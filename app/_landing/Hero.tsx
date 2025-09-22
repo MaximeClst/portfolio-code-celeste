@@ -6,30 +6,35 @@ import { Section } from "./Section";
 export const Hero = () => {
   return (
     <Section className="flex flex-col gap-2 lg:gap-4">
-      <h2 className="text-4xl lg:text-5xl font-bold ">Salut c'est Maxime 👋</h2>
-      <p className="text-lg leading-8">
+      <h1 className="text-4xl lg:text-5xl font-bold ">Salut c'est Maxime 👋</h1>
+      <p className="text-lg text-muted-foreground">
         Votre entreprise mérite plus qu’un{" "}
-        <Code>
+        <Code className="whitespace-nowrap">
           <CustomIcon name="store" className="inline mb-1 mr-1" size={16} />{" "}
           site vitrine
         </Code>{" "}
-        : je développe des
-        <Code>
+        : je développe des{" "}
+        <Code className="whitespace-nowrap">
           <CustomIcon name="mobile" className="inline mb-1 mr-1" size={16} />{" "}
           applications mobiles
         </Code>{" "}
         qui créent un lien direct et instantané avec vos clients.
       </p>
-      <Button size="lg" className="w-fit mt-6">
-        Contactez-moi
-      </Button>
+      <div className="mt-4 lg:mt-6 flex items-center flex-wrap gap-4">
+        <Button size="lg" className="w-fit mt-6">
+          Prendre un rendez-vous
+        </Button>
+        {/* <Button size="lg" variant="ghost" className="w-fit mt-6">
+          Voir mes projets
+        </Button> */}
+      </div>
     </Section>
   );
 };
 
 const Code = (props: PropsWithChildren<{ className?: string }>) => {
   return (
-    <span className="px-1 -mx-0.5 bg-accent/20 border border-accent inline-flex items-center rounded-md  py-1">
+    <span className="px-1 -mx-0.5 text-foreground bg-accent/20 border border-accent inline-flex items-center rounded-md  py-1">
       {props.children}
     </span>
   );
