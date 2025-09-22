@@ -61,9 +61,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="pt-12 border-t border-border/50">
-          <p className="text-sm text-muted-foreground">
-            Merci pour votre patience • © 2024 Code Celeste
-          </p>
+          <p className="text-sm text-muted-foreground">© 2024 Code Celeste</p>
         </div>
       </div>
 
