@@ -45,31 +45,58 @@
 
 @layer base {
   :root {
-    --background: 279 60% 100%;
-    --foreground: 279 70% 5%;
-    --muted: 249 23% 87%;
-    --muted-foreground: 249 2% 33%;
-    --popover: 0 0% 99%;
-    --popover-foreground: 279 70% 4%;
-    --card: 0 0% 99%;
-    --card-foreground: 279 70% 4%;
-    --border: 279 8% 95%;
-    --input: 279 8% 95%;
-    --primary: 279 49% 43%;
+    --background: 279 55% 98%;
+    --foreground: 279 63% 0%;
+    --muted: 249 38% 88%;
+    --muted-foreground: 249 10% 33%;
+    --popover: 279 55% 98%;
+    --popover-foreground: 279 63% 0%;
+    --card: 279 55% 98%;
+    --card-foreground: 279 63% 0%;
+    --border: 279 3% 91%;
+    --input: 279 3% 91%;
+    --primary: 279 24% 49%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 249 49% 43%;
+    --secondary: 249 24% 49%;
     --secondary-foreground: 0 0% 100%;
-    --accent: 309 49% 43%;
+    --accent: 309 24% 49%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 13 84% 35%;
-    --destructive-foreground: 13 84% 95%;
-    --ring: 279 49% 43%;
-    --chart-1: 279 49% 43%;
-    --chart-2: 249 49% 43%;
-    --chart-3: 309 49% 43%;
-    --chart-4: 249 49% 46%;
-    --chart-5: 279 52% 43%;
+    --destructive: 6 96% 20%;
+    --destructive-foreground: 6 96% 80%;
+    --ring: 279 24% 49%;
+    --chart-1: 279 24% 49%;
+    --chart-2: 249 24% 49%;
+    --chart-3: 309 24% 49%;
+    --chart-4: 249 24% 52%;
+    --chart-5: 279 27% 49%;
     --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 279 57% 0%;
+    --foreground: 279 25% 98%;
+    --muted: 249 38% 12%;
+    --muted-foreground: 249 10% 67%;
+    --popover: 279 57% 0%;
+    --popover-foreground: 279 25% 98%;
+    --card: 279 57% 0%;
+    --card-foreground: 279 25% 98%;
+    --border: 279 3% 15%;
+    --input: 279 3% 15%;
+    --primary: 279 24% 49%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 249 24% 49%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 309 24% 49%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 6 96% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 279 24% 49%;
+    --chart-1: 279 24% 49%;
+    --chart-2: 249 24% 49%;
+    --chart-3: 309 24% 49%;
+    --chart-4: 249 24% 52%;
+    --chart-5: 279 27% 49%;
   }
 }
 @layer base {
@@ -78,5 +105,78 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Animations personnalisées pour la page de teasing */
+  @keyframes gradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes progress {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float-delayed {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  .animate-progress {
+    animation: progress 2s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 3s ease-in-out infinite 0.5s;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 4s ease-in-out infinite 1s;
   }
 }

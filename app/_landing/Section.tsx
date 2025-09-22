@@ -8,7 +8,11 @@ export type SectionProps = PropsWithChildren<{
 export const Section = (props: SectionProps) => {
   return (
     <section
-      className={cn("py-8 max-w-2xl m-auto lg:px-6 px-4", props.className)}
+      className={cn(
+        "md:my-14 lg:my-20 max-w-2xl m-auto lg:px-6 px-4",
+        props.className,
+        "my-12"
+      )}
     >
       {props.children}
     </section>
