@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/site.config";
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -20,17 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full">
-      <body className={cn(inter.className, "h-full")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
+    <html lang="en" suppressHydrationWarning className="h-full dark">
+      <body className={cn(inter.className, "h-full")}>{children}</body>
     </html>
   );
 }
