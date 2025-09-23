@@ -1,6 +1,6 @@
 import { CustomIcon } from "@/components/icons/CustomIcon";
-import { Button } from "@/components/ui/button";
 import { PropsWithChildren } from "react";
+import { CalComEmbed } from "./CalComEmbed";
 import { Section } from "./Section";
 
 export const Hero = () => {
@@ -21,9 +21,7 @@ export const Hero = () => {
         qui créent un lien direct et instantané avec vos clients.
       </p>
       <div className="mt-4 lg:mt-6 flex items-center flex-wrap gap-4">
-        <Button size="lg" className="w-fit mt-6">
-          Prendre un rendez-vous
-        </Button>
+        <CalComEmbed />
         {/* <Button size="lg" variant="ghost" className="w-fit mt-6">
           Voir mes projets
         </Button> */}
@@ -32,7 +30,7 @@ export const Hero = () => {
   );
 };
 
-const Code = (props: PropsWithChildren<{ className?: string }>) => {
+export const Code = (props: PropsWithChildren<{ className?: string }>) => {
   return (
     <span className="px-1 -mx-0.5 text-foreground bg-accent/20 border border-accent inline-flex items-center rounded-md  py-1">
       {props.children}
