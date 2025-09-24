@@ -20,7 +20,7 @@ export const Hero = () => {
         </Code>{" "}
         qui créent un lien direct et instantané avec vos clients.
       </p>
-      <div className="mt-4 lg:mt-6 flex items-center flex-wrap gap-4">
+      <div className="mt-4 lg:mt-2 flex items-center flex-wrap gap-4">
         <CalComEmbed />
         {/* <Button size="lg" variant="ghost" className="w-fit mt-6">
           Voir mes projets

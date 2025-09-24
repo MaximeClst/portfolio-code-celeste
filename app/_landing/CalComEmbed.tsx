@@ -21,7 +21,7 @@ export function CalComEmbed() {
     <Button
       size="lg"
       variant="default"
-      className="w-fit mt-6 cursor-pointer"
+      className="w-fit mt-6 cursor-pointer h-14 text-lg"
       data-cal-namespace="15min"
       data-cal-link="maxime-celeste-jqxmmh/15min"
       data-cal-config='{"layout":"month_view"}'

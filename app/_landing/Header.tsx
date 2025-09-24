@@ -15,7 +15,9 @@ export const Header = () => {
             Bienvenue sur
           </h1>
           <h1 className="text-4xl font-bold text-primary mb-3">Code Celeste</h1>
-          <p className="text-muted-foreground italic">by Maxime</p>
+          <p className="flex justify-end text-muted-foreground italic">
+            by Maxime
+          </p>
         </div>
       </div>
     </header>
