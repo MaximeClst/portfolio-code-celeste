@@ -45,7 +45,7 @@ const testimonialChunks = chunkArray(
 export const Testimonial = () => {
   return (
     <Section>
-      <div className="py-16 md:py-32">
+      <div className="py-6 md:py-32 lg:py-12">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
             <h2 className="text-3xl font-semibold">Wall of Love ❤️</h2>
