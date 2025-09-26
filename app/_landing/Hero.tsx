@@ -6,7 +6,9 @@ import { Section } from "./Section";
 export const Hero = () => {
   return (
     <Section className="flex flex-col gap-2 lg:gap-4">
-      <h1 className="text-4xl lg:text-5xl font-bold ">Salut c'est Maxime 👋</h1>
+      <h1 className="text-4xl lg:text-5xl font-bold flex justify-center">
+        Salut c'est Maxime 👋
+      </h1>
       <p className="text-lg text-muted-foreground">
         Votre entreprise mérite plus qu’un{" "}
         <Code className="whitespace-nowrap">

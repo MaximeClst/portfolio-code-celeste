@@ -15,14 +15,14 @@ const testimonials: Testimonial[] = [
     site: "Smart Power System",
     image: "/pp-AlexEydieux.jpg",
     quote:
-      "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
+      "Nous avons sollicité Maxime pour la création de notre site Internet et nous sommes pleinement satisfaits du résultat. Son investissement dans le projet et le rapport qualité/prix proposé ont été particulièrement appréciés.\n\nDepuis la mise en ligne, le site nous a permis de générer une quinzaine de demandes, dont 4 à 5 se sont concrétisées.\n\nJe recommande ses services!",
   },
   {
     name: "Grégory Maillot",
     site: "VELORUN Festival",
     image: "/pp-AlexEydieux.jpg",
     quote:
-      "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
+      "Maxime a créé un site web exceptionnel pour notre évènement. Son professionnalisme et sa réactivité ont fait toute la différence. Le site a permis d'augmenter nos inscriptions de 40% cette année.\n\nJe recommande vivement ses services!",
   },
 ];
 
@@ -44,15 +44,15 @@ const testimonialChunks = chunkArray(
 
 export const Testimonial = () => {
   return (
-    <Section>
-      <div className="mx-auto max-w-6xl">
-        <div className="text-center">
-          <h2 className="text-3xl font-semibold">Wall of Love ❤️</h2>
+    <Section className="max-w-6xl">
+      <div className="w-full">
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="text-3xl lg:text-4xl font-bold">Wall of Love ❤️</h2>
           <p className="mt-6 text-muted-foreground">
             Voici ce que disent les gens qui ont utilisé mes services.
           </p>
         </div>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 md:mt-12 lg:grid-cols-2">
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 md:mt-12 md:grid-cols-2 lg:grid-cols-2">
           {testimonialChunks.map((chunk, chunkIndex) => (
             <div key={chunkIndex} className="space-y-3">
               {chunk.map(({ name, quote, image, site }, index) => (
@@ -77,7 +77,7 @@ export const Testimonial = () => {
                       </span>
 
                       <blockquote className="mt-3">
-                        <p className="text-gray-700 dark:text-gray-300">
+                        <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
                           {quote}
                         </p>
                       </blockquote>

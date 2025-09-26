@@ -20,7 +20,7 @@ export const Footer = () => {
             <CustomIcon name="twitter" size={30} />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/celeste-maxime-581352235/"
+            href="https://www.linkedin.com/in/code-celeste/"
             target="_blank"
           >
             <CustomIcon name="linkedin" size={30} />
