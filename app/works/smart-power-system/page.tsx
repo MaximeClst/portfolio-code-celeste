@@ -22,7 +22,7 @@ export default function SmartPowerSystemPage() {
           {/* Navigation retour */}
           <div className="mb-8">
             <Button asChild variant="ghost" size="sm" className="gap-2">
-              <Link href="/work">
+              <Link href="/works">
                 <ArrowLeft className="size-4" />
                 Retour aux projets
               </Link>
@@ -69,7 +69,6 @@ export default function SmartPowerSystemPage() {
                 </Card>
               </div>
 
-              {/* Contenu textuel */}
               <div className="order-1 lg:order-2 space-y-8">
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Contexte</h2>

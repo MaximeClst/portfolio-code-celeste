@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Section } from "../Section";
+import { Section } from "./Section";
 
 export const Work = () => {
   return (
@@ -16,27 +16,26 @@ export const Work = () => {
           Découvrez mes projets et réalisations récentes.
         </p>
       </div>
-
-      <div className="mt-8 grid gap-3 sm:grid-cols-2">
+      <div className="mt-8 grid gap-3  sm:grid-cols-1 md:grid-cols-2 lg:mx-0">
         <WorkCard
           title="Smart Power System"
           description="Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts."
           image="/SPS LOGO - BASELINE CLAIR.png"
-          link="/work/smart-power-system"
-          externalLink="https://smartpowersystem.com"
+          link="/works/smart-power-system"
+          externalLink="https://smart-power-system.fr"
         />
 
         <WorkCard
           title="VELORUN Festival"
-          description="Plateforme événementielle pour le festival de course à pied et vélo de La Réunion."
+          description="Plateforme événementielle pour le festival de vélo de La Réunion."
           image="/VeloRunFest.png"
-          link="/work/velorun-festival"
+          link="/works/velorun-festival"
+          externalLink="https://velorunfestival.re"
         />
       </div>
-
       <div className="mt-8 text-center">
         <Button asChild variant="outline" size="lg">
-          <Link href="/work">
+          <Link href="/works">
             Voir tous les projets
             <ChevronRight className="ml-2 size-4" />
           </Link>
@@ -60,20 +59,22 @@ const WorkCard = ({
   externalLink?: string;
 }) => {
   return (
-    <Card className="p-6">
+    <Card className="p-8">
       <div className="relative">
         <div className="flex justify-center items-center mb-6">
           <Image
             src={image}
             alt={title}
-            width={80}
-            height={80}
-            className="object-contain"
+            width={100}
+            height={100}
+            className="object-contain md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px]"
           />
         </div>
 
         <div className="space-y-2 py-6">
-          <h3 className="text-base font-medium">{title}</h3>
+          <h3 className="text-base font-medium sm:text-lg md:text-lg lg:text-xl">
+            {title}
+          </h3>
           <p className="text-muted-foreground line-clamp-2 text-sm">
             {description}
           </p>

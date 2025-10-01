@@ -3,10 +3,10 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Footer } from "../../Footer";
-import { Header } from "../../Header";
+import { Footer } from "../../_landing/Footer";
+import { Header } from "../../_landing/Header";
 
-export default function SmartPowerSystemPage() {
+export default function VeloRunFestivalPage() {
   return (
     <main className="h-full relative">
       {/* Background avec grille et gradient */}
@@ -22,7 +22,7 @@ export default function SmartPowerSystemPage() {
           {/* Navigation retour */}
           <div className="mb-8">
             <Button asChild variant="ghost" size="sm" className="gap-2">
-              <Link href="/work">
+              <Link href="/works">
                 <ArrowLeft className="size-4" />
                 Retour aux projets
               </Link>
@@ -34,19 +34,19 @@ export default function SmartPowerSystemPage() {
             <div className="text-center mb-12">
               <div className="flex justify-center items-center mb-6">
                 <Image
-                  src="/SPS LOGO - BASELINE CLAIR.png"
-                  alt="Smart Power System"
+                  src="/VeloRunFest.png"
+                  alt="VELORUN Festival"
                   width={120}
                   height={120}
                   className="object-contain"
                 />
               </div>
-              <h1 className="text-4xl font-bold mb-4">Smart Power System</h1>
+              <h1 className="text-4xl font-bold mb-4">VELORUN Festival</h1>
               <div className="flex justify-center gap-4">
                 <Button asChild variant="outline" className="gap-2">
-                  <Link href="https://smartpowersystem.com" target="_blank">
+                  <Link href="https://velorunfestival.re" target="_blank">
                     <ExternalLink className="size-4" />
-                    smartpowersystem.com
+                    velorunfestival.re
                   </Link>
                 </Button>
               </div>
@@ -59,8 +59,8 @@ export default function SmartPowerSystemPage() {
                 <Card className="p-6">
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
                     <Image
-                      src="/screen-SPS.png"
-                      alt="Capture d'écran du site Smart Power System"
+                      src="/VeloRunFest.png"
+                      alt="Capture d'écran du site VELORUN Festival"
                       width={600}
                       height={400}
                       className="rounded-lg object-cover w-full h-full"
@@ -74,28 +74,30 @@ export default function SmartPowerSystemPage() {
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Contexte</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Un coach sportif souhaitait développer sa présence en ligne
-                    et proposer ses services de manière professionnelle afin
-                    d'attirer de nouveaux clients.
+                    Le VELORUN Festival est un événement majeur du cyclisme à La
+                    Réunion qui avait besoin d'une plateforme moderne pour
+                    centraliser toutes les informations et faciliter les
+                    inscriptions.
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Solution</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    J'ai conçu un site en Next.js, moderne et responsive, avec
-                    un design clair et adapté à ses besoins. Le site met en
-                    avant ses services, son expertise et facilite la prise de
-                    contact.
+                    Création d'une plateforme événementielle complète avec
+                    système d'inscription, présentation des parcours, programme
+                    détaillé et galerie photos. Le site est optimisé pour mobile
+                    et offre une expérience utilisateur fluide.
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Résultats</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Le lancement du site a permis de signer 4 nouveaux coachés
-                    dès les premières semaines. Aujourd'hui, le site sert de
-                    véritable vitrine digitale, simple et efficace.
+                    Le site a permis de simplifier la gestion des inscriptions
+                    et d'améliorer la communication autour de l'événement,
+                    contribuant au succès de l'édition avec une participation
+                    record.
                   </p>
                 </Card>
               </div>
@@ -113,6 +115,7 @@ export default function SmartPowerSystemPage() {
                     "TypeScript",
                     "Tailwind CSS",
                     "Responsive Design",
+                    "API Integration",
                   ].map((tech) => (
                     <span
                       key={tech}
