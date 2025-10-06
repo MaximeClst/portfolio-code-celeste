@@ -20,9 +20,9 @@ const testimonials: Testimonial[] = [
   {
     name: "Grégory Maillot",
     site: "VELORUN Festival",
-    image: "/pp-AlexEydieux.jpg",
+    image: "VeloRunFest.png",
     quote:
-      "Maxime a créé un site web exceptionnel pour notre évènement. Son professionnalisme et sa réactivité ont fait toute la différence. Le site a permis d'augmenter nos inscriptions de 40% cette année.\n\nJe recommande vivement ses services!",
+      "Maxime à des grandes capacité d'adaptation pour le projet site web VELORUN FESTIVAL. \n\nDe plus c'est aller très vite pour une 1ère version. Il a fais preuve d'autonomie. \n\nLe site est performant!",
   },
 ];
 

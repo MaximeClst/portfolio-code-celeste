@@ -9,7 +9,7 @@ export const Section = (props: SectionProps) => {
   return (
     <section
       className={cn(
-        "md:my-20 lg:my-32 max-w-2xl m-auto lg:px-12 px-4",
+        "md:my-20 lg:my-32 max-w-3xl m-auto lg:px-12 px-4",
         props.className,
         "my-16"
       )}
