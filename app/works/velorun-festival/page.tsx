@@ -14,12 +14,10 @@ export default function VeloRunFestivalPage() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_3px,transparent_3px),linear-gradient(rgba(255,255,255,0.02)_3px,transparent_3px)] bg-[size:100px_100px]"></div>
       </div>
 
-      {/* Contenu par-dessus le background */}
       <div className="relative z-10">
         <Header />
 
         <section className="container mx-auto px-4 py-24">
-          {/* Navigation retour */}
           <div className="mb-8">
             <Button asChild variant="ghost" size="sm" className="gap-2">
               <Link href="/works">
@@ -30,7 +28,6 @@ export default function VeloRunFestivalPage() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            {/* Header du projet */}
             <div className="text-center mb-12">
               <div className="flex justify-center items-center mb-6">
                 <Image
@@ -52,9 +49,7 @@ export default function VeloRunFestivalPage() {
               </div>
             </div>
 
-            {/* Contenu principal */}
             <div className="grid gap-8 lg:grid-cols-2">
-              {/* Image du site */}
               <div className="order-2 lg:order-1">
                 <Card className="p-6">
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
@@ -69,7 +64,6 @@ export default function VeloRunFestivalPage() {
                 </Card>
               </div>
 
-              {/* Contenu textuel */}
               <div className="order-1 lg:order-2 space-y-8">
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Contexte</h2>
@@ -103,7 +97,6 @@ export default function VeloRunFestivalPage() {
               </div>
             </div>
 
-            {/* Technologies utilisées */}
             <div className="mt-12">
               <Card className="p-6">
                 <h2 className="text-2xl font-semibold mb-4">

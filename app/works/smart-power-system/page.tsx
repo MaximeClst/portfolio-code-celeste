@@ -19,7 +19,6 @@ export default function SmartPowerSystemPage() {
         <Header />
 
         <section className="container mx-auto px-4 py-24">
-          {/* Navigation retour */}
           <div className="mb-8">
             <Button asChild variant="ghost" size="sm" className="gap-2">
               <Link href="/works">
@@ -30,7 +29,6 @@ export default function SmartPowerSystemPage() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            {/* Header du projet */}
             <div className="text-center mb-12">
               <div className="flex justify-center items-center mb-6">
                 <Image
@@ -52,9 +50,7 @@ export default function SmartPowerSystemPage() {
               </div>
             </div>
 
-            {/* Contenu principal */}
             <div className="grid gap-8 lg:grid-cols-2">
-              {/* Image du site */}
               <div className="order-2 lg:order-1">
                 <Card className="p-6">
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
@@ -100,7 +96,6 @@ export default function SmartPowerSystemPage() {
               </div>
             </div>
 
-            {/* Technologies utilisées */}
             <div className="mt-12">
               <Card className="p-6">
                 <h2 className="text-2xl font-semibold mb-4">
