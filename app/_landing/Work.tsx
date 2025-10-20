@@ -10,13 +10,13 @@ export const Work = () => {
     <Section>
       <div className="text-center">
         <h2 className="text-balance text-3xl font-semibold md:text-4xl">
-          My Works
+          Vos projets
         </h2>
         <p className="text-muted-foreground mt-6">
-          Découvrez mes projets et réalisations récentes.
+          Découvrez les projets et réalisations de Code Celeste.
         </p>
       </div>
-      <div className="mt-8 grid gap-3  sm:grid-cols-1 md:grid-cols-2 lg:mx-0">
+      <div className="mt-8 grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:mx-0">
         <WorkCard
           title="Smart Power System"
           description="Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts."

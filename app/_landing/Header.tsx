@@ -44,8 +44,7 @@ export const Header = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <CustomIcon name="codeceleste" size={32} />
-                Code Celeste
+                <CustomIcon name="codeceleste" size={150} />
               </Link>
 
               <button
@@ -66,7 +65,7 @@ export const Header = () => {
                       href={item.href}
                       className="text-muted-foreground hover:text-accent-foreground block duration-150"
                     >
-                      <span>{item.name}</span>
+                      <span className="text-xl">{item.name}</span>
                     </Link>
                   </li>
                 ))}
