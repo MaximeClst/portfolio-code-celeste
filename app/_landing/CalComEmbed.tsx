@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { getCalApi } from "@calcom/embed-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 
 interface CalComButtonProps {
@@ -65,19 +65,17 @@ export function CalComButton({
 export function CalComEmbed() {
   return <CalComButton />;
 }
-// import Cal, { getCalApi } from "@calcom/embed-react";
-// import { useEffect } from "react";
-// export default function MyApp() {
-//   useEffect(() => {
-//     (async function () {
-//       const cal = await getCalApi({"namespace":"30min"});
-//       cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-//     })();
-//   }, [])
-//   return <Cal namespace="30min"
-//     calLink="code-celeste/30min"
-//     style={{width:"100%",height:"100%",overflow:"scroll"}}
-//     config={{"layout":"month_view"}}
 
-//   />;
-// };
+export function CalEmbed() {
+  return (
+    <Cal
+      namespace="30min"
+      calLink="code-celeste/30min"
+      style={{ width: "100%", height: "100%", background: "transparent" }}
+      config={{
+        layout: "month_view",
+        theme: "dark",
+      }}
+    />
+  );
+}
