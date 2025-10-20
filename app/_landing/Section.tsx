@@ -3,6 +3,7 @@ import { PropsWithChildren } from "react";
 
 export type SectionProps = PropsWithChildren<{
   className?: string;
+  id?: string;
 }>;
 
 export const Section = (props: SectionProps) => {
@@ -13,6 +14,7 @@ export const Section = (props: SectionProps) => {
         props.className,
         "my-16"
       )}
+      id={props.id}
     >
       {props.children}
     </section>

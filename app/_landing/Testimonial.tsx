@@ -44,12 +44,15 @@ const testimonialChunks = chunkArray(
 
 export const Testimonial = () => {
   return (
-    <Section className="max-w-6xl">
+    <Section id="testimonial" className="max-w-6xl">
       <div className="w-full">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="text-3xl lg:text-4xl font-bold">Wall of Love ❤️</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold">
+            Des résultats concrets pour chaque projet
+          </h2>
           <p className="mt-6 text-muted-foreground">
-            Voici ce que disent les gens qui ont utilisé mes services.
+            Chaque collaboration est guidée par la performance, la clarté et la
+            recherche d’impact mesurable.
           </p>
         </div>
         <div className="mt-8 grid gap-3 sm:grid-cols-2 md:mt-12 md:grid-cols-2 lg:grid-cols-2">

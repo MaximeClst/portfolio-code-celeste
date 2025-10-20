@@ -1,3 +1,4 @@
+import Feature from "./_landing/Feature";
 import { Footer } from "./_landing/Footer";
 import { Header } from "./_landing/Header";
 import { Hero } from "./_landing/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="relative z-10">
         <Header />
         <Hero />
+        <Feature />
         <Work />
         <Showcase />
         <Testimonial />

@@ -5,8 +5,8 @@ import { Section } from "./Section";
 export const Showcase = () => {
   return (
     <Section>
-      <h2 className="text-3xl lg:text-4xl font-bold ">
-        Comment <Code>Smart Power System</Code> a pu acquérir des nouveaux
+      <h2 className="text-3xl lg:text-4xl font-bold">
+        Comment ce site de coaching en ligne a fait l'acquisition de 5 nouveaux
         athlètes
       </h2>
       <p className="mt-4 text-muted-foreground">
