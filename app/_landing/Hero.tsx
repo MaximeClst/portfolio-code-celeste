@@ -12,7 +12,7 @@ export const Hero = () => {
       <p className="text-lg text-muted-foreground">
         Une application mobile{" "}
         <CustomIcon name="mobile" size={16} className="inline mb-1 mr-1" />,
-        livrée en <Code>5 jours</Code>, pour créer un lien direct et durable
+        livrée en <Code>10 jours</Code>, pour créer un lien direct et durable
         avec vos clients.
       </p>
       <div className="mt-4 lg:mt-2 flex justify-center flex-wrap gap-4">

@@ -31,7 +31,7 @@ export const Footer = () => {
           >
             <CustomIcon name="linkedin" size={24} />
           </Link>
-          <Link href="mailto:contact.maximeclst@gmail.com" target="_blank">
+          <Link href="mailto:maxime@code-celeste.com" target="_blank">
             <CustomIcon name="gmail" size={24} />
           </Link>
         </div>

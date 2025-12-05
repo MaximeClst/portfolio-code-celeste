@@ -13,8 +13,8 @@ export const SiteConfig = {
     primary: "#007291", // Teal color for consistency
   },
   email: {
-    from: "Maxime Céleste <contact.maximeclst@gmail.com>",
-    contact: "contact.maximeclst@gmail.com",
+    from: "Maxime Céleste <maxime@code-celeste.com>",
+    contact: "maxime@code-celeste.com",
   },
   maker: {
     image: "https://x.com/maxime_clst/photo",
