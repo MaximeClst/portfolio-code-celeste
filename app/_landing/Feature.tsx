@@ -1,103 +1,139 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Palette, Rocket, Search, Settings } from "lucide-react";
+"use client";
+
+import { Card } from "@/components/ui/card";
+import { motion, useReducedMotion } from "framer-motion";
+import { Globe, Layers, Smartphone } from "lucide-react";
 import { ReactNode } from "react";
-import { Code } from "./Hero";
+
+type Offer = {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  price: string;
+  meta?: string[];
+  highlight?: boolean;
+};
+
+const offers: Offer[] = [
+  {
+    icon: <Smartphone className="size-5" aria-hidden />,
+    title: "MVP Mobile",
+    description:
+      "Une application iOS & Android fonctionnelle pour tester votre marché avant d'investir davantage.",
+    price: "À partir de 2 000€",
+    meta: ["Livré en 7 jours", "Maintenance 97€/mois"],
+    highlight: true,
+  },
+  {
+    icon: <Layers className="size-5" aria-hidden />,
+    title: "Application mobile sur mesure",
+    description:
+      "Une application mobile complète avec toutes les fonctionnalités dont votre entreprise a besoin.",
+    price: "Sur devis",
+  },
+  {
+    icon: <Globe className="size-5" aria-hidden />,
+    title: "Site vitrine",
+    description:
+      "Un site professionnel pour les artisans et commerçants locaux. Rapide à livrer, facile à mettre à jour.",
+    price: "À partir de 1 000€",
+    meta: ["Maintenance 75€/mois", "Mises à jour & sécurité incluses"],
+  },
+];
 
 export default function Feature() {
+  const reduce = useReducedMotion();
+
   return (
-    <section className="py-8 md:py-18" id="feature">
-      <div className="@container mx-auto max-w-5xl px-6">
-        <div className="text-center">
-          <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
-            Ce que je propose
+    <section className="py-16 md:py-24" id="offres">
+      <div className="mx-auto max-w-6xl px-4 lg:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-center max-w-2xl mx-auto"
+        >
+          <span className="text-xs font-medium text-brand uppercase tracking-wider">
+            Offres
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight">
+            Ce que je construis
           </h2>
-          <p className="mt-4">
-            Je vous propose des solutions <Code>innovantes</Code> et
-            performantes pour répondre à vos besoins.
+          <p className="mt-3 text-muted-foreground">
+            Trois formats clairs, prix fixes ou sur devis. Vous choisissez,
+            on démarre.
           </p>
-        </div>
-        <div className="mx-auto mt-8 grid grid-cols-1 gap-4 *:text-center md:mt-16 md:grid-cols-4">
-          <Card className="group border bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-colors">
-            <CardHeader className="pb-3">
-              <CardDecorator>
-                <Search className="size-6" aria-hidden />
-              </CardDecorator>
+        </motion.div>
 
-              <h3 className="mt-6 font-medium">Audit & Analyse</h3>
-            </CardHeader>
-
-            <CardContent>
-              <p className="text-xs">
-                Échange pour comprendre vos besoins et objectifs. L'audit
-                définit les fonctionnalités essentielles avant le développement.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="group border bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-colors">
-            <CardHeader className="pb-3">
-              <CardDecorator>
-                <Palette className="size-6" aria-hidden />
-              </CardDecorator>
-
-              <h3 className="mt-6 font-medium">Design</h3>
-            </CardHeader>
-
-            <CardContent>
-              <p className="mt-3 text-xs">
-                Design moderne et ergonomique adapté à votre marque. Expérience
-                fluide dès la première interaction.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="group border bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-colors">
-            <CardHeader className="pb-3">
-              <CardDecorator>
-                <Settings className="size-6" aria-hidden />
-              </CardDecorator>
-
-              <h3 className="mt-6 font-medium">Développement</h3>
-            </CardHeader>
-
-            <CardContent>
-              <p className="mt-3 text-xs">
-                Développement avec les technologies récentes. Tests garantissant
-                performance, sécurité et stabilité.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="group border bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-colors">
-            <CardHeader className="pb-3">
-              <CardDecorator>
-                <Rocket className="size-6" aria-hidden />
-              </CardDecorator>
-
-              <h3 className="mt-6 font-medium">Déploiement & Suivi</h3>
-            </CardHeader>
-
-            <CardContent>
-              <p className="mt-3 text-xs">
-                Mise en ligne sur les stores (App Store & Google Play).
-                Accompagnement post-livraison pour une prise en main fluide.
-              </p>
-            </CardContent>
-          </Card>
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {offers.map((offer, i) => (
+            <motion.div
+              key={offer.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: reduce ? 0 : i * 0.1,
+              }}
+            >
+              <OfferCard {...offer} />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-const CardDecorator = ({ children }: { children: ReactNode }) => (
-  <div className="mask-radial-from-40% mask-radial-to-60% relative mx-auto size-24 duration-200 [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]">
-    <div
-      aria-hidden
-      className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:16px_16px] dark:opacity-50"
-    />
+const OfferCard = ({
+  icon,
+  title,
+  description,
+  price,
+  meta,
+  highlight,
+}: Offer) => (
+  <Card
+    className={`group relative h-full p-6 sm:p-8 bg-card border-border/80 hover:border-brand/50 transition-colors ${
+      highlight ? "border-brand/40 shadow-[0_0_0_1px_hsl(var(--brand)/0.15)]" : ""
+    }`}
+  >
+    {highlight ? (
+      <span className="absolute -top-2.5 right-6 inline-flex items-center rounded-full border border-brand/30 bg-brand/15 px-2.5 py-0.5 text-[11px] font-medium text-brand">
+        Populaire
+      </span>
+    ) : null}
 
-    <div className="bg-background absolute inset-0 m-auto flex size-8 items-center justify-center border-l border-t">
-      {children}
+    <div className="flex size-10 items-center justify-center rounded-lg border border-border bg-background/40 text-foreground">
+      {icon}
     </div>
-  </div>
+
+    <h3 className="mt-5 text-lg font-medium">{title}</h3>
+    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+      {description}
+    </p>
+
+    <div className="mt-6 pt-6 border-t border-dashed border-border/80">
+      <p className="text-2xl font-semibold tracking-tight">{price}</p>
+      {meta && meta.length > 0 ? (
+        <ul className="mt-3 space-y-1.5">
+          {meta.map((m) => (
+            <li
+              key={m}
+              className="text-xs text-muted-foreground flex items-center gap-2"
+            >
+              <span
+                aria-hidden
+                className="size-1 rounded-full bg-brand/70 shrink-0"
+              />
+              {m}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
+  </Card>
 );

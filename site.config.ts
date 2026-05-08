@@ -1,7 +1,7 @@
 export const SiteConfig = {
   title: "Code Celeste",
   description:
-    "Développeur full-stack passionné, je crée des applications mobiles modernes et performantes. Spécialisé dans React Native, Expo et Next.js ",
+    "Créateur de sites web et applications mobiles pour artisans et entrepreneurs à La Réunion.",
   prodUrl: "https://code-celeste.com",
   domain: "code-celeste.com",
   appIcon: "/images/icon.png",

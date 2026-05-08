@@ -6,17 +6,16 @@ export const Showcase = () => {
   return (
     <Section>
       <h2 className="text-3xl lg:text-4xl font-bold">
-        Comment ce site de coaching en ligne a fait l'acquisition de 5 nouveaux
-        athlètes
+        Un site qui transforme vos visiteurs en clients
       </h2>
       <p className="mt-4 text-muted-foreground">
-        Ils cherchaient un moyen pour toucher beaucoup plus de monde, j’ai mis
-        en place <Code>une plateforme web</Code> qui facilite les infos et la
-        prise de contact
+        Pour chaque projet, l’objectif est <Code>concret</Code> : générer des
+        appels, des devis ou des prises de rendez-vous. Pas seulement « être
+        beau ».
       </p>
       <Image
         src="/screen-SPS.png"
-        alt="Smart Power System"
+        alt="Aperçu d'un site client réalisé par Code Celeste"
         width={400}
         height={200}
         className="w-full h-auto mt-6 lg:mt-8"

@@ -1,54 +1,68 @@
-"use client";
-
-import { CustomIcon } from "@/components/icons/CustomIcon";
+import { Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
-import { CalEmbed } from "./CalComEmbed";
-import { Section } from "./Section";
 
 export const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <Section className="max-w-none w-full border-t-2 mt-32 flex flex-col items-center py-0 md:py-0 gap-0 border-t-accent px-0">
-      <div className="w-full max-w-[1400px] mx-auto text-center mt-4 mb-1 px-6 pt-2">
-        <h2 className="text-2xl lg:text-4xl font-bold mb-4 mt-5">
-          Vous avez un projet ? Parlons-en 🚀
-        </h2>
-        <div className="w-full min-h-[44vh] md:min-h-[56vh] lg:min-h-[60vh] px-0 mt-0">
-          <CalEmbed />
-        </div>
-      </div>
-
-      <div className="max-w-2xl pb-1 mt-1">
-        <h3 className="text-lg font-medium mb-2">
-          Nous suivre sur les réseaux sociaux :{" "}
-        </h3>
-        <div className="flex items-center justify-between gap-2">
-          <Link href="https://x.com/maxime_clst" target="_blank">
-            <CustomIcon name="twitter" size={24} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/code-celeste/"
-            target="_blank"
-          >
-            <CustomIcon name="linkedin" size={24} />
-          </Link>
-          <Link href="mailto:maxime@code-celeste.com" target="_blank">
-            <CustomIcon name="gmail" size={24} />
-          </Link>
-        </div>
-
-        <div className="flex items-center justify-center gap-3 text-center text-muted-foreground mt-4">
-          <span>
-            ©{new Date().getFullYear()} Code Celeste — Tous droits réservés.
+    <footer className="border-t border-border/80 mt-12">
+      <div className="mx-auto max-w-6xl px-4 lg:px-12 py-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-base font-semibold tracking-tight">
+            Code Celeste
           </span>
-          <span aria-hidden>•</span>
+          <span className="text-xs text-muted-foreground">
+            · La Réunion 🇷🇪
+          </span>
+        </div>
+
+        <nav aria-label="Réseaux sociaux" className="flex items-center gap-2">
+          <SocialLink
+            href="https://x.com/maxime_clst"
+            label="X (Twitter)"
+            icon={<Twitter className="size-4" />}
+          />
+          <SocialLink
+            href="https://www.linkedin.com/in/code-celeste/"
+            label="LinkedIn"
+            icon={<Linkedin className="size-4" />}
+          />
+          <SocialLink
+            href="mailto:maxime@code-celeste.com"
+            label="Email"
+            icon={<Mail className="size-4" />}
+          />
+        </nav>
+
+        <div className="flex flex-col sm:items-end gap-1 text-xs text-muted-foreground">
+          <span>© {year} Code Celeste — Tous droits réservés.</span>
           <Link
             href="/mentions-legales"
-            className="underline underline-offset-2"
+            className="underline underline-offset-2 hover:text-foreground transition-colors"
           >
             Mentions légales
           </Link>
         </div>
       </div>
-    </Section>
+    </footer>
   );
 };
+
+const SocialLink = ({
+  href,
+  label,
+  icon,
+}: {
+  href: string;
+  label: string;
+  icon: React.ReactNode;
+}) => (
+  <Link
+    href={href}
+    target="_blank"
+    aria-label={label}
+    className="inline-flex size-9 items-center justify-center rounded-md border border-border/80 text-muted-foreground hover:text-foreground hover:border-brand/50 transition-colors"
+  >
+    {icon}
+  </Link>
+);
