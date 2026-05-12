@@ -1,3 +1,4 @@
+import { Comparison } from "./_landing/Comparison";
 import Feature from "./_landing/Feature";
 import { FinalCTA } from "./_landing/FinalCTA";
 import { Footer } from "./_landing/Footer";
@@ -26,6 +27,7 @@ export default function Home() {
         <Work />
         <Testimonial />
         <Feature />
+        <Comparison />
         <FinalCTA />
         <Footer />
       </div>
