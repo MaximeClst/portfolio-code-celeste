@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/site.config";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { QuoteModalProvider } from "./_landing/QuoteModal";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,7 +34,7 @@ export default function RootLayout({
           "h-full font-sans antialiased"
         )}
       >
-        {children}
+        <QuoteModalProvider>{children}</QuoteModalProvider>
       </body>
     </html>
   );

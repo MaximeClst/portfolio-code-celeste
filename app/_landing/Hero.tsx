@@ -5,9 +5,11 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
+import { useQuoteModal } from "./QuoteModal";
 import { Section } from "./Section";
 
 export const Hero = () => {
+  const { open } = useQuoteModal();
   return (
     <Section className="flex flex-col items-center text-center pt-32 lg:pt-40 gap-6">
       <motion.div
@@ -49,11 +51,13 @@ export const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
         className="flex flex-col sm:flex-row gap-3 mt-2"
       >
-        <Button asChild size="lg" className="h-12 px-6 text-base">
-          <Link href="mailto:maxime@code-celeste.com?subject=Démarrer%20un%20MVP">
-            Démarrer un MVP
-            <ArrowRight className="ml-1 size-4" />
-          </Link>
+        <Button
+          size="lg"
+          className="h-12 px-6 text-base"
+          onClick={() => open({ projectType: "mvp" })}
+        >
+          Démarrer un MVP
+          <ArrowRight className="ml-1 size-4" />
         </Button>
         <Button
           asChild

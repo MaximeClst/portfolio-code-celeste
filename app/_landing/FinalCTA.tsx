@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { useQuoteModal } from "./QuoteModal";
 
 export const FinalCTA = () => {
+  const { open } = useQuoteModal();
   return (
     <section id="contact" className="px-4 py-16 md:py-24">
       <motion.div
@@ -38,11 +40,13 @@ export const FinalCTA = () => {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Button asChild size="lg" className="h-12 px-6 text-base">
-              <Link href="mailto:maxime@code-celeste.com?subject=Estimation%20projet&body=Bonjour%20Maxime%2C%0A%0A1.%20Quel%20type%20de%20projet%20%3F%20(site%20web%20%2F%20app%20mobile%20%2F%20MVP)%0A2.%20Pour%20quel%20usage%20%3F%0A3.%20Quel%20budget%20et%20quelle%20deadline%20%3F%0A%0A">
-                Estimer mon projet
-                <ArrowRight className="ml-1 size-4" />
-              </Link>
+            <Button
+              size="lg"
+              className="h-12 px-6 text-base"
+              onClick={() => open()}
+            >
+              Estimer mon projet
+              <ArrowRight className="ml-1 size-4" />
             </Button>
             <Button
               asChild
