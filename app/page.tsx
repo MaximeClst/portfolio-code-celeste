@@ -24,10 +24,10 @@ export default function Home() {
         <Header />
         <Hero />
         <HowItWorks />
+        <Comparison />
         <Work />
         <Testimonial />
         <Feature />
-        <Comparison />
         <FinalCTA />
         <Footer />
       </div>
