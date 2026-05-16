@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -19,12 +19,10 @@ export default function VeloRunFestivalPage() {
 
         <section className="container mx-auto px-4 py-24">
           <div className="mb-8">
-            <Button asChild variant="ghost" size="sm" className="gap-2">
-              <Link href="/works">
-                <ArrowLeft className="size-4" />
-                Retour aux projets
-              </Link>
-            </Button>
+            <Link href="/works" className={buttonVariants({ variant: "ghost", size: "sm" }) + " gap-2"}>
+              <ArrowLeft className="size-4" />
+              Retour aux projets
+            </Link>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -40,12 +38,10 @@ export default function VeloRunFestivalPage() {
               </div>
               <h1 className="text-4xl font-bold mb-4">VELORUN Festival</h1>
               <div className="flex justify-center gap-4">
-                <Button asChild variant="outline" className="gap-2">
-                  <Link href="https://velorunfestival.re" target="_blank">
-                    <ExternalLink className="size-4" />
-                    velorunfestival.re
-                  </Link>
-                </Button>
+                <Link href="https://velorunfestival.re" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline" }) + " gap-2"}>
+                  <ExternalLink className="size-4" />
+                  velorunfestival.re
+                </Link>
               </div>
             </div>
 

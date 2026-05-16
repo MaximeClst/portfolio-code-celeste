@@ -1,6 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, ChevronRight, ExternalLink, Smartphone } from "lucide-react";
+import {
+  ArrowLeft,
+  ChevronRight,
+  ExternalLink,
+  Smartphone,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "../_landing/Footer";
@@ -8,59 +13,65 @@ import { Header } from "../_landing/Header";
 
 export default function WorksPage() {
   return (
-    <main className="h-full relative">
-      <div className="relative z-10">
-        <Header />
+    <main className="min-h-screen">
+      <Header />
 
-        <section className="container mx-auto px-4 py-24">
-          <div className="mb-8">
-            <Button asChild variant="ghost" size="sm" className="gap-2">
-              <Link href="/">
-                <ArrowLeft className="size-4" />
-                Retour à l'accueil
-              </Link>
-            </Button>
+      <section className="container mx-auto px-4 py-24">
+        <div className="mb-8">
+          <Link href="/" className={buttonVariants({ variant: "ghost", size: "sm" }) + " gap-2"}>
+            <ArrowLeft className="size-4" />
+            Retour à l'accueil
+          </Link>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4">Mes Projets Web</h1>
+            <p className="text-muted-foreground text-lg">
+              Découvrez l'ensemble de mes réalisations et projets récents.
+            </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold mb-4">Mes Projets Web</h1>
-              <p className="text-muted-foreground text-lg">
-                Découvrez l'ensemble de mes réalisations et projets récents.
-              </p>
-            </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <WorkCard
+              title="Smart Power System"
+              description="Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts."
+              image="/SPS LOGO - BASELINE CLAIR.png"
+              link="/works/smart-power-system"
+              externalLink="https://smart-power-system.fr"
+            />
 
-            <div className="grid gap-6 sm:grid-cols-2">
-              <WorkCard
-                title="Budget Copain"
-                description="Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers."
-                image="/budget-copain-icon.png"
-                link="/works/budget-copain"
-                externalLink="https://github.com/MaximeClst/budget-copain"
-                badge="mobile"
-              />
-
-              <WorkCard
-                title="Smart Power System"
-                description="Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts."
-                image="/SPS LOGO - BASELINE CLAIR.png"
-                link="/works/smart-power-system"
-                externalLink="https://smart-power-system.fr"
-              />
-
-              <WorkCard
-                title="VELORUN Festival"
-                description="Plateforme événementielle pour le festival de vélo de La Réunion."
-                image="/VeloRunFest.png"
-                link="/works/velorun-festival"
-                externalLink="https://velorunfestival.re"
-              />
-            </div>
+            <WorkCard
+              title="VELORUN Festival"
+              description="Plateforme événementielle pour le festival de vélo de La Réunion."
+              image="/VeloRunFest.png"
+              link="/works/velorun-festival"
+              externalLink="https://velorunfestival.re"
+            />
           </div>
-        </section>
+        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 mt-12">
+            <h1 className="text-4xl font-bold mb-4">Mes Projets Mobiles</h1>
+            <p className="text-muted-foreground text-lg">
+              Découvrez l'ensemble de mes réalisations et projets récents.
+            </p>
+          </div>
 
-        <Footer />
-      </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <WorkCard
+              title="Budget Copain"
+              description="Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers."
+              image="/adaptive-icon.png"
+              link="/works/budget-copain"
+              externalLink="https://www.budgetcopain.com/"
+              badge="mobile"
+            />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </main>
   );
 }
@@ -105,24 +116,15 @@ const WorkCard = ({
         </div>
 
         <div className="flex gap-3 border-t border-dashed pt-6">
-          <Button
-            asChild
-            variant="secondary"
-            size="sm"
-            className="gap-1 pr-2 shadow-none"
-          >
-            <Link href={link}>
-              Voir le projet
-              <ChevronRight className="ml-0 !size-3.5 opacity-50" />
-            </Link>
-          </Button>
+          <Link href={link} className={buttonVariants({ variant: "secondary", size: "sm" }) + " gap-1 pr-2 shadow-none"}>
+            Voir le projet
+            <ChevronRight className="ml-0 !size-3.5 opacity-50" />
+          </Link>
           {externalLink && (
-            <Button asChild variant="outline" size="sm" className="gap-1 pr-2">
-              <Link href={externalLink} target="_blank">
-                Site web
-                <ExternalLink className="ml-0 !size-3.5" />
-              </Link>
-            </Button>
+            <Link href={externalLink} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm" }) + " gap-1 pr-2"}>
+              Site web
+              <ExternalLink className="ml-0 !size-3.5" />
+            </Link>
           )}
         </div>
       </div>

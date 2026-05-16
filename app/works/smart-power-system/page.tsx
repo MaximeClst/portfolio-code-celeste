@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -10,7 +10,7 @@ export default function SmartPowerSystemPage() {
   return (
     <main className="h-full relative">
       {/* Background avec grille et gradient */}
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-primary-800 to-primary-900">
+      <div className="fixed inset-0 pointer-events-none bg-gradient-to-br from-slate-900 via-primary-800 to-primary-900">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_3px,transparent_3px),linear-gradient(rgba(255,255,255,0.02)_3px,transparent_3px)] bg-[size:100px_100px]"></div>
       </div>
 
@@ -20,12 +20,10 @@ export default function SmartPowerSystemPage() {
 
         <section className="container mx-auto px-4 py-24">
           <div className="mb-8">
-            <Button asChild variant="ghost" size="sm" className="gap-2">
-              <Link href="/works">
-                <ArrowLeft className="size-4" />
-                Retour aux projets
-              </Link>
-            </Button>
+            <Link href="/works" className={buttonVariants({ variant: "ghost", size: "sm" }) + " gap-2"}>
+              <ArrowLeft className="size-4" />
+              Retour aux projets
+            </Link>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -41,12 +39,10 @@ export default function SmartPowerSystemPage() {
               </div>
               <h1 className="text-4xl font-bold mb-4">Smart Power System</h1>
               <div className="flex justify-center gap-4">
-                <Button asChild variant="outline" className="gap-2">
-                  <Link href="https://smartpowersystem.com" target="_blank">
-                    <ExternalLink className="size-4" />
-                    smartpowersystem.com
-                  </Link>
-                </Button>
+                <Link href="https://smartpowersystem.com" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline" }) + " gap-2"}>
+                  <ExternalLink className="size-4" />
+                  smartpowersystem.com
+                </Link>
               </div>
             </div>
 
