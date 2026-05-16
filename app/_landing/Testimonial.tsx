@@ -99,6 +99,23 @@ export const Testimonial = () => {
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+        className="mt-10 flex justify-center"
+      >
+        <a
+          href="https://g.page/r/CVMUT2Y0DghoEAE/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+        >
+          Laisser un avis Google ⭐
+        </a>
+      </motion.div>
     </Section>
   );
 };
