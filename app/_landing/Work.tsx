@@ -22,6 +22,15 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Budget Copain",
+    description:
+      "Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers.",
+    image: "/budget-copain-icon.png",
+    link: "/works/budget-copain",
+    externalLink: "https://budget-copain.vercel.app",
+    type: "App mobile",
+  },
+  {
     title: "Smart Power System",
     description:
       "Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts.",

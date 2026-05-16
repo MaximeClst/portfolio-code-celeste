@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ArrowLeft, ChevronRight, ExternalLink, Smartphone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "../_landing/Footer";
@@ -32,6 +32,15 @@ export default function WorksPage() {
 
             <div className="grid gap-6 sm:grid-cols-2">
               <WorkCard
+                title="Budget Copain"
+                description="Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers."
+                image="/budget-copain-icon.png"
+                link="/works/budget-copain"
+                externalLink="https://budget-copain.vercel.app"
+                badge="mobile"
+              />
+
+              <WorkCard
                 title="Smart Power System"
                 description="Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts."
                 image="/SPS LOGO - BASELINE CLAIR.png"
@@ -62,12 +71,14 @@ const WorkCard = ({
   image,
   link,
   externalLink,
+  badge,
 }: {
   title: string;
   description: string;
   image: string;
   link: string;
   externalLink?: string;
+  badge?: "mobile";
 }) => {
   return (
     <Card className="p-6 hover:shadow-xl transition-shadow">
@@ -83,6 +94,12 @@ const WorkCard = ({
         </div>
 
         <div className="space-y-2 py-6">
+          {badge === "mobile" && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+              <Smartphone className="size-3" />
+              App Mobile
+            </span>
+          )}
           <h3 className="text-xl font-semibold">{title}</h3>
           <p className="text-muted-foreground line-clamp-3">{description}</p>
         </div>
