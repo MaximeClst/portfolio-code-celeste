@@ -34,7 +34,7 @@ export default function BudgetCopainPage() {
             <div className="text-center mb-12">
               <div className="flex justify-center items-center mb-6">
                 <Image
-                  src="/budget-copain-icon.png"
+                  src="/adaptive-icon.png"
                   alt="Budget Copain"
                   width={120}
                   height={120}
