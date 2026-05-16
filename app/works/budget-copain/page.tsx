@@ -47,9 +47,9 @@ export default function BudgetCopainPage() {
               <h1 className="text-4xl font-bold mb-4">Budget Copain</h1>
               <div className="flex justify-center gap-4">
                 <Button asChild variant="outline" className="gap-2">
-                  <Link href="https://budget-copain.vercel.app" target="_blank">
+                  <Link href="https://github.com/MaximeClst/budget-copain" target="_blank">
                     <ExternalLink className="size-4" />
-                    budget-copain.vercel.app
+                    GitHub - Voir le code
                   </Link>
                 </Button>
               </div>

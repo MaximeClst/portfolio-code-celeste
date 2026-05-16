@@ -36,7 +36,7 @@ export default function WorksPage() {
                 description="Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers."
                 image="/budget-copain-icon.png"
                 link="/works/budget-copain"
-                externalLink="https://budget-copain.vercel.app"
+                externalLink="https://github.com/MaximeClst/budget-copain"
                 badge="mobile"
               />
 
