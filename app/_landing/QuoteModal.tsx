@@ -183,7 +183,10 @@ function QuoteModal({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 16, scale: 0.97 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-brand/40 bg-gradient-to-br from-[#13092c] via-[#0d0820] to-[#0a0a0a] p-6 sm:p-8 shadow-2xl shadow-brand/10"
+        className={cn(
+          "relative w-full overflow-hidden rounded-2xl border border-brand/40 bg-gradient-to-br from-[#13092c] via-[#0d0820] to-[#0a0a0a] p-6 sm:p-8 shadow-2xl shadow-brand/10 transition-[max-width] duration-300",
+          step === 6 ? "max-w-4xl" : "max-w-2xl"
+        )}
       >
         <div
           aria-hidden
@@ -606,7 +609,7 @@ function StepBooking({ onConfirm }: { onConfirm: () => void }) {
         subtitle="Appel découverte gratuit avec Maxime"
       />
       <div className="overflow-hidden rounded-xl border border-dashed border-brand/40 bg-white/[0.02]">
-        <div className="h-[460px] w-full">
+        <div className="h-[640px] w-full">
           <CalEmbed />
         </div>
       </div>

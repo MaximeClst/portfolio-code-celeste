@@ -23,8 +23,8 @@ interface CalComButtonProps {
 }
 
 export function CalComButton({
-  namespace = "30min",
-  calLink = "code-celeste/30min",
+  namespace = "15min",
+  calLink = "codeceleste/15min",
   layout = "month_view",
   buttonText = "Prendre rendez-vous",
   buttonSize = "lg",
@@ -66,11 +66,31 @@ export function CalComEmbed() {
   return <CalComButton />;
 }
 
-export function CalEmbed() {
+export function CalEmbed({
+  brandColor = "#7737b8",
+  hideEventTypeDetails = true,
+}: {
+  brandColor?: string;
+  hideEventTypeDetails?: boolean;
+} = {}) {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", {
+        cssVarsPerTheme: {
+          light: { "cal-brand": brandColor },
+          dark: { "cal-brand": brandColor },
+        },
+        hideEventTypeDetails,
+        layout: "month_view",
+      });
+    })();
+  }, [brandColor, hideEventTypeDetails]);
+
   return (
     <Cal
-      namespace="30min"
-      calLink="code-celeste/30min"
+      namespace="15min"
+      calLink="codeceleste/15min"
       style={{ width: "100%", height: "100%", background: "transparent" }}
       config={{
         layout: "month_view",
