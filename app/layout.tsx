@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/site.config";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { QuoteModalProvider } from "./_landing/QuoteModal";
 import "./globals.css";
 
@@ -27,6 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning className="h-full dark">
+      <head>
+        <Script
+          defer
+          data-website-id="dfid_xPNqbWDvJnuHPch4GRVuL"
+          data-domain="code-celeste.com"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         className={cn(
           geistSans.variable,
