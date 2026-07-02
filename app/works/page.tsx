@@ -48,6 +48,20 @@ export default function WorksPage() {
               link="/works/velorun-festival"
               externalLink="https://velorunfestival.re"
             />
+
+            <WorkCard
+              title="SCMOI"
+              description="Site vitrine pour une entreprise de climatisation, chauffage et électricité à La Réunion : présentation des services, réalisations et demande de devis."
+              image="/logo-scmoi.jpg"
+              externalLink="https://www.scmoi.re/"
+            />
+
+            <WorkCard
+              title="Anthony Celeste Coaching"
+              description="Site vitrine pour un coach endurance (VTT, triathlon, trail) à La Réunion : plans d'entraînement individualisés, préparation mentale et nutrition."
+              image="/anthony-celeste.png"
+              externalLink="https://www.anthonyceleste-coaching.re/"
+            />
           </div>
         </div>
         <div className="max-w-6xl mx-auto">
@@ -65,6 +79,20 @@ export default function WorksPage() {
               image="/adaptive-icon.png"
               link="/works/budget-copain"
               externalLink="https://www.budgetcopain.com/"
+              badge="mobile"
+            />
+
+            <WorkCard
+              title="FoodHub"
+              description="Projet d'entraînement : app mobile de commande de fast-food avec panier et authentification. React Native, Expo, NativeWind, Zustand."
+              image="/foodhub-logo.png"
+              badge="mobile"
+            />
+
+            <WorkCard
+              title="Pokédex"
+              description="Projet d'entraînement : Pokédex mobile connecté à la PokéAPI. React Native, Expo Router."
+              image="/pokedex-logo.svg"
               badge="mobile"
             />
           </div>
@@ -87,7 +115,7 @@ const WorkCard = ({
   title: string;
   description: string;
   image: string;
-  link: string;
+  link?: string;
   externalLink?: string;
   badge?: "mobile";
 }) => {
@@ -116,10 +144,12 @@ const WorkCard = ({
         </div>
 
         <div className="flex gap-3 border-t border-dashed pt-6">
-          <Link href={link} className={buttonVariants({ variant: "secondary", size: "sm" }) + " gap-1 pr-2 shadow-none"}>
-            Voir le projet
-            <ChevronRight className="ml-0 !size-3.5 opacity-50" />
-          </Link>
+          {link && (
+            <Link href={link} className={buttonVariants({ variant: "secondary", size: "sm" }) + " gap-1 pr-2 shadow-none"}>
+              Voir le projet
+              <ChevronRight className="ml-0 !size-3.5 opacity-50" />
+            </Link>
+          )}
           {externalLink && (
             <Link href={externalLink} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm" }) + " gap-1 pr-2"}>
               Site web

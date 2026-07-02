@@ -1,10 +1,10 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { motion, useReducedMotion } from "framer-motion";
-import { ChevronRight, ExternalLink } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { ArrowUpRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "./Section";
@@ -13,45 +13,77 @@ type ProjectType = "Site web" | "App mobile";
 
 type Project = {
   title: string;
-  description: string;
-  image: string;
-  link: string;
+  logo: string;
+  /** Classes additionnelles pour le logo (ex : rounded-full) */
+  logoClassName?: string;
+  /** Dégradé du panneau intérieur */
+  gradient: string;
+  /** Page détail interne (/works/...) — optionnelle */
+  link?: string;
   externalLink?: string;
   type: ProjectType;
 };
 
+// Les FEATURED_COUNT premiers projets sont mis en avant sur la landing.
+// Ajoute tes nouveaux projets en tête de liste ; la liste complète vit sur /works.
+const FEATURED_COUNT = 4;
+
 const projects: Project[] = [
   {
     title: "Budget Copain",
-    description:
-      "Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers.",
-    image: "/adaptive-icon.png",
+    logo: "/adaptive-icon.png",
+    gradient: "from-brand/25 to-brand/5",
     link: "/works/budget-copain",
     externalLink: "https://budgetcopain.com",
     type: "App mobile",
   },
   {
+    title: "SCMOI",
+    logo: "/logo-scmoi.jpg",
+    logoClassName: "rounded-full",
+    gradient: "from-white/10 to-white/[0.02]",
+    externalLink: "https://www.scmoi.re/",
+    type: "Site web",
+  },
+  {
+    title: "Anthony Celeste Coaching",
+    logo: "/anthony-celeste.png",
+    gradient: "from-white/10 to-white/[0.02]",
+    externalLink: "https://www.anthonyceleste-coaching.re/",
+    type: "Site web",
+  },
+  {
     title: "Smart Power System",
-    description:
-      "Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts.",
-    image: "/SPS LOGO - BASELINE CLAIR.png",
+    logo: "/SPS LOGO - BASELINE CLAIR.png",
+    gradient: "from-brand/25 to-brand/5",
     link: "/works/smart-power-system",
     externalLink: "https://smart-power-system.fr",
     type: "Site web",
   },
-  {
-    title: "VELORUN Festival",
-    description:
-      "Plateforme événementielle pour le festival de vélo de La Réunion.",
-    image: "/VeloRunFest.png",
-    link: "/works/velorun-festival",
-    externalLink: "https://velorunfestival.re",
-    type: "Site web",
-  },
 ];
+
+const featured = projects.slice(0, FEATURED_COUNT);
+
+// Alternance 4/8 puis 8/4 (grille 12 colonnes)
+const spanFor = (i: number) =>
+  i % 4 === 0 || i % 4 === 3 ? "md:col-span-4" : "md:col-span-8";
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
 
 export const Work = () => {
   const reduce = useReducedMotion();
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: reduce ? 0 : 28 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 110, damping: 18 },
+    },
+  };
 
   return (
     <Section id="realisations" className="max-w-6xl">
@@ -60,106 +92,130 @@ export const Work = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="text-center max-w-2xl mx-auto"
+        className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
       >
-        <span className="text-xs font-medium text-brand uppercase tracking-wider">
-          Projets clients
-        </span>
-        <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight">
-          Réalisations
-        </h2>
-        <p className="mt-3 text-muted-foreground">
-          Des produits livrés, en ligne, et qui font tourner du business.
-        </p>
+        <div className="max-w-lg">
+          <span className="text-xs font-medium text-brand uppercase tracking-wider">
+            Projets clients
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight">
+            Dernières{" "}
+            <span className="text-muted-foreground">réalisations</span>
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Des produits livrés, en ligne, et qui font tourner du business.
+          </p>
+        </div>
+        <Link
+          href="/works"
+          className={cn(
+            buttonVariants({ variant: "outline", size: "lg" }),
+            "gap-1.5 whitespace-nowrap"
+          )}
+        >
+          Voir tous les projets
+          <ArrowUpRight className="size-4" />
+        </Link>
       </motion.div>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-1 md:grid-cols-2">
-        {projects.map((p, i) => (
-          <motion.div
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        className="mt-10 grid grid-cols-12 gap-4"
+      >
+        {featured.map((p, i) => (
+          <BounceCard
             key={p.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{
-              duration: 0.5,
-              ease: "easeOut",
-              delay: reduce ? 0 : i * 0.1,
-            }}
-          >
-            <WorkCard {...p} />
-          </motion.div>
+            project={p}
+            variants={itemVariants}
+            reduce={!!reduce}
+            className={spanFor(i)}
+          />
         ))}
-      </div>
-
-      <div className="mt-10 text-center">
-        <Button asChild variant="outline" size="lg">
-          <Link href="/works">
-            Voir tous les projets
-            <ChevronRight className="ml-1 size-4" />
-          </Link>
-        </Button>
-      </div>
+      </motion.div>
     </Section>
   );
 };
 
-const WorkCard = ({
-  title,
-  description,
-  image,
-  link,
-  externalLink,
-  type,
-}: Project) => (
-  <Card className="group relative overflow-hidden p-8 bg-card border-border/80 hover:border-brand/40 transition-colors">
-    <div
-      aria-hidden
-      className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity bg-[radial-gradient(circle_at_top,hsl(var(--brand)/0.08),transparent_60%)]"
-    />
-    <div className="relative">
-      <div className="absolute right-0 top-0">
+const BounceCard = ({
+  project,
+  className,
+  variants,
+  reduce,
+}: {
+  project: Project;
+  className?: string;
+  variants: Variants;
+  reduce: boolean;
+}) => {
+  const href = project.link ?? project.externalLink;
+  const external = !project.link && !!project.externalLink;
+
+  return (
+    <motion.article
+      variants={variants}
+      whileHover={reduce ? undefined : { scale: 0.97, rotate: "-1deg" }}
+      transition={{ type: "spring", stiffness: 250, damping: 20 }}
+      className={cn(
+        "group relative col-span-12 min-h-[300px] cursor-pointer overflow-hidden rounded-2xl border border-border/80 bg-card p-8 transition-colors hover:border-brand/40",
+        className
+      )}
+    >
+      <div className="mx-auto text-center">
         <Badge variant="outline" className="border-border/80">
-          {type}
+          {project.type}
         </Badge>
+        <h3 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
+          {project.title}
+        </h3>
       </div>
-      <div className="flex justify-center items-center mb-6">
-        <Image
-          src={image}
-          alt={title}
-          width={120}
-          height={120}
-          className="object-contain md:w-[140px] md:h-[140px]"
+
+      <div
+        className={cn(
+          "absolute bottom-0 left-4 right-4 top-36 translate-y-8 rounded-t-2xl border border-b-0 border-border/60 bg-gradient-to-br p-4 transition-transform duration-[250ms]",
+          !reduce && "group-hover:translate-y-4 group-hover:rotate-[2deg]",
+          project.gradient
+        )}
+      >
+        <div className="flex h-full flex-col items-center justify-center gap-3 pb-8">
+          <Image
+            src={project.logo}
+            alt={project.title}
+            width={120}
+            height={120}
+            className={cn(
+              "h-auto max-h-20 w-auto object-contain drop-shadow-lg",
+              project.logoClassName
+            )}
+          />
+          {href ? (
+            <span className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-background/60 px-3 py-1 text-sm font-medium text-foreground backdrop-blur-sm">
+              {external ? "Voir le site" : "Voir le projet"}
+              {external ? (
+                <ArrowUpRight className="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              ) : (
+                <ChevronRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+              )}
+            </span>
+          ) : null}
+        </div>
+      </div>
+
+      {href ? (
+        <Link
+          href={href}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+          className="absolute inset-0 z-10"
+          aria-label={
+            external
+              ? `Ouvrir le site de ${project.title} dans un nouvel onglet`
+              : `Voir le projet ${project.title}`
+          }
         />
-      </div>
-
-      <div className="space-y-2 py-4">
-        <h3 className="text-lg sm:text-xl font-medium">{title}</h3>
-        <p className="text-muted-foreground line-clamp-2 text-sm">
-          {description}
-        </p>
-      </div>
-
-      <div className="flex gap-3 border-t border-dashed pt-6">
-        <Button
-          asChild
-          variant="secondary"
-          size="sm"
-          className="gap-1 pr-2 shadow-none"
-        >
-          <Link href={link}>
-            Voir le projet
-            <ChevronRight className="ml-0 !size-3.5 opacity-50" />
-          </Link>
-        </Button>
-        {externalLink ? (
-          <Button asChild variant="outline" size="sm" className="gap-1 pr-2">
-            <Link href={externalLink} target="_blank">
-              Site web
-              <ExternalLink className="ml-0 !size-3.5" />
-            </Link>
-          </Button>
-        ) : null}
-      </div>
-    </div>
-  </Card>
-);
+      ) : null}
+    </motion.article>
+  );
+};
