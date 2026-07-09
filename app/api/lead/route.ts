@@ -182,7 +182,7 @@ export async function POST(request: Request) {
             locationId,
             pipelineId,
             pipelineStageId: stageId,
-            name: company || `${firstName} ${lastName}`,
+            name: `${firstName} ${lastName} - ${company.toUpperCase()}`,
             status: "open",
             contactId,
           }),

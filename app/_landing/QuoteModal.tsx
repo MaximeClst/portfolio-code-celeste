@@ -18,7 +18,7 @@ import {
   useMemo,
   useState,
 } from "react";
-import { CalEmbed } from "./CalComEmbed";
+import { GhlBooking } from "./GhlBooking";
 
 type ProjectType =
   | "site-artisan"
@@ -642,7 +642,7 @@ function StepBooking({ onConfirm }: { onConfirm: () => void }) {
       />
       <div className="overflow-hidden rounded-xl border border-dashed border-brand/40 bg-white/[0.02]">
         <div className="h-[640px] w-full">
-          <CalEmbed />
+          <GhlBooking />
         </div>
       </div>
       <Button
