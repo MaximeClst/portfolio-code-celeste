@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/site.config";
 import type { Metadata } from "next";
@@ -45,6 +46,7 @@ export default function RootLayout({
         )}
       >
         <QuoteModalProvider>{children}</QuoteModalProvider>
+        <Toaster />
       </body>
     </html>
   );

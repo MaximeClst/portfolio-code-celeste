@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Lock, X } from "lucide-react";
+import { ArrowRight, Loader2, Lock, X } from "lucide-react";
+import { toast } from "sonner";
 import {
   createContext,
   Dispatch,
@@ -270,7 +271,7 @@ function QuoteModal({
                 )}
                 {step === 5 && (
                   <StepContact
-                    contact={form.contact}
+                    form={form}
                     onChange={(contact) => setForm((f) => ({ ...f, contact }))}
                     onSubmit={next}
                   />
@@ -470,14 +471,16 @@ function StepPain({
 }
 
 function StepContact({
-  contact,
+  form,
   onChange,
   onSubmit,
 }: {
-  contact: Contact;
+  form: FormState;
   onChange: (c: Contact) => void;
   onSubmit: () => void;
 }) {
+  const contact = form.contact;
+  const [submitting, setSubmitting] = useState(false);
   const isValid =
     contact.firstName.trim() &&
     contact.lastName.trim() &&
@@ -485,14 +488,34 @@ function StepContact({
     contact.phone.trim() &&
     contact.company.trim();
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isValid || submitting) return;
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...contact,
+          projectType: form.projectType,
+          hasSite: form.hasSite,
+          goal: form.goal,
+          pain: form.pain,
+        }),
+      });
+      if (!res.ok) throw new Error("lead request failed");
+    } catch {
+      // On ne bloque pas le prospect : la prise de RDV reste la vraie conversion.
+      toast.error("Un souci technique côté envoi, mais vous pouvez continuer.");
+    } finally {
+      setSubmitting(false);
+      onSubmit();
+    }
+  };
+
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (isValid) onSubmit();
-      }}
-      className="space-y-5"
-    >
+    <form onSubmit={handleSubmit} className="space-y-5">
       <StepHeading title="Vos coordonnées" />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field
@@ -551,11 +574,20 @@ function StepContact({
       <Button
         type="submit"
         size="lg"
-        disabled={!isValid}
+        disabled={!isValid || submitting}
         className="h-12 w-full text-base"
       >
-        Continuer
-        <ArrowRight className="ml-1 size-4" />
+        {submitting ? (
+          <>
+            <Loader2 className="mr-1 size-4 animate-spin" />
+            Envoi…
+          </>
+        ) : (
+          <>
+            Continuer
+            <ArrowRight className="ml-1 size-4" />
+          </>
+        )}
       </Button>
     </form>
   );
