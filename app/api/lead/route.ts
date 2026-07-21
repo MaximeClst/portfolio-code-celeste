@@ -3,6 +3,10 @@ import { NextResponse } from "next/server";
 const GHL_BASE = "https://services.leadconnectorhq.com";
 const GHL_VERSION = "2021-07-28";
 
+// Champ personnalisé d'opportunité « Détails de la demande » (texte multiligne).
+// ID de ressource GHL (pas un secret) — propre à la location Code Celeste.
+const OPPORTUNITY_DETAILS_FIELD_ID = "IPoJLuMDDRmhRl40pW46";
+
 type ProjectType = "site-artisan" | "app-mobile" | "mvp" | "refonte";
 type HasSite = "oui" | "non";
 type Goal = "clients" | "google" | "pro" | "test-idee" | "moderniser";
@@ -149,10 +153,8 @@ export async function POST(request: Request) {
 
   // À partir d'ici le contact est capturé : les erreurs suivantes ne bloquent pas la réponse.
   if (contactId) {
-    // 2. Note de qualification
-    const noteBody = [
-      "Nouveau lead — formulaire code-celeste.com",
-      "",
+    // Récapitulatif des réponses de l'optin, porté par l'opportunité.
+    const qualificationRecap = [
       `Type de projet : ${projectLabel ?? "—"}`,
       `Déjà un site / une app : ${hasSite ? HAS_SITE_LABELS[hasSite] : "—"}`,
       `Objectif principal : ${goalLabel ?? "—"}`,
@@ -160,17 +162,7 @@ export async function POST(request: Request) {
       `Site actuel : ${currentSite || "—"}`,
     ].join("\n");
 
-    try {
-      await fetch(`${GHL_BASE}/contacts/${contactId}/notes`, {
-        method: "POST",
-        headers,
-        body: JSON.stringify({ body: noteBody }),
-      });
-    } catch (err) {
-      console.error("[lead] Échec création note GHL", err);
-    }
-
-    // 3. Opportunité (optionnelle — seulement si un pipeline est configuré)
+    // Opportunité (seulement si un pipeline est configuré) avec la qualif en clair.
     const pipelineId = process.env.GHL_PIPELINE_ID;
     const stageId = process.env.GHL_PIPELINE_STAGE_ID;
     if (pipelineId && stageId) {
@@ -185,6 +177,9 @@ export async function POST(request: Request) {
             name: `${firstName} ${lastName} - ${company.toUpperCase()}`,
             status: "open",
             contactId,
+            customFields: [
+              { id: OPPORTUNITY_DETAILS_FIELD_ID, field_value: qualificationRecap },
+            ],
           }),
         });
       } catch (err) {

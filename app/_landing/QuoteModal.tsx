@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Loader2, Lock, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import {
   createContext,
@@ -634,6 +635,7 @@ function Field({
 }
 
 function StepBooking({ onConfirm }: { onConfirm: () => void }) {
+  const router = useRouter();
   return (
     <div className="space-y-5">
       <StepHeading
@@ -641,17 +643,20 @@ function StepBooking({ onConfirm }: { onConfirm: () => void }) {
         subtitle="Appel découverte gratuit avec Maxime"
       />
       <div className="overflow-hidden rounded-xl border border-dashed border-brand/40 bg-white/[0.02]">
-        <div className="h-[640px] w-full">
+        <div className="h-[640px] w-full overflow-y-auto">
           <GhlBooking />
         </div>
       </div>
       <Button
         type="button"
         size="lg"
-        onClick={onConfirm}
+        onClick={() => {
+          onConfirm();
+          router.push("/confirmation");
+        }}
         className="h-12 w-full text-base"
       >
-        Confirmer mon RDV
+        J&apos;ai réservé mon appel
         <ArrowRight className="ml-1 size-4" />
       </Button>
     </div>
