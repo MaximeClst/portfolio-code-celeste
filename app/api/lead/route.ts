@@ -7,6 +7,16 @@ const GHL_VERSION = "2021-07-28";
 // ID de ressource GHL (pas un secret) — propre à la location Code Celeste.
 const OPPORTUNITY_DETAILS_FIELD_ID = "IPoJLuMDDRmhRl40pW46";
 
+// Champs personnalisés de contact — miroir de la qualif directement sur la fiche prospect.
+const CONTACT_FIELDS = {
+  metier: "8sWrtshAB59qqMRbbwHZ",
+  projet: "IdzHdPCMOZpau5vgryTm",
+  hasSite: "oW6nP5km14VfFYb6HLUq",
+  objectif: "lDKIIv6m6hMrMq1oQK7N",
+  probleme: "MER62Voaa6u3ljXRgr9W",
+  siteActuel: "K6NopCcxZg9G9qCU0Kuv",
+} as const;
+
 type ProjectType = "site-artisan" | "app-mobile" | "mvp" | "refonte";
 type HasSite = "oui" | "non";
 type Goal = "clients" | "google" | "pro" | "test-idee" | "moderniser";
@@ -124,6 +134,17 @@ export async function POST(request: Request) {
 
   const headers = ghlHeaders(token);
 
+  // Réponses de qualif portées directement par le contact (seulement les valeurs
+  // renseignées, pour ne pas écraser un champ existant lors d'un ré-upsert).
+  const contactCustomFields = [
+    metier && { id: CONTACT_FIELDS.metier, field_value: metier },
+    projectLabel && { id: CONTACT_FIELDS.projet, field_value: projectLabel },
+    hasSite && { id: CONTACT_FIELDS.hasSite, field_value: HAS_SITE_LABELS[hasSite] },
+    goalLabel && { id: CONTACT_FIELDS.objectif, field_value: goalLabel },
+    pain && { id: CONTACT_FIELDS.probleme, field_value: PAIN_LABELS[pain] },
+    currentSite && { id: CONTACT_FIELDS.siteActuel, field_value: currentSite },
+  ].filter(Boolean) as { id: string; field_value: string }[];
+
   // 1. Upsert du contact (dédup par email / téléphone dans la location)
   let contactId: string | null = null;
   try {
@@ -140,6 +161,7 @@ export async function POST(request: Request) {
         companyName: company,
         source,
         tags,
+        customFields: contactCustomFields,
       }),
     });
 
