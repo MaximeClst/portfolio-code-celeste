@@ -50,6 +50,8 @@ type LeadBody = {
   hasSite?: unknown;
   goal?: unknown;
   pain?: unknown;
+  metier?: unknown;
+  source?: unknown;
 };
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
@@ -107,12 +109,15 @@ export async function POST(request: Request) {
   const hasSite = body.hasSite as HasSite | null;
   const goal = body.goal as Goal | null;
   const pain = body.pain as Pain | null;
+  const metier = str(body.metier); // métier de l'artisan (funnel /ads uniquement)
+  const source = str(body.source) || "Site web Code Celeste";
 
   const projectLabel = projectType ? PROJECT_LABELS[projectType] : undefined;
   const goalLabel = goal ? GOAL_LABELS[goal] : undefined;
 
   const tags = [
     "Lead site web",
+    metier && `Métier : ${metier}`,
     projectLabel && `Projet : ${projectLabel}`,
     goalLabel && `Objectif : ${goalLabel}`,
   ].filter(Boolean) as string[];
@@ -133,7 +138,7 @@ export async function POST(request: Request) {
         email,
         phone: normalizePhone(phone),
         companyName: company,
-        source: "Site web Code Celeste",
+        source,
         tags,
       }),
     });
@@ -155,12 +160,15 @@ export async function POST(request: Request) {
   if (contactId) {
     // Récapitulatif des réponses de l'optin, porté par l'opportunité.
     const qualificationRecap = [
+      metier && `Métier : ${metier}`,
       `Type de projet : ${projectLabel ?? "—"}`,
       `Déjà un site / une app : ${hasSite ? HAS_SITE_LABELS[hasSite] : "—"}`,
       `Objectif principal : ${goalLabel ?? "—"}`,
       `Problématique : ${pain ? PAIN_LABELS[pain] : "—"}`,
       `Site actuel : ${currentSite || "—"}`,
-    ].join("\n");
+    ]
+      .filter(Boolean)
+      .join("\n");
 
     // Opportunité (seulement si un pipeline est configuré) avec la qualif en clair.
     const pipelineId = process.env.GHL_PIPELINE_ID;

@@ -2,6 +2,25 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { GhlBooking } from "@/app/_landing/GhlBooking";
+
+// Correspondance des réponses du funnel /ads vers les clés attendues par /api/lead.
+const ADS_HAS_SITE: Record<string, "oui" | "non"> = {
+  "Oui, mais je veux mieux": "oui",
+  "Non, j'en veux un": "non",
+};
+const ADS_GOAL: Record<string, string> = {
+  "Plus de clients": "clients",
+  "Être visible sur Google": "google",
+  "Avoir un site pro": "pro",
+  "Moderniser mon image": "moderniser",
+};
+const ADS_PAIN: Record<string, string> = {
+  "Pas assez de visibilité": "visibilite",
+  "Mon site est trop vieux": "vieux",
+  "Trop cher ailleurs": "trop-cher",
+  "Je ne sais pas par où commencer": "commencer",
+};
 
 // Tokens extraits du CSS live de code-celeste.com :
 // --brand: hsl(263 83% 58%) · --brand-secondary: hsl(239 84% 67%) · --background: hsl(0 0% 4%)
@@ -229,6 +248,7 @@ function AnimNum({
 type ContactData = {
   prenom: string;
   nom: string;
+  email: string;
   telephone: string;
   entreprise: string;
   site: string;
@@ -409,10 +429,12 @@ export default function CodeCelesteLanding() {
   const [contactData, setContactData] = useState<ContactData>({
     prenom: "",
     nom: "",
+    email: "",
     telephone: "",
     entreprise: "",
     site: "",
   });
+  const [sending, setSending] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
@@ -425,6 +447,46 @@ export default function CodeCelesteLanding() {
     setTimeout(() => setFormStep((p) => p + 1), 300);
   };
   const handleSubmit = () => setSubmitted(true);
+
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactData.email.trim());
+  const contactIncomplete =
+    !contactData.prenom.trim() ||
+    !contactData.nom.trim() ||
+    !emailValid ||
+    !contactData.telephone.trim() ||
+    !contactData.entreprise.trim();
+
+  // Envoi du lead à GHL au passage de l'étape coordonnées (avant la prise de RDV),
+  // pour ne pas perdre le prospect s'il ne réserve pas de créneau.
+  const submitLead = async () => {
+    if (contactIncomplete || sending) return;
+    setSending(true);
+    try {
+      await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: contactData.prenom,
+          lastName: contactData.nom,
+          email: contactData.email,
+          phone: contactData.telephone,
+          company: contactData.entreprise,
+          currentSite: contactData.site,
+          projectType: "site-artisan",
+          hasSite: ADS_HAS_SITE[formData.site_existant] ?? null,
+          goal: ADS_GOAL[formData.objectif] ?? null,
+          pain: ADS_PAIN[formData.problematique] ?? null,
+          metier: formData.metier,
+          source: "Landing Ads Code Celeste",
+        }),
+      });
+    } catch {
+      // On ne bloque pas le prospect : la prise de RDV reste la vraie conversion.
+    } finally {
+      setSending(false);
+      setFormStep((p) => p + 1);
+    }
+  };
 
   const step = formSteps[formStep];
   const totalSteps = formSteps.length + 1;
@@ -746,6 +808,12 @@ export default function CodeCelesteLanding() {
                             t: "text",
                           },
                           {
+                            key: "email",
+                            label: "Email *",
+                            ph: "vous@exemple.com",
+                            t: "email",
+                          },
+                          {
                             key: "telephone",
                             label: "Téléphone *",
                             ph: "0692 XX XX XX",
@@ -796,33 +864,25 @@ export default function CodeCelesteLanding() {
                         </div>
                       ))}
                       <button
-                        onClick={() => setFormStep((p) => p + 1)}
-                        disabled={
-                          !contactData.prenom ||
-                          !contactData.nom ||
-                          !contactData.telephone ||
-                          !contactData.entreprise
-                        }
+                        onClick={submitLead}
+                        disabled={contactIncomplete || sending}
                         className="cta-main"
                         style={{
-                          background:
-                            !contactData.prenom ||
-                            !contactData.nom ||
-                            !contactData.telephone ||
-                            !contactData.entreprise
-                              ? "#333"
-                              : `linear-gradient(135deg, ${P}, ${PD})`,
+                          background: contactIncomplete
+                            ? "#333"
+                            : `linear-gradient(135deg, ${P}, ${PD})`,
                           color: "#fff",
                           border: "none",
                           padding: "14px",
                           borderRadius: 11,
                           fontWeight: 700,
                           fontSize: 15,
-                          cursor: "pointer",
+                          cursor: sending ? "wait" : "pointer",
                           marginTop: 4,
+                          opacity: sending ? 0.7 : 1,
                         }}
                       >
-                        Continuer →
+                        {sending ? "Envoi…" : "Continuer →"}
                       </button>
                     </div>
                   </>
@@ -908,14 +968,13 @@ export default function CodeCelesteLanding() {
                   style={{
                     background: "rgba(124,58,237,0.05)",
                     borderRadius: 12,
-                    padding: 32,
-                    border: "1px dashed rgba(124,58,237,0.3)",
+                    border: "1px solid rgba(124,58,237,0.3)",
+                    overflow: "hidden",
+                    height: 620,
                     marginBottom: 14,
                   }}
                 >
-                  <p style={{ color: MUT, fontSize: 13 }}>
-                    📅 Calendrier GHL ici
-                  </p>
+                  <GhlBooking />
                 </div>
                 <p style={{ fontSize: 12, color: MUT, marginBottom: 16 }}>
                   📞 Appel gratuit • Durée : 15 minutes • Aucun engagement
