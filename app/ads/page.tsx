@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { GhlBooking } from "@/app/_landing/GhlBooking";
+import { MetaPixel, newEventId, trackMeta } from "@/components/meta-pixel";
 
 // Correspondance des réponses du funnel /ads vers les clés attendues par /api/lead.
 const ADS_HAS_SITE: Record<string, "oui" | "non"> = {
@@ -461,6 +462,9 @@ export default function CodeCelesteLanding() {
   const submitLead = async () => {
     if (contactIncomplete || sending) return;
     setSending(true);
+    // Événement Lead : même eventId côté Pixel (ici) et CAPI (route) → déduplication.
+    const eventId = newEventId();
+    trackMeta("Lead", eventId);
     try {
       await fetch("/api/lead", {
         method: "POST",
@@ -478,6 +482,11 @@ export default function CodeCelesteLanding() {
           pain: ADS_PAIN[formData.problematique] ?? null,
           metier: formData.metier,
           source: "Landing Ads Code Celeste",
+          meta: {
+            eventId,
+            eventSourceUrl:
+              typeof window !== "undefined" ? window.location.href : undefined,
+          },
         }),
       });
     } catch {
@@ -514,6 +523,7 @@ export default function CodeCelesteLanding() {
       }}
     >
       <style>{css}</style>
+      <MetaPixel />
 
       {/* Éléments graphiques du site live : grille fixe 80px masquée + halo radial brand */}
       <div

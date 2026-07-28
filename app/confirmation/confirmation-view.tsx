@@ -1,8 +1,10 @@
 "use client";
 
 import { CustomIcon } from "@/components/icons/CustomIcon";
+import { MetaPixel, newEventId, trackMeta } from "@/components/meta-pixel";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import {
   ArrowRight,
   CalendarCheck,
@@ -32,8 +34,20 @@ const steps: { icon: ReactNode; title: string; desc: string }[] = [
 ];
 
 export function ConfirmationView() {
+  // Conversion "Schedule" (RDV pris) : Pixel + CAPI avec le même eventId (dédup).
+  useEffect(() => {
+    const eventId = newEventId();
+    trackMeta("Schedule", eventId);
+    fetch("/api/meta/schedule", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ eventId, eventSourceUrl: window.location.href }),
+    }).catch(() => {});
+  }, []);
+
   return (
     <main className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-background px-6 py-16">
+      <MetaPixel />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,hsl(var(--brand)/0.18),transparent_60%)]"

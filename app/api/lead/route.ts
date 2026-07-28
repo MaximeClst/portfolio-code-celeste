@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { readCookie, sendCapiEvent } from "@/lib/meta-capi";
 
 const GHL_BASE = "https://services.leadconnectorhq.com";
 const GHL_VERSION = "2021-07-28";
@@ -62,6 +63,7 @@ type LeadBody = {
   pain?: unknown;
   metier?: unknown;
   source?: unknown;
+  meta?: { eventId?: unknown; eventSourceUrl?: unknown };
 };
 
 const str = (v: unknown) => (typeof v === "string" ? v.trim() : "");
@@ -216,6 +218,32 @@ export async function POST(request: Request) {
         console.error("[lead] Échec création opportunité GHL", err);
       }
     }
+  }
+
+  // Événement "Lead" côté serveur (CAPI), dédupliqué avec le Pixel via event_id.
+  // Déclenché uniquement quand le client fournit un eventId (funnel /ads).
+  const eventId =
+    typeof body.meta?.eventId === "string" ? body.meta.eventId : "";
+  if (eventId) {
+    const cookie = request.headers.get("cookie");
+    await sendCapiEvent({
+      eventName: "Lead",
+      eventId,
+      eventSourceUrl:
+        typeof body.meta?.eventSourceUrl === "string"
+          ? body.meta.eventSourceUrl
+          : undefined,
+      userData: {
+        email,
+        phone: normalizePhone(phone),
+        firstName,
+        lastName,
+      },
+      clientIp: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim(),
+      userAgent: request.headers.get("user-agent") ?? undefined,
+      fbp: readCookie(cookie, "_fbp"),
+      fbc: readCookie(cookie, "_fbc"),
+    });
   }
 
   return NextResponse.json({ ok: true, contactId });
