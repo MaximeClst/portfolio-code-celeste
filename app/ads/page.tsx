@@ -32,13 +32,11 @@ const P = "#7C3AED",
   PL = "#A78BFA",
   PD = "#6366F1",
   BG = "#0a0a0a",
-  BG2 = "#101010",
   CARD = "#141414",
   TEXT = "#fafafa",
   MUT = "#a3a3a3",
   RED = "#ef4444",
-  GRN = "#00d294",
-  BORD = "rgba(255,255,255,0.10)";
+  GRN = "#00d294";
 
 /* ── Reusable Icons ── */
 const LogoIcon = ({ size = 32 }) => (
@@ -976,11 +974,11 @@ export default function CodeCelesteLanding() {
                 </div>
                 <div
                   style={{
+                    height: 640,
+                    overflow: "hidden",
                     background: "rgba(124,58,237,0.05)",
                     borderRadius: 12,
                     border: "1px solid rgba(124,58,237,0.3)",
-                    overflow: "hidden",
-                    height: 620,
                     marginBottom: 14,
                   }}
                 >
@@ -1004,7 +1002,7 @@ export default function CodeCelesteLanding() {
                     cursor: "pointer",
                   }}
                 >
-                  Confirmer mon RDV →
+                  J&apos;ai réservé mon créneau →
                 </button>
                 <button
                   onClick={() => setFormStep((p) => p - 1)}
