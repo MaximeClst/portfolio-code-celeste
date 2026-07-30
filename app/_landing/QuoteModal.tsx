@@ -43,8 +43,7 @@ type Pain =
   | "commencer";
 
 type Contact = {
-  firstName: string;
-  lastName: string;
+  fullName: string;
   email: string;
   phone: string;
   company: string;
@@ -67,8 +66,7 @@ type Ctx = {
 const QuoteModalContext = createContext<Ctx | null>(null);
 
 const initialContact: Contact = {
-  firstName: "",
-  lastName: "",
+  fullName: "",
   email: "",
   phone: "",
   company: "",
@@ -97,7 +95,7 @@ export function QuoteModalProvider({ children }: { children: ReactNode }) {
   const [form, setForm] = useState<FormState>(initialForm);
 
   const open = useCallback((preset?: Partial<FormState>) => {
-    setForm((prev) => ({ ...initialForm, ...preset, contact: prev.contact.firstName ? prev.contact : initialContact }));
+    setForm((prev) => ({ ...initialForm, ...preset, contact: prev.contact.fullName ? prev.contact : initialContact }));
     setStep(1);
     setIsOpen(true);
   }, []);
@@ -483,8 +481,7 @@ function StepContact({
   const contact = form.contact;
   const [submitting, setSubmitting] = useState(false);
   const isValid =
-    contact.firstName.trim() &&
-    contact.lastName.trim() &&
+    contact.fullName.trim() &&
     contact.email.trim() &&
     contact.phone.trim() &&
     contact.company.trim();
@@ -493,12 +490,21 @@ function StepContact({
     e.preventDefault();
     if (!isValid || submitting) return;
     setSubmitting(true);
+    // Découpe « Nom complet » en prénom / nom pour GHL (1er mot = prénom).
+    const parts = contact.fullName.trim().split(/\s+/);
+    const firstName = parts.shift() ?? "";
+    const lastName = parts.join(" ");
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...contact,
+          firstName,
+          lastName,
+          email: contact.email,
+          phone: contact.phone,
+          company: contact.company,
+          currentSite: contact.currentSite,
           projectType: form.projectType,
           hasSite: form.hasSite,
           goal: form.goal,
@@ -520,20 +526,13 @@ function StepContact({
       <StepHeading title="Vos coordonnées" />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field
-          id="firstName"
-          label="Prénom"
+          id="fullName"
+          label="Nom complet"
           required
-          value={contact.firstName}
-          onChange={(v) => onChange({ ...contact, firstName: v })}
-          placeholder="Jean-Pierre"
-        />
-        <Field
-          id="lastName"
-          label="Nom"
-          required
-          value={contact.lastName}
-          onChange={(v) => onChange({ ...contact, lastName: v })}
-          placeholder="Dupont"
+          value={contact.fullName}
+          onChange={(v) => onChange({ ...contact, fullName: v })}
+          placeholder="Jean-Pierre Dupont"
+          className="sm:col-span-2"
         />
         <Field
           id="email"

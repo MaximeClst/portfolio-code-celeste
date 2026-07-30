@@ -18,16 +18,21 @@ export function GhlBooking() {
     document.body.appendChild(s);
   }, []);
 
-  // minHeight garantit que tout le formulaire GHL (dont l'étape coordonnées, la
-  // plus haute) est rendu même si form_embed.js n'ajuste pas la hauteur : le
-  // conteneur parent (scrollable) prend alors le relais. Pas de scrolling="no"
-  // qui piégeait le contenu dans une iframe non scrollable.
+  // form_embed.js ajuste la hauteur au contenu (pas d'espace vide superflu). Le
+  // minHeight sert de plancher anti-collapse au chargement ; sans scrolling="no",
+  // l'iframe garde un scroll natif de secours si le script n'a pas (encore) ajusté.
   return (
     <iframe
       src={`https://api.leadconnectorhq.com/widget/booking/${CALENDAR_ID}`}
       title="Réserver un appel découverte avec Maxime"
       id={`${CALENDAR_ID}_booking`}
-      style={{ width: "100%", minHeight: 820, border: 0, background: "transparent" }}
+      style={{
+        width: "100%",
+        minHeight: 560,
+        border: 0,
+        background: "transparent",
+        display: "block",
+      }}
     />
   );
 }

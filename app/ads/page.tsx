@@ -245,8 +245,7 @@ function AnimNum({
 }
 
 type ContactData = {
-  prenom: string;
-  nom: string;
+  nomComplet: string;
   email: string;
   telephone: string;
   entreprise: string;
@@ -426,8 +425,7 @@ export default function CodeCelesteLanding() {
   const [formStep, setFormStep] = useState(0);
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [contactData, setContactData] = useState<ContactData>({
-    prenom: "",
-    nom: "",
+    nomComplet: "",
     email: "",
     telephone: "",
     entreprise: "",
@@ -435,7 +433,6 @@ export default function CodeCelesteLanding() {
   });
   const [sending, setSending] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [submitted, setSubmitted] = useState(false);
 
   const openModal = () => {
     setShowForm(true);
@@ -445,12 +442,9 @@ export default function CodeCelesteLanding() {
     setFormData((p) => ({ ...p, [k]: v }));
     setTimeout(() => setFormStep((p) => p + 1), 300);
   };
-  const handleSubmit = () => setSubmitted(true);
-
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactData.email.trim());
   const contactIncomplete =
-    !contactData.prenom.trim() ||
-    !contactData.nom.trim() ||
+    !contactData.nomComplet.trim() ||
     !emailValid ||
     !contactData.telephone.trim() ||
     !contactData.entreprise.trim();
@@ -463,13 +457,17 @@ export default function CodeCelesteLanding() {
     // Événement Lead : même eventId côté Pixel (ici) et CAPI (route) → déduplication.
     const eventId = newEventId();
     trackMeta("Lead", eventId);
+    // Découpe « Nom complet » en prénom / nom pour GHL (1er mot = prénom).
+    const parts = contactData.nomComplet.trim().split(/\s+/);
+    const firstName = parts.shift() ?? "";
+    const lastName = parts.join(" ");
     try {
       await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          firstName: contactData.prenom,
-          lastName: contactData.nom,
+          firstName,
+          lastName,
           email: contactData.email,
           phone: contactData.telephone,
           company: contactData.entreprise,
@@ -497,7 +495,8 @@ export default function CodeCelesteLanding() {
 
   const step = formSteps[formStep];
   const totalSteps = formSteps.length + 1;
-  const pct = submitted ? 100 : Math.round((formStep / totalSteps) * 100);
+  const isCalendar = formStep >= formSteps.length; // dernière étape = calendrier
+  const pct = Math.round((formStep / totalSteps) * 100);
   const inp: React.CSSProperties = {
     width: "100%",
     padding: "13px 16px",
@@ -568,7 +567,7 @@ export default function CodeCelesteLanding() {
           }}
         >
           <div
-            onClick={() => !submitted && setShowForm(false)}
+            onClick={() => setShowForm(false)}
             style={{
               position: "absolute",
               inset: 0,
@@ -583,12 +582,13 @@ export default function CodeCelesteLanding() {
               background: CARD,
               borderRadius: 24,
               padding: "36px 28px",
-              maxWidth: 500,
+              maxWidth: isCalendar ? 640 : 500,
               width: "100%",
               border: `2px solid ${P}44`,
               boxShadow: `0 0 100px ${P}22`,
               maxHeight: "90vh",
               overflowY: "auto",
+              transition: "max-width 0.3s ease",
             }}
           >
             <button
@@ -606,16 +606,15 @@ export default function CodeCelesteLanding() {
             >
               ✕
             </button>
-            {!submitted && (
-              <div style={{ marginBottom: 22 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: 6,
-                  }}
-                >
+            <div style={{ marginBottom: 22 }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  marginBottom: 6,
+                }}
+              >
                   <span style={{ fontSize: 12, color: MUT, fontWeight: 600 }}>
                     Étape {Math.min(formStep + 1, totalSteps)} / {totalSteps}
                   </span>
@@ -643,98 +642,7 @@ export default function CodeCelesteLanding() {
                   />
                 </div>
               </div>
-            )}
-            {submitted ? (
-              <div style={{ textAlign: "center", padding: "20px 0" }}>
-                <div style={{ fontSize: 52, marginBottom: 12 }}>✅</div>
-                <h3 style={{ fontSize: 21, fontWeight: 700, marginBottom: 8 }}>
-                  Votre appel est confirmé !
-                </h3>
-                <p
-                  style={{
-                    color: MUT,
-                    fontSize: 14,
-                    lineHeight: 1.6,
-                    marginBottom: 18,
-                  }}
-                >
-                  Merci pour votre réservation. Maxime vous appellera à la date
-                  et à l'heure choisies.
-                </p>
-                <div
-                  style={{
-                    background: "rgba(124,58,237,0.08)",
-                    borderRadius: 12,
-                    padding: 16,
-                    textAlign: "left",
-                    marginBottom: 16,
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: 13,
-                      color: TEXT,
-                      fontWeight: 600,
-                      margin: "0 0 8px",
-                    }}
-                  >
-                    Pendant cet échange de 15 minutes, nous verrons ensemble :
-                  </p>
-                  {[
-                    "votre activité",
-                    "vos objectifs",
-                    "à quoi pourrait ressembler votre futur site",
-                  ].map((s, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 8,
-                        fontSize: 13,
-                        color: MUT,
-                        padding: "4px 0",
-                      }}
-                    >
-                      <Check />
-                      <span>{s}</span>
-                    </div>
-                  ))}
-                </div>
-                <p
-                  style={{
-                    color: MUT,
-                    fontSize: 13,
-                    lineHeight: 1.6,
-                    marginBottom: 4,
-                  }}
-                >
-                  À la suite de l'appel, nous préparerons votre première page
-                  personnalisée,{" "}
-                  <strong style={{ color: PL }}>
-                    offerte et sans engagement
-                  </strong>
-                  .
-                </p>
-                <button
-                  onClick={() => setShowForm(false)}
-                  className="cta-main"
-                  style={{
-                    marginTop: 20,
-                    background: P,
-                    color: "#fff",
-                    border: "none",
-                    padding: "12px 28px",
-                    borderRadius: 10,
-                    fontWeight: 700,
-                    fontSize: 14,
-                    cursor: "pointer",
-                  }}
-                >
-                  Fermer
-                </button>
-              </div>
-            ) : step ? (
+            {step ? (
               <>
                 {step.type === "choice" ? (
                   <>
@@ -804,15 +712,9 @@ export default function CodeCelesteLanding() {
                       {(
                         [
                           {
-                            key: "prenom",
-                            label: "Prénom *",
-                            ph: "Jean-Pierre",
-                            t: "text",
-                          },
-                          {
-                            key: "nom",
-                            label: "Nom *",
-                            ph: "Dupont",
+                            key: "nomComplet",
+                            label: "Nom complet *",
+                            ph: "Jean-Pierre Dupont",
                             t: "text",
                           },
                           {
@@ -977,35 +879,18 @@ export default function CodeCelesteLanding() {
                     background: "rgba(124,58,237,0.05)",
                     borderRadius: 12,
                     border: "1px solid rgba(124,58,237,0.3)",
-                    overflowY: "auto",
-                    WebkitOverflowScrolling: "touch",
-                    overscrollBehavior: "contain",
-                    maxHeight: "65vh",
+                    overflow: "hidden",
                     marginBottom: 14,
                   }}
                 >
                   <GhlBooking />
                 </div>
-                <p style={{ fontSize: 12, color: MUT, marginBottom: 16 }}>
+                <p style={{ fontSize: 12, color: MUT, marginBottom: 4 }}>
                   📞 Appel gratuit • Durée : 15 minutes • Aucun engagement
                 </p>
-                <button
-                  onClick={handleSubmit}
-                  className="cta-main"
-                  style={{
-                    width: "100%",
-                    background: `linear-gradient(135deg, ${P}, ${PD})`,
-                    color: "#fff",
-                    border: "none",
-                    padding: "14px",
-                    borderRadius: 11,
-                    fontWeight: 700,
-                    fontSize: 15,
-                    cursor: "pointer",
-                  }}
-                >
-                  J&apos;ai réservé mon créneau →
-                </button>
+                <p style={{ fontSize: 12, color: MUT, marginBottom: 16 }}>
+                  Une fois le créneau réservé, vous êtes redirigé automatiquement.
+                </p>
                 <button
                   onClick={() => setFormStep((p) => p - 1)}
                   style={{
@@ -1021,19 +906,17 @@ export default function CodeCelesteLanding() {
                 </button>
               </div>
             )}
-            {!submitted && (
-              <p
-                style={{
-                  textAlign: "center",
-                  fontSize: 11,
-                  color: MUT,
-                  marginTop: 16,
-                  marginBottom: 0,
-                }}
-              >
-                🔒 Données confidentielles. Zéro spam.
-              </p>
-            )}
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: 11,
+                color: MUT,
+                marginTop: 16,
+                marginBottom: 0,
+              }}
+            >
+              🔒 Données confidentielles. Zéro spam.
+            </p>
           </div>
         </div>
       )}

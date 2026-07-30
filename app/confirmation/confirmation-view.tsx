@@ -36,6 +36,19 @@ const steps: { icon: ReactNode; title: string; desc: string }[] = [
 export function ConfirmationView() {
   // Conversion "Schedule" (RDV pris) : Pixel + CAPI avec le même eventId (dédup).
   useEffect(() => {
+    // Après réservation, le calendrier GHL redirige vers /confirmation — parfois
+    // à l'intérieur de son iframe. Comme /confirmation est sur notre domaine
+    // (même origine que la page parente), on fait sortir la fenêtre parente pour
+    // que la redirection soit plein écran et automatique, sans clic.
+    if (window.top && window.top !== window.self) {
+      try {
+        window.top.location.href = window.location.href;
+        return;
+      } catch {
+        // même origine attendue : si jamais bloqué, on continue sur place
+      }
+    }
+
     const eventId = newEventId();
     trackMeta("Schedule", eventId);
     fetch("/api/meta/schedule", {

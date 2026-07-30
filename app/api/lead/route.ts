@@ -109,8 +109,11 @@ export async function POST(request: Request) {
   const phone = str(body.phone);
   const company = str(body.company);
   const currentSite = str(body.currentSite);
+  const fullName = [firstName, lastName].filter(Boolean).join(" ");
 
-  if (!firstName || !lastName || !email || !phone || !company) {
+  // lastName optionnel : le champ nom du funnel est unifié (« Nom complet »), le
+  // découpage prénom/nom peut ne donner qu'un seul mot.
+  if (!firstName || !email || !phone || !company) {
     return NextResponse.json({ error: "Champs obligatoires manquants" }, { status: 400 });
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -157,7 +160,7 @@ export async function POST(request: Request) {
         locationId,
         firstName,
         lastName,
-        name: `${firstName} ${lastName}`,
+        name: fullName,
         email,
         phone: normalizePhone(phone),
         companyName: company,
@@ -206,7 +209,7 @@ export async function POST(request: Request) {
             locationId,
             pipelineId,
             pipelineStageId: stageId,
-            name: `${firstName} ${lastName} - ${company.toUpperCase()}`,
+            name: `${fullName} - ${company.toUpperCase()}`,
             status: "open",
             contactId,
             customFields: [
