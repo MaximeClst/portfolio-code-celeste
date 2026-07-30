@@ -643,7 +643,7 @@ function StepBooking({ onConfirm }: { onConfirm: () => void }) {
         subtitle="Appel découverte gratuit avec Maxime"
       />
       <div className="overflow-hidden rounded-xl border border-dashed border-brand/40 bg-white/[0.02]">
-        <div className="h-[640px] w-full overflow-y-auto">
+        <div className="max-h-[65vh] w-full overflow-y-auto overscroll-contain">
           <GhlBooking />
         </div>
       </div>

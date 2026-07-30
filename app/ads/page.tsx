@@ -974,11 +974,13 @@ export default function CodeCelesteLanding() {
                 </div>
                 <div
                   style={{
-                    height: 640,
-                    overflow: "hidden",
                     background: "rgba(124,58,237,0.05)",
                     borderRadius: 12,
                     border: "1px solid rgba(124,58,237,0.3)",
+                    overflowY: "auto",
+                    WebkitOverflowScrolling: "touch",
+                    overscrollBehavior: "contain",
+                    maxHeight: "65vh",
                     marginBottom: 14,
                   }}
                 >
