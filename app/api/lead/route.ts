@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { readCookie, sendCapiEvent } from "@/lib/meta-capi";
+import { sendProspectNotification } from "@/lib/slack";
 
 const GHL_BASE = "https://services.leadconnectorhq.com";
 const GHL_VERSION = "2021-07-28";
@@ -222,6 +223,21 @@ export async function POST(request: Request) {
       }
     }
   }
+
+  // Notification Slack (#prospects-code) en identifiant Maxime — non bloquant.
+  await sendProspectNotification({
+    fullName,
+    email,
+    phone,
+    company,
+    currentSite: currentSite || undefined,
+    metier: metier || undefined,
+    projet: projectLabel,
+    dejaSite: hasSite ? HAS_SITE_LABELS[hasSite] : undefined,
+    objectif: goalLabel,
+    probleme: pain ? PAIN_LABELS[pain] : undefined,
+    source,
+  });
 
   // Événement "Lead" côté serveur (CAPI), dédupliqué avec le Pixel via event_id.
   // Déclenché uniquement quand le client fournit un eventId (funnel /ads).
