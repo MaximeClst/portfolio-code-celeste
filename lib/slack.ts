@@ -1,7 +1,25 @@
-// Notification Slack d'un nouveau prospect (canal #prospects-code via Incoming Webhook).
-// No-op si le webhook n'est pas configuré ; ne jette jamais (ne doit pas casser le lead).
+// Notifications Slack (Incoming Webhooks). No-op si le webhook n'est pas configuré ;
+// ne jettent jamais (le tracking ne doit pas casser le flux métier).
 
 const MAXIME_SLACK_ID = "U08NPHMEL8K";
+
+const line = (label: string, value?: string) =>
+  value ? `*${label} :* ${value}` : null;
+
+async function postSlack(url: string, payload: unknown) {
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      console.error("[slack] échec notification", res.status, await res.text());
+    }
+  } catch (err) {
+    console.error("[slack] erreur réseau", err);
+  }
+}
 
 export type ProspectNotification = {
   fullName: string;
@@ -17,12 +35,10 @@ export type ProspectNotification = {
   source: string;
 };
 
+// Canal #prospects-code : nouveau prospect dans l'optin.
 export async function sendProspectNotification(p: ProspectNotification) {
   const url = process.env.SLACK_WEBHOOK_URL;
   if (!url) return;
-
-  const line = (label: string, value?: string) =>
-    value ? `*${label} :* ${value}` : null;
 
   const details = [
     line("Nom", p.fullName),
@@ -40,8 +56,7 @@ export async function sendProspectNotification(p: ProspectNotification) {
     .filter(Boolean)
     .join("\n");
 
-  const body = {
-    // `text` sert de repli (notification push mobile / clients sans Block Kit).
+  await postSlack(url, {
     text: `🎯 Nouveau prospect : ${p.fullName} — ${p.company}`,
     blocks: [
       {
@@ -57,18 +72,52 @@ export async function sendProspectNotification(p: ProspectNotification) {
       },
       { type: "section", text: { type: "mrkdwn", text: details } },
     ],
-  };
+  });
+}
 
-  try {
-    const res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-    });
-    if (!res.ok) {
-      console.error("[slack] échec notification", res.status, await res.text());
-    }
-  } catch (err) {
-    console.error("[slack] erreur réseau", err);
-  }
+export type AppointmentNotification = {
+  fullName?: string;
+  email?: string;
+  phone?: string;
+  startsAt?: string; // créneau déjà formaté (texte)
+  title?: string; // nom du calendrier / type de RDV
+  status?: string;
+};
+
+// Canal #rendez-vous-code : nouveau RDV planifié sur l'agenda GHL.
+export async function sendAppointmentNotification(a: AppointmentNotification) {
+  const url = process.env.SLACK_RDV_WEBHOOK_URL;
+  if (!url) return;
+
+  const details =
+    [
+      line("Contact", a.fullName),
+      line("Email", a.email),
+      line("Téléphone", a.phone),
+      line("Créneau", a.startsAt),
+      line("Type", a.title),
+      line("Statut", a.status),
+    ]
+      .filter(Boolean)
+      .join("\n") || "Détails indisponibles.";
+
+  await postSlack(url, {
+    text: `📅 Nouveau rendez-vous${a.fullName ? ` : ${a.fullName}` : ""}${
+      a.startsAt ? ` — ${a.startsAt}` : ""
+    }`,
+    blocks: [
+      {
+        type: "header",
+        text: { type: "plain_text", text: "📅 Nouveau rendez-vous", emoji: true },
+      },
+      {
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `<@${MAXIME_SLACK_ID}> un appel vient d'être réservé 👇`,
+        },
+      },
+      { type: "section", text: { type: "mrkdwn", text: details } },
+    ],
+  });
 }
