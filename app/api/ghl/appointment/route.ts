@@ -10,6 +10,8 @@ const GHL_BASE = "https://services.leadconnectorhq.com";
 const asObj = (v: unknown): Record<string, unknown> =>
   v && typeof v === "object" ? (v as Record<string, unknown>) : {};
 
+const asArray = (v: unknown): unknown[] => (Array.isArray(v) ? v : []);
+
 const pick = (...vals: unknown[]): string | undefined => {
   for (const v of vals) {
     if (typeof v === "string" && v.trim()) return v.trim();
@@ -100,6 +102,43 @@ async function fetchLatestAppointment(
   }
 }
 
+// Idempotence : on marque le contact d'un tag propre au RDV. Un 2e webhook pour
+// le même RDV (workflow GHL qui refire sur booked puis confirmed, renvois…) est
+// alors ignoré → pas de doublon Slack.
+function notifTag(appointmentId: string) {
+  return `rdv-slack-${appointmentId}`.toLowerCase();
+}
+
+async function alreadyNotified(contactId: string, appointmentId: string) {
+  if (!process.env.GHL_API_TOKEN) return false;
+  try {
+    const res = await fetch(`${GHL_BASE}/contacts/${contactId}`, {
+      headers: ghlHeaders("2021-07-28"),
+    });
+    if (!res.ok) return false;
+    const data = (await res.json()) as { contact?: unknown };
+    const tags = asArray(asObj(data.contact).tags).map((t) =>
+      String(t).toLowerCase()
+    );
+    return tags.includes(notifTag(appointmentId));
+  } catch {
+    return false;
+  }
+}
+
+async function markNotified(contactId: string, appointmentId: string) {
+  if (!process.env.GHL_API_TOKEN) return;
+  try {
+    await fetch(`${GHL_BASE}/contacts/${contactId}/tags`, {
+      method: "POST",
+      headers: { ...ghlHeaders("2021-07-28"), "Content-Type": "application/json" },
+      body: JSON.stringify({ tags: [notifTag(appointmentId)] }),
+    });
+  } catch {
+    // best-effort : si le marquage échoue, on notifie quand même
+  }
+}
+
 export async function POST(request: Request) {
   // Protection optionnelle : secret en query (?secret=...), configuré dans l'URL
   // du webhook du workflow GHL.
@@ -132,10 +171,12 @@ export async function POST(request: Request) {
   let meetLink: string | undefined;
   let status: string | undefined;
 
+  let appointmentId: string | undefined;
   const contactId = await resolveContactId(body);
   if (contactId) {
     const appt = await fetchLatestAppointment(contactId);
     if (appt) {
+      appointmentId = pick(appt.id);
       const form = asObj(asObj(appt.appointmentMeta).defaultFormDetails);
       const composed = [pick(form.firstName), pick(form.lastName)]
         .filter(Boolean)
@@ -156,6 +197,14 @@ export async function POST(request: Request) {
     }
   }
 
+  // Anti-doublon : si ce RDV a déjà été notifié, on s'arrête là.
+  if (contactId && appointmentId) {
+    if (await alreadyNotified(contactId, appointmentId)) {
+      return NextResponse.json({ ok: true, notified: false, reason: "duplicate" });
+    }
+    await markNotified(contactId, appointmentId);
+  }
+
   await sendAppointmentNotification({
     fullName,
     email,
@@ -166,5 +215,5 @@ export async function POST(request: Request) {
     status,
   });
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, notified: true });
 }
