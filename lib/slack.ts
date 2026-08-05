@@ -79,8 +79,9 @@ export type AppointmentNotification = {
   fullName?: string;
   email?: string;
   phone?: string;
-  startsAt?: string; // créneau déjà formaté (texte)
-  title?: string; // nom du calendrier / type de RDV
+  startsAt?: string; // créneau déjà formaté (texte, heure Réunion)
+  title?: string; // type de RDV
+  meetLink?: string; // lien visio (Google Meet)
   status?: string;
 };
 
@@ -92,10 +93,11 @@ export async function sendAppointmentNotification(a: AppointmentNotification) {
   const details =
     [
       line("Contact", a.fullName),
-      line("Email", a.email),
-      line("Téléphone", a.phone),
       line("Créneau", a.startsAt),
       line("Type", a.title),
+      line("Email", a.email),
+      line("Téléphone", a.phone),
+      line("Lien visio", a.meetLink),
       line("Statut", a.status),
     ]
       .filter(Boolean)
