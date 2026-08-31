@@ -21,7 +21,7 @@ const offers: Offer[] = [
     description:
       "Une application iOS & Android fonctionnelle pour tester votre marché avant d'investir davantage.",
     price: "À partir de 2 000€",
-    meta: ["Livré en 7 jours", "Maintenance 97€/mois"],
+    meta: ["Livré en 7 jours", "Maintenance 120€/mois"],
     highlight: true,
   },
   {
@@ -61,8 +61,8 @@ export default function Feature() {
             Ce que je construis
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Trois formats clairs, prix fixes ou sur devis. Vous choisissez,
-            on démarre.
+            Trois formats clairs, prix fixes ou sur devis. Vous choisissez, on
+            démarre.
           </p>
         </motion.div>
 
@@ -98,7 +98,9 @@ const OfferCard = ({
 }: Offer) => (
   <Card
     className={`group relative h-full p-6 sm:p-8 bg-card border-border/80 hover:border-brand/50 transition-colors ${
-      highlight ? "border-brand/40 shadow-[0_0_0_1px_hsl(var(--brand)/0.15)]" : ""
+      highlight
+        ? "border-brand/40 shadow-[0_0_0_1px_hsl(var(--brand)/0.15)]"
+        : ""
     }`}
   >
     {highlight ? (
