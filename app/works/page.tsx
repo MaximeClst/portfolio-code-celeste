@@ -74,6 +74,13 @@ export default function WorksPage() {
 
           <div className="grid gap-6 sm:grid-cols-2">
             <WorkCard
+              title="Mossly"
+              description="Application mobile de suivi d’hydratation gamifié : objectifs quotidiens, statistiques, séries et univers végétal évolutif qui grandit avec vos habitudes."
+              image="/mossly-icon.png"
+              badge="mobile"
+            />
+
+            <WorkCard
               title="Budget Copain"
               description="Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers."
               image="/adaptive-icon.png"
