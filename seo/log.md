@@ -4,4 +4,4 @@
 
 - 2026-10-30 — Clarification propriétaire Smart Power System : coaching sportif et force athlétique, domaine https://smart-power-system.fr. Description du portfolio, fiche projet, bilan attribué au témoignage et libellé /ads harmonisés. Validations locales et production réussies ; publié dans `5d4df09` (Vercel réussi), trois URL vérifiées 200. Voir `reports/2026-10-30-smart-power-system.md`.
 
-- 2026-10-30 — Partage /ads : ajout de l’image du logo Code Céleste (Open Graph et Twitter) ; auparavant aucune image déclarée et un portrait client apparaissait dans l’aperçu transmis par le propriétaire. Lint, build, TypeScript et contrôles locaux des réponses aux user-agents sociaux réussis. Publication en cours.
+- 2026-10-30 — Partage /ads : ajout de l’image du logo Code Céleste (Open Graph et Twitter) ; auparavant aucune image déclarée et un portrait client apparaissait dans l’aperçu transmis par le propriétaire. Lint, build, TypeScript et contrôles des réponses aux user-agents sociaux réussis en local et en production. Publié dans `04aa673`, Vercel réussi.
