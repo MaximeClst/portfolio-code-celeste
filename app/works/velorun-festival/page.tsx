@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
@@ -5,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "../../_landing/Footer";
 import { Header } from "../../_landing/Header";
+
+export const metadata = pageMetadata("Site VELORUN Festival | Réalisation Code Céleste", "Découvrez le site du VELORUN Festival à La Réunion réalisé par Code Céleste : présentation de l’événement, parcours et informations pratiques.", "/works/velorun-festival");
 
 export default function VeloRunFestivalPage() {
   return (

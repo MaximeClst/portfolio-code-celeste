@@ -1,0 +1,321 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "final_url": "https://code-celeste.com/",
+    "seconds": 1.08,
+    "title": "Code Celeste",
+    "description": [
+      "Créateur de sites web et applications mobiles pour artisans et entrepreneurs à La Réunion."
+    ],
+    "canonical": [],
+    "robots": [],
+    "h1": [
+      "Vous avez une idée. On la livre en 7 jours."
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "/works",
+      "/works/budget-copain",
+      "https://www.scmoi.re/",
+      "https://www.anthonyceleste-coaching.re/",
+      "/works/smart-power-system",
+      "https://g.page/r/CVMUT2Y0DghoEAE/review",
+      "mailto:maxime@code-celeste.com",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "process",
+      "comparatif",
+      "realisations",
+      "testimonial",
+      "offres",
+      "contact",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works",
+    "seconds": 1.37,
+    "title": "Code Celeste",
+    "description": [
+      "Créateur de sites web et applications mobiles pour artisans et entrepreneurs à La Réunion."
+    ],
+    "canonical": [],
+    "robots": [],
+    "h1": [
+      "Mes Projets Web",
+      "Mes Projets Mobiles"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/",
+      "/works/smart-power-system",
+      "https://smart-power-system.fr",
+      "/works/velorun-festival",
+      "https://velorunfestival.re",
+      "https://www.scmoi.re/",
+      "https://www.anthonyceleste-coaching.re/",
+      "/works/budget-copain",
+      "https://www.budgetcopain.com/",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works/budget-copain",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works/budget-copain",
+    "seconds": 1.26,
+    "title": "Code Celeste",
+    "description": [
+      "Créateur de sites web et applications mobiles pour artisans et entrepreneurs à La Réunion."
+    ],
+    "canonical": [],
+    "robots": [],
+    "h1": [
+      "Budget Copain"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "https://www.budgetcopain.com/",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works/smart-power-system",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works/smart-power-system",
+    "seconds": 1.43,
+    "title": "Code Celeste",
+    "description": [
+      "Créateur de sites web et applications mobiles pour artisans et entrepreneurs à La Réunion."
+    ],
+    "canonical": [],
+    "robots": [],
+    "h1": [
+      "Smart Power System"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "https://smartpowersystem.com",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works/velorun-festival",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works/velorun-festival",
+    "seconds": 1.3,
+    "title": "Code Celeste",
+    "description": [
+      "Créateur de sites web et applications mobiles pour artisans et entrepreneurs à La Réunion."
+    ],
+    "canonical": [],
+    "robots": [],
+    "h1": [
+      "VELORUN Festival"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "https://velorunfestival.re",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/mentions-legales",
+    "status": 200,
+    "final_url": "https://code-celeste.com/mentions-legales",
+    "seconds": 0.46,
+    "title": "Mentions légales — Code Celeste",
+    "description": [
+      "Mentions légales, conditions d'utilisation, propriété intellectuelle et politique de confidentialité."
+    ],
+    "canonical": [],
+    "robots": [],
+    "h1": [
+      "Mentions légales"
+    ],
+    "structured": 0,
+    "links": [
+      "mailto:maxime@code-celeste.com",
+      "https://vercel.com"
+    ],
+    "ids": [
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/ads",
+    "status": 200,
+    "final_url": "https://code-celeste.com/ads",
+    "seconds": 0.47,
+    "title": "Code Celeste",
+    "description": [
+      "Créateur de sites web et applications mobiles pour artisans et entrepreneurs à La Réunion."
+    ],
+    "canonical": [],
+    "robots": [],
+    "h1": [
+      "Avant d'acheter un site, voyez-le."
+    ],
+    "structured": 0,
+    "links": [
+      "mailto:maxime@code-celeste.com",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "https://code-celeste.com/mentions-legales"
+    ],
+    "ids": [
+      "ccBg",
+      "ccBorder",
+      "ccBlur",
+      "ccBg",
+      "ccBorder",
+      "ccBlur",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/confirmation",
+    "status": 200,
+    "final_url": "https://code-celeste.com/confirmation",
+    "seconds": 0.66,
+    "title": "Rendez-vous confirmé — Code Celeste",
+    "description": [
+      "Votre appel découverte avec Maxime est réservé."
+    ],
+    "canonical": [],
+    "robots": [
+      "noindex, nofollow"
+    ],
+    "h1": [
+      "Votre appel est réservé"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/robots.txt",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "/sitemap.xml",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

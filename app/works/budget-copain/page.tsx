@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink, Smartphone } from "lucide-react";
@@ -5,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "../../_landing/Footer";
 import { Header } from "../../_landing/Header";
+
+export const metadata = pageMetadata("Application Budget Copain | Réalisation Code Céleste", "Découvrez Budget Copain, application mobile de gestion de budget développée par Code Céleste avec React Native et Expo.", "/works/budget-copain");
 
 export default function BudgetCopainPage() {
   return (

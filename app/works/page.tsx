@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -10,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "../_landing/Footer";
 import { Header } from "../_landing/Header";
+
+export const metadata = pageMetadata("Réalisations web et mobiles | Code Céleste, La Réunion", "Découvrez les sites web et applications mobiles réalisés par Code Céleste : Smart Power System, VELORUN Festival, Budget Copain et autres projets.", "/works");
 
 export default function WorksPage() {
   return (
@@ -26,7 +29,8 @@ export default function WorksPage() {
 
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Mes Projets Web</h1>
+            <h1 className="text-4xl font-bold mb-4">Mes réalisations web et mobiles</h1>
+            <h2 className="text-2xl font-semibold mb-4">Projets web</h2>
             <p className="text-muted-foreground text-lg">
               Découvrez l'ensemble de mes réalisations et projets récents.
             </p>
@@ -66,7 +70,7 @@ export default function WorksPage() {
         </div>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 mt-12">
-            <h1 className="text-4xl font-bold mb-4">Mes Projets Mobiles</h1>
+            <h2 className="text-4xl font-bold mb-4">Mes projets mobiles</h2>
             <p className="text-muted-foreground text-lg">
               Découvrez l'ensemble de mes réalisations et projets récents.
             </p>

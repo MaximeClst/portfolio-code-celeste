@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
@@ -5,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "../../_landing/Footer";
 import { Header } from "../../_landing/Header";
+
+export const metadata = pageMetadata("Site Smart Power System | Réalisation Code Céleste", "Découvrez le site Smart Power System réalisé par Code Céleste : présentation du projet, conception du site et technologies utilisées.", "/works/smart-power-system");
 
 export default function SmartPowerSystemPage() {
   return (

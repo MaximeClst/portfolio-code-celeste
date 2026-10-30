@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SiteConfig.prodUrl),
   title: SiteConfig.title,
   description: SiteConfig.description,
 };
