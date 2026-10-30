@@ -1,0 +1,33 @@
+{
+  "checked_on": "2026-10-30",
+  "timezone": "Indian/Reunion",
+  "property": "sc-domain:code-celeste.com",
+  "source": "Google Search Console UI, professional account",
+  "performance": {
+    "search_type": "Web",
+    "selected_range": "3 months",
+    "observed_chart_from": "2026-10-25",
+    "observed_chart_to": "2026-10-28",
+    "clicks": 0,
+    "impressions": 16,
+    "ctr_percent": 0,
+    "average_position": 3.8,
+    "comparison_to_previous_period": null
+  },
+  "indexation": {
+    "aggregate_report": "processing",
+    "individual": {
+      "https://code-celeste.com/": "indexed before deployment"
+    },
+    "other_sitemap_urls": "not individually verified"
+  },
+  "sitemap": {
+    "url": "https://code-celeste.com/sitemap.xml",
+    "submitted_on": "2026-10-30",
+    "last_read_on": "2026-10-30",
+    "status": "Opération effectuée",
+    "discovered_pages": 6,
+    "discovered_videos": 0,
+    "all_pages_indexed": null
+  }
+}

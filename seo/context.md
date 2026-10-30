@@ -35,7 +35,7 @@ Sources : `app/_landing/Feature.tsx`, `Comparison.tsx`, page https://code-celest
 - Search Console déjà configurée, propriété `sc-domain:code-celeste.com`, accessible dans Chrome via `maxime@code-celeste.com` le 2026-10-30. Le compte personnel initial ouvre une page d'accueil vide : choisir le compte professionnel sans recréer la propriété.
 - Performance Web, filtre 3 mois, graphique disponible du 25 au 28 octobre 2026 : 0 clic, 16 impressions, CTR 0 %, position moyenne 3,8. Ce ne sont pas les positions des mots-clés commerciaux ; aucun gain n'est attribuable à ce premier passage.
 - Rapport agrégé d'indexation : traitement des données en cours. Indexation détaillée : voir rapport daté. Absence de rapport ne signifie pas absence d'indexation.
-- Aucun sitemap soumis avant ce passage (table vide). Soumettre une seule fois après mise en ligne, puis consigner la lecture réelle.
+- Sitemap https://code-celeste.com/sitemap.xml soumis le 2026-10-30 après publication ; dernière lecture le même jour, « Opération effectuée », six pages découvertes. Ne pas le soumettre à nouveau sans raison. Six découvertes ne signifient pas six pages indexées.
 - Datafast est instrumenté (`app/layout.tsx`) mais les métriques de conversions ne sont pas disponibles via un connecteur dans cette session. Ahrefs et outil de volumes non connectés : volumes/difficulté/positions inconnus restent vides. Ils permettraient priorisation quantitative et mesure des devis attribués au SEO.
 - Suivi ChatGPT/Perplexity/AI Overviews non mesuré ; les questions de `ai-prompts.md` sont une grille, pas des observations.
 
