@@ -17,7 +17,7 @@ Sources : `app/_landing/Feature.tsx`, `Comparison.tsx`, page https://code-celest
 - Site vitrine : à partir de 1 000 €, maintenance 75 €/mois.
 - Maxime est l'interlocuteur ; contact public maxime@code-celeste.com (`site.config.ts`, Footer).
 - Preuves propriétaires : portfolio, visuels des projets et témoignages déjà présents. Ne pas inventer de résultats ou étendre les citations (`Work.tsx`, `Testimonial.tsx`, `app/works/`).
-- Incohérence existante : Smart Power System est décrit comme gestion énergétique dans /works, mais comme coaching dans sa fiche ; domaines externes différents. Ne pas amplifier ces affirmations sans confirmation. Métadonnées nouvelles volontairement neutres.
+- Smart Power System confirmé le 2026-10-30 par le propriétaire et https://smart-power-system.fr/ + /notre-team : équipe de coachs sportifs, force athlétique et coaching en ligne. Domaine officiel : smart-power-system.fr. Description énergétique et ancien domaine .com corrigés. Le site live indique Hostinger Website Builder (en-tête HTTP x-powered-by) : ne pas attribuer Next.js à ce projet. Résultats attribués au témoignage existant d’Alexandre Eydieux (`app/_landing/Testimonial.tsx`) : une quinzaine de demandes, dont 4 à 5 concrétisées, sans délai ajouté.
 
 - Autre écart à clarifier : /ads annonce trois mois de maintenance offerts (`app/ads/page.tsx`) alors que l’offre générale ne mentionne pas de gratuité. Peut être une offre de campagne ; ne pas trancher ni modifier sans confirmation spécifique.
 

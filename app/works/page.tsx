@@ -39,7 +39,7 @@ export default function WorksPage() {
           <div className="grid gap-6 sm:grid-cols-2">
             <WorkCard
               title="Smart Power System"
-              description="Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts."
+              description="Site vitrine pour une équipe de coachs sportifs spécialisés en force athlétique : présentation des coachs, offres de suivi en ligne et prise de contact."
               image="/SPS LOGO - BASELINE CLAIR.png"
               link="/works/smart-power-system"
               externalLink="https://smart-power-system.fr"

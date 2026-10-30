@@ -10,7 +10,7 @@
 
 ## Prochaines priorités
 1. **Indexation des six URL** — requêtes de chaque page dans keyword-map.csv. Vérifier inspection individuelle + lecture du sitemap, corriger une cause observée avant toute demande d'indexation ; ne pas multiplier les soumissions.
-2. **Fiabilité Smart Power System** — « réalisation site Smart Power System », /works et /works/smart-power-system. Identifier avec le propriétaire le domaine et l'activité corrects, puis harmoniser le texte et les liens. Aucun résultat chiffré nouveau.
+2. **Résolu le 2026-10-30 — Smart Power System** : activité de coaching confirmée par le propriétaire et le site officiel ; description, domaine, résultats attribués au témoignage et technologie du site harmonisés.
 3. **Page service artisan** — « création site web artisan La Réunion », /creation-site-web-artisan-reunion (gap). Lire cinq résultats frais, s'appuyer sur les projets réellement livrés et un périmètre d'offre confirmé ; liens depuis trois pages existantes avant publication. Ne pas cannibaliser l'accueil.
 4. **Page mobile** — « développement application mobile La Réunion », /application-mobile-reunion (gap). Montrer un cas réel avec périmètre confirmé. Trois liens entrants, canonical et sitemap ; exclure les fonctionnalités non vérifiées des projets.
 5. **Mesure** — obtenir les métriques Datafast existantes et rapprochement avec les devis/rendez-vous ; ne pas envoyer de leads de test réels, ne pas exposer données personnelles. Comparer les métriques à période équivalente quand l'historique suffit.
