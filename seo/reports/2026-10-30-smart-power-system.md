@@ -8,4 +8,4 @@ La fiche attribuait le site à Next.js/TypeScript/Tailwind. La réponse HTTP du 
 
 Sources : site officiel consulté ce jour ; confirmation du propriétaire ; `app/_landing/Testimonial.tsx` pour le bilan commercial. Aucune modification de l’offre de maintenance sur /ads.
 
-Validation : lint, build de production, TypeScript et diff réussis ; contrôle navigateur des trois pages modifiées. Correction annexe de la configuration ESLint : exclusions globales de .next et des fichiers générés, afin que le lint fonctionne aussi après un build. Publication en cours.
+Validation : lint, build de production, TypeScript et diff réussis ; contrôle navigateur des trois pages modifiées. Correction annexe de la configuration ESLint : exclusions globales de .next et des fichiers générés, afin que le lint fonctionne aussi après un build. Publié dans le commit `5d4df09`, déploiement Vercel réussi. Les trois URL répondent 200 en production avec les textes corrigés et sans ancien domaine ni description énergétique.
