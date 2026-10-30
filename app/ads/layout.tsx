@@ -1,11 +1,31 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata(
+const adsMetadata = pageMetadata(
   "Votre site artisan à La Réunion | Code Céleste",
   "Découvrez une page personnalisée pour votre entreprise à La Réunion et échangez avec Maxime sur votre projet de site web.",
   "/ads",
 );
+
+export const metadata: Metadata = {
+  ...adsMetadata,
+  openGraph: {
+    ...adsMetadata.openGraph,
+    images: [{
+      url: "/social/code-celeste-logo-v1.png",
+      width: 1200,
+      height: 630,
+      type: "image/png",
+      alt: "Logo Code Céleste",
+    }],
+  },
+  twitter: {
+    ...adsMetadata.twitter,
+    card: "summary_large_image",
+    images: [{ url: "/social/code-celeste-logo-v1.png", alt: "Logo Code Céleste" }],
+  },
+};
 
 export default function AdsLayout({ children }: { children: ReactNode }) {
   return children;
