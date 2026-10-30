@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   openGraph: {
     ...adsMetadata.openGraph,
     images: [{
-      url: "/social/code-celeste-logo-v1.png",
-      width: 1200,
-      height: 630,
+      url: "/social/code-celeste-logo-v2.png",
+      width: 512,
+      height: 512,
       type: "image/png",
       alt: "Logo Code Céleste",
     }],
   },
   twitter: {
     ...adsMetadata.twitter,
-    card: "summary_large_image",
-    images: [{ url: "/social/code-celeste-logo-v1.png", alt: "Logo Code Céleste" }],
+    card: "summary",
+    images: [{ url: "/social/code-celeste-logo-v2.png", alt: "Logo Code Céleste" }],
   },
 };
 

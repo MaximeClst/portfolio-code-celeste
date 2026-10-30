@@ -24,7 +24,7 @@ Sources : `app/_landing/Feature.tsx`, `Comparison.tsx`, page https://code-celest
 ## Technique et publication
 - Next.js 15.5.9 App Router, React 19, TypeScript, Tailwind (`package.json`). Pages dans `app/**/page.tsx`, composants landing dans `app/_landing/`.
 - Titres, descriptions, canonicals et Open Graph : `lib/seo.ts` et métadonnées de chaque page ; origine dans `app/layout.tsx`.
-- Partage /ads : image explicite Open Graph et Twitter dans `app/ads/layout.tsx`, logo existant exporté en PNG 1200×630 (`public/social/code-celeste-logo-v1.png`). Régénération : `node scripts/export-social-logo.mjs`. Conserver une image de marque explicite pour éviter la sélection automatique d’un portrait client. Les caches des messageries sont indépendants du déploiement.
+- Partage /ads : image explicite Open Graph et Twitter dans `app/ads/layout.tsx`, fichier exact du logo carré fourni par le propriétaire le 2026-10-30, sans texte ajouté (`public/social/code-celeste-logo-v2.png`, 512×512). Ne pas remplacer par la signature horizontale du header. Le fichier v1 reste disponible uniquement pour les anciens caches. Conserver une image de marque explicite pour éviter la sélection automatique d’un portrait client. Les caches des messageries sont indépendants du déploiement.
 - `app/sitemap.ts` : six URL éditoriales, sans lastmod artificiel ; `/ads` omise du sitemap, indexabilité existante conservée ; `/confirmation` reste noindex/nofollow et hors sitemap.
 - `app/robots.ts` : exploration publique autorisée, /api/ exclue ; ne pas bloquer /confirmation, dont Google doit pouvoir lire noindex.
 - JSON-LD Organization dans l'accueil, uniquement identité publique, sans note, avis ni prix.

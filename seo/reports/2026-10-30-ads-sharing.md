@@ -7,3 +7,7 @@ Correction : PNG 1200×630 avec le logo vectoriel existant sur fond sombre, rend
 Validation : lint, build et TypeScript réussis ; image inspectée et page chargée dans Chrome. Requêtes locales avec user-agents facebookexternalhit, WhatsApp et Twitterbot : HTML et PNG 200, image unique attendue, dimensions PNG 1200×630 et canonical correct. Ces simulations valident la réponse serveur, pas le renouvellement du cache réel de chaque plateforme.
 
 Publication : commit `04aa673`, Vercel réussi. Vérifications en production réussies avec les trois user-agents : page et image 200, URL du logo, dimensions et canonical conformes. Voir `2026-10-30-ads-sharing-production.json`. Si un ancien aperçu persiste, réessayer le partage avec /ads?share=logo-v1 pour demander un aperçu sur une URL distincte ; aucun délai universel de cache promis.
+
+## Correction du logo fourni par le propriétaire
+
+Le propriétaire a précisé que son logo est le pictogramme carré du fichier `LOGO-code-celeste.png`. Ce fichier est copié à l’identique dans `public/social/code-celeste-logo-v2.png` (512×512). Les métadonnées /ads utilisent cette nouvelle URL ; Twitter utilise le format summary adapté au carré. L’ancien export horizontal reste accessible pour les anciens caches, son script de génération est retiré. Validation locale et publication de cette correction : en cours.
