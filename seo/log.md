@@ -7,3 +7,5 @@
 - 2026-10-30 — Partage /ads : ajout de l’image du logo Code Céleste (Open Graph et Twitter) ; auparavant aucune image déclarée et un portrait client apparaissait dans l’aperçu transmis par le propriétaire. Lint, build, TypeScript et contrôles des réponses aux user-agents sociaux réussis en local et en production. Publié dans `04aa673`, Vercel réussi.
 
 - 2026-10-30 — Logo /ads remplacé par le PNG carré exact fourni par le propriétaire, sans texte ajouté : `103f273`, Vercel réussi. Métadonnées et image vérifiées en production avec trois user-agents sociaux.
+
+- 2026-11-01 — Publié `e26f6d8` : https://code-celeste.com/creation-site-web-artisan-reunion, exemple SCMOI, préparation du devis et offre existante ; métadonnées, Service JSON-LD, sitemap sept URL et liens depuis cinq pages. Lint, build, TypeScript, contrôle visuel ordinateur/mobile et parcours devis au clavier sans envoi réussis ; production Vercel réussie et onze réponses 200 conformes. Search Console : quatre des six anciennes URL indexées, SPS inconnu et VELORUN détecté non indexé ; aucune nouvelle soumission. Voir `reports/2026-11-01.md`.
