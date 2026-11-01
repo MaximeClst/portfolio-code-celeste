@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-11-01",
+  "property": "sc-domain:code-celeste.com",
+  "source": "Search Console UI, professional account",
+  "performance": {
+    "search_type": "Web",
+    "filter": "3 months",
+    "observed_data_start": "2026-10-25",
+    "observed_data_end": "2026-10-30",
+    "clicks": 1,
+    "impressions": 21,
+    "ctr_percent": 4.8,
+    "average_position": 6.6,
+    "queries": [
+      {
+        "query": "code celeste",
+        "clicks": 1,
+        "impressions": 4
+      },
+      {
+        "query": "celeste",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "query": "cómo viajar",
+        "clicks": 0,
+        "impressions": 1
+      }
+    ]
+  },
+  "inspection": {
+    "/": "indexed",
+    "/works": "indexed",
+    "/works/smart-power-system": "URL unknown to Google",
+    "/works/velorun-festival": "Discovered - currently not indexed",
+    "/works/budget-copain": "indexed",
+    "/mentions-legales": "indexed",
+    "/creation-site-web-artisan-reunion": "not verified"
+  },
+  "sitemap": {
+    "url": "https://code-celeste.com/sitemap.xml",
+    "last_read": "2026-10-30",
+    "status": "Success",
+    "discovered_pages": 6
+  },
+  "aggregate_indexing_report": "processing",
+  "indexing_requests_sent": 0,
+  "limitations": [
+    "Different date window from Oct 30 baseline; no causal uplift claimed",
+    "Search Console queries need not account for all impressions",
+    "No connected Datafast conversion or keyword-volume dataset"
+  ]
+}

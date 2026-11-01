@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { motion, useReducedMotion } from "framer-motion";
 import { Globe, Layers, Smartphone } from "lucide-react";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 type Offer = {
   icon: ReactNode;
@@ -83,6 +84,12 @@ export default function Feature() {
             </motion.div>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm text-muted-foreground">
+          Artisan à La Réunion ?{" "}
+          <Link href="/creation-site-web-artisan-reunion" className="underline underline-offset-4 hover:text-foreground">
+            Découvrez l’offre site vitrine et un projet réalisé.
+          </Link>
+        </p>
       </div>
     </section>
   );

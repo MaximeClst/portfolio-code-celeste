@@ -9,9 +9,9 @@
 - /ads promet trois mois de maintenance offerts, contrairement au contexte de l’offre générale. Confirmer si cette campagne reste valable avant harmonisation.
 
 ## Prochaines priorités
-1. **Indexation des six URL** — requêtes de chaque page dans keyword-map.csv. Vérifier inspection individuelle + lecture du sitemap, corriger une cause observée avant toute demande d'indexation ; ne pas multiplier les soumissions.
+1. **Suivi d’indexation des sept URL** — inspection du 2026-11-01 : accueil, /works, Budget Copain et mentions légales indexés ; Smart Power System inconnu de Google ; VELORUN détecté non indexé. Aucun blocage technique observé, sitemap récent lu le 30 octobre. Surveiller la découverte sans resoumission répétée ; nouvelle page artisan non encore vérifiée dans l’index.
 2. **Résolu le 2026-10-30 — Smart Power System** : activité de coaching confirmée par le propriétaire et le site officiel ; description, domaine, résultats attribués au témoignage et technologie du site harmonisés.
-3. **Page service artisan** — « création site web artisan La Réunion », /creation-site-web-artisan-reunion (gap). Lire cinq résultats frais, s'appuyer sur les projets réellement livrés et un périmètre d'offre confirmé ; liens depuis trois pages existantes avant publication. Ne pas cannibaliser l'accueil.
+3. **Réalisé le 2026-11-01 — Page service artisan** : /creation-site-web-artisan-reunion, exemple SCMOI, tarif existant, préparation du devis, métadonnées, Service JSON-LD et cinq pages entrantes. Surveiller impressions et demandes qualifiées avant de réécrire.
 4. **Page mobile** — « développement application mobile La Réunion », /application-mobile-reunion (gap). Montrer un cas réel avec périmètre confirmé. Trois liens entrants, canonical et sitemap ; exclure les fonctionnalités non vérifiées des projets.
 5. **Mesure** — obtenir les métriques Datafast existantes et rapprochement avec les devis/rendez-vous ; ne pas envoyer de leads de test réels, ne pas exposer données personnelles. Comparer les métriques à période équivalente quand l'historique suffit.
 6. **Qualité technique** — vérifier images/liens sortants et ancres, performance réelle mobile et coûts des scripts tiers, animations à opacité initiale nulle. Le temps HTTP n'est pas un score Lighthouse ni des Core Web Vitals.
