@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/works",
     "/creation-site-web-artisan-reunion",
+    "/application-mobile-reunion",
     "/works/smart-power-system",
     "/works/velorun-festival",
     "/works/budget-copain",

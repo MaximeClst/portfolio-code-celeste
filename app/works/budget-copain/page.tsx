@@ -70,7 +70,7 @@ export default function BudgetCopainPage() {
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
                     <Image
                       src="/adaptive-icon.png"
-                      alt="Capture d'écran de Budget Copain"
+                      alt="Icône de l’application Budget Copain"
                       width={600}
                       height={400}
                       className="rounded-lg object-cover w-full h-full"

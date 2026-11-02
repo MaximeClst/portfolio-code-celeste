@@ -90,6 +90,12 @@ export default function Feature() {
             Découvrez l’offre site vitrine et un projet réalisé.
           </Link>
         </p>
+        <p className="mt-3 text-center text-sm text-muted-foreground">
+          Un projet mobile ?{" "}
+          <Link href="/application-mobile-reunion" className="underline underline-offset-4 hover:text-foreground">
+            Découvrez les applications réalisées et préparez votre devis.
+          </Link>
+        </p>
       </div>
     </section>
   );
