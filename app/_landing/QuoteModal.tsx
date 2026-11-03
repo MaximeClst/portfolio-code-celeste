@@ -59,7 +59,8 @@ type FormState = {
 };
 
 type Ctx = {
-  open: (preset?: Partial<FormState>) => void;
+  /** `startStep` permet d'ouvrir directement une étape (ex. 5 = coordonnées puis calendrier). */
+  open: (preset?: Partial<FormState>, startStep?: number) => void;
   close: () => void;
 };
 
@@ -94,9 +95,9 @@ export function QuoteModalProvider({ children }: { children: ReactNode }) {
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<FormState>(initialForm);
 
-  const open = useCallback((preset?: Partial<FormState>) => {
+  const open = useCallback((preset?: Partial<FormState>, startStep = 1) => {
     setForm((prev) => ({ ...initialForm, ...preset, contact: prev.contact.fullName ? prev.contact : initialContact }));
-    setStep(1);
+    setStep(startStep);
     setIsOpen(true);
   }, []);
 
@@ -138,6 +139,8 @@ export function QuoteModalProvider({ children }: { children: ReactNode }) {
 }
 
 const TOTAL_STEPS = 6;
+/** Étape « Vos coordonnées » : point d'entrée de « Réserver un appel » (lead puis calendrier). */
+export const CONTACT_STEP = 5;
 
 function QuoteModal({
   step,

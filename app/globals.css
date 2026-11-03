@@ -29,8 +29,14 @@
   --color-brand: hsl(var(--brand));
   --color-brand-secondary: hsl(var(--brand-secondary));
   --radius: 0.625rem;
+}
+
+/* `inline` : les variables next/font sont posées sur <body>, pas sur :root, donc
+   les utilitaires doivent les résoudre sur l'élément lui-même. */
+@theme inline {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
 }
 
 @layer base {

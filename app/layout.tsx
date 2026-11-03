@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/site.config";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import Script from "next/script";
 import { QuoteModalProvider } from "./_landing/QuoteModal";
 import "./globals.css";
@@ -15,6 +15,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
 });
 
 export const metadata: Metadata = {
@@ -42,6 +49,7 @@ export default function RootLayout({
         className={cn(
           geistSans.variable,
           geistMono.variable,
+          instrumentSerif.variable,
           "h-full font-sans antialiased"
         )}
       >

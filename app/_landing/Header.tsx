@@ -8,8 +8,8 @@ import React from "react";
 import { useQuoteModal } from "./QuoteModal";
 
 const menuItems = [
-  { name: "Process", href: "/#process" },
   { name: "Réalisations", href: "/#realisations" },
+  { name: "Tous les projets", href: "/works" },
   { name: "Offres", href: "/#offres" },
   { name: "Contact", href: "/#contact" },
 ];

@@ -1,170 +1,67 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import {
-  ArrowLeft,
-  ChevronRight,
-  ExternalLink,
-  Smartphone,
-} from "lucide-react";
-import Image from "next/image";
+import { ArrowLeft } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "../_landing/Footer";
 import { Header } from "../_landing/Header";
+import { apps, sites } from "../_landing/home/data";
+import { AppCard, SiteCard } from "../_landing/home/Realisations";
+import { Eyebrow, SideProjects } from "../_landing/home/Sections";
+
+export const metadata: Metadata = {
+  title: "Réalisations | Code Celeste",
+  description:
+    "Sites web et applications mobiles réalisés pour des entreprises de La Réunion.",
+};
 
 export default function WorksPage() {
   return (
     <main className="min-h-screen">
       <Header />
 
-      <section className="container mx-auto px-4 py-24">
-        <div className="mb-8">
-          <Link href="/" className={buttonVariants({ variant: "ghost", size: "sm" }) + " gap-2"}>
+      <div className="mx-auto max-w-5xl space-y-20 px-4 pb-16 pt-28 sm:px-6">
+        <div>
+          <Link
+            href="/"
+            className={buttonVariants({ variant: "ghost", size: "sm" }) + " -ml-3 gap-2"}
+          >
             <ArrowLeft className="size-4" />
-            Retour à l'accueil
+            Retour à l&apos;accueil
           </Link>
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
+            Toutes mes{" "}
+            <span className="font-serif font-normal italic text-violet-300">
+              réalisations
+            </span>
+          </h1>
+          <p className="mt-3 max-w-xl text-muted-foreground">
+            {sites.length} sites et {apps.length} applications mis en ligne pour
+            des entreprises de La Réunion.
+          </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Mes Projets Web</h1>
-            <p className="text-muted-foreground text-lg">
-              Découvrez l'ensemble de mes réalisations et projets récents.
-            </p>
+        <section>
+          <Eyebrow>Sites web</Eyebrow>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {sites.map((s) => (
+              <SiteCard key={s.title} site={s} />
+            ))}
           </div>
+        </section>
 
-          <div className="grid gap-6 sm:grid-cols-2">
-            <WorkCard
-              title="Smart Power System"
-              description="Solution innovante de gestion énergétique pour optimiser la consommation et réduire les coûts."
-              image="/SPS LOGO - BASELINE CLAIR.png"
-              link="/works/smart-power-system"
-              externalLink="https://smart-power-system.fr"
-            />
-
-            <WorkCard
-              title="VELORUN Festival"
-              description="Plateforme événementielle pour le festival de vélo de La Réunion."
-              image="/VeloRunFest.png"
-              link="/works/velorun-festival"
-              externalLink="https://velorunfestival.re"
-            />
-
-            <WorkCard
-              title="SCMOI"
-              description="Site vitrine pour une entreprise de climatisation, chauffage et électricité à La Réunion : présentation des services, réalisations et demande de devis."
-              image="/logo-scmoi.jpg"
-              externalLink="https://www.scmoi.re/"
-            />
-
-            <WorkCard
-              title="Anthony Celeste Coaching"
-              description="Site vitrine pour un coach endurance (VTT, triathlon, trail) à La Réunion : plans d'entraînement individualisés, préparation mentale et nutrition."
-              image="/anthony-celeste.png"
-              externalLink="https://www.anthonyceleste-coaching.re/"
-            />
+        <section>
+          <Eyebrow>Applications mobiles</Eyebrow>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {apps.map((a) => (
+              <AppCard key={a.title} app={a} />
+            ))}
           </div>
-        </div>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 mt-12">
-            <h1 className="text-4xl font-bold mb-4">Mes Projets Mobiles</h1>
-            <p className="text-muted-foreground text-lg">
-              Découvrez l'ensemble de mes réalisations et projets récents.
-            </p>
-          </div>
+        </section>
 
-          <div className="grid gap-6 sm:grid-cols-2">
-            <WorkCard
-              title="Mossly"
-              description="Application mobile de suivi d’hydratation gamifié : objectifs quotidiens, statistiques, séries et univers végétal évolutif qui grandit avec vos habitudes."
-              image="/mossly-icon.png"
-              badge="mobile"
-            />
-
-            <WorkCard
-              title="Budget Copain"
-              description="Application mobile de gestion de budget personnelle. Suivez vos dépenses, gérez vos revenus et atteignez vos objectifs financiers."
-              image="/adaptive-icon.png"
-              link="/works/budget-copain"
-              externalLink="https://www.budgetcopain.com/"
-              badge="mobile"
-            />
-
-            <WorkCard
-              title="FoodHub"
-              description="Projet d'entraînement : app mobile de commande de fast-food avec panier et authentification. React Native, Expo, NativeWind, Zustand."
-              image="/foodhub-logo.png"
-              badge="mobile"
-            />
-
-            <WorkCard
-              title="Pokédex"
-              description="Projet d'entraînement : Pokédex mobile connecté à la PokéAPI. React Native, Expo Router."
-              image="/pokedex-logo.svg"
-              badge="mobile"
-            />
-          </div>
-        </div>
-      </section>
+        <SideProjects />
+      </div>
 
       <Footer />
     </main>
   );
 }
-
-const WorkCard = ({
-  title,
-  description,
-  image,
-  link,
-  externalLink,
-  badge,
-}: {
-  title: string;
-  description: string;
-  image: string;
-  link?: string;
-  externalLink?: string;
-  badge?: "mobile";
-}) => {
-  return (
-    <Card className="p-6 hover:shadow-xl transition-shadow">
-      <div className="relative">
-        <div className="flex justify-center items-center mb-6">
-          <Image
-            src={image}
-            alt={title}
-            width={120}
-            height={120}
-            className="object-contain"
-          />
-        </div>
-
-        <div className="space-y-2 py-6">
-          {badge === "mobile" && (
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
-              <Smartphone className="size-3" />
-              App Mobile
-            </span>
-          )}
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="text-muted-foreground line-clamp-3">{description}</p>
-        </div>
-
-        <div className="flex gap-3 border-t border-dashed pt-6">
-          {link && (
-            <Link href={link} className={buttonVariants({ variant: "secondary", size: "sm" }) + " gap-1 pr-2 shadow-none"}>
-              Voir le projet
-              <ChevronRight className="ml-0 !size-3.5 opacity-50" />
-            </Link>
-          )}
-          {externalLink && (
-            <Link href={externalLink} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm" }) + " gap-1 pr-2"}>
-              Site web
-              <ExternalLink className="ml-0 !size-3.5" />
-            </Link>
-          )}
-        </div>
-      </div>
-    </Card>
-  );
-};

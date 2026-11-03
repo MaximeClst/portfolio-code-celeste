@@ -1,35 +1,43 @@
-import { Comparison } from "./_landing/Comparison";
-import Feature from "./_landing/Feature";
-import { FinalCTA } from "./_landing/FinalCTA";
-import { Footer } from "./_landing/Footer";
-import { Header } from "./_landing/Header";
-import { Hero } from "./_landing/Hero";
-import { HowItWorks } from "./_landing/HowItWorks";
-import { Testimonial } from "./_landing/Testimonial";
-import { Work } from "./_landing/Work";
+import { CaseStudy } from "./_landing/home/CaseStudy";
+import { ContactCTA, MobileBar } from "./_landing/home/ContactCTA";
+import { KindProvider } from "./_landing/home/KindTabs";
+import { Offers } from "./_landing/home/Offers";
+import { Profile } from "./_landing/home/Profile";
+import { Realisations } from "./_landing/home/Realisations";
+import {
+  HomeFooter,
+  Intro,
+  Process,
+  Reviews,
+  SideProjects,
+} from "./_landing/home/Sections";
 
 export default function Home() {
   return (
     <main className="relative min-h-dvh bg-background text-foreground">
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none fixed inset-x-0 top-0 h-[60vh] bg-[radial-gradient(ellipse_at_top,hsl(var(--brand)/0.12),transparent_60%)]"
+        className="pointer-events-none fixed inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_top,hsl(var(--brand)/0.18),transparent_60%)]"
       />
 
-      <div className="relative z-10">
-        <Header />
-        <Hero />
-        <HowItWorks />
-        <Comparison />
-        <Work />
-        <Testimonial />
-        <Feature />
-        <FinalCTA />
-        <Footer />
+      <MobileBar />
+
+      <div className="relative mx-auto grid max-w-[1200px] gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-14 lg:py-16">
+        <Profile />
+
+        <div className="min-w-0 space-y-20">
+          <Intro />
+          <KindProvider>
+            <Realisations />
+            <CaseStudy />
+            <Offers />
+          </KindProvider>
+          <Reviews />
+          <SideProjects />
+          <Process />
+          <ContactCTA />
+          <HomeFooter />
+        </div>
       </div>
     </main>
   );
