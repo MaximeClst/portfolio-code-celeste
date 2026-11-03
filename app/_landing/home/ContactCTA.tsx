@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useQuoteModal } from "../QuoteModal";
@@ -56,6 +56,42 @@ export function MobileBar() {
       >
         Estimer mon projet
       </button>
+    </div>
+  );
+}
+
+// Barre légère des pages secondaires (/works) : retour vers la page perso.
+export function PageTopBar() {
+  const { open } = useQuoteModal();
+  return (
+    <div className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <Link
+          href="/"
+          aria-label="Retour à l'accueil"
+          className="group flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <ArrowLeft
+            className="size-4 transition-transform group-hover:-translate-x-0.5"
+            aria-hidden
+          />
+          <Image
+            src="/maxime-celeste.webp"
+            alt=""
+            width={64}
+            height={64}
+            className="size-8 rounded-lg object-cover ring-1 ring-brand/40"
+          />
+          <span className="font-medium text-foreground">Maxime Céleste</span>
+        </Link>
+        <button
+          type="button"
+          onClick={() => open()}
+          className="rounded-lg bg-brand px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-brand/90 sm:text-sm"
+        >
+          Estimer mon projet
+        </button>
+      </div>
     </div>
   );
 }

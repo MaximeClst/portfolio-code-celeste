@@ -1,30 +1,24 @@
 import { pageMetadata } from "@/lib/seo";
-import { buttonVariants } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import { Footer } from "../_landing/Footer";
-import { Header } from "../_landing/Header";
+import { ContactCTA, PageTopBar } from "../_landing/home/ContactCTA";
 import { apps, sites } from "../_landing/home/data";
 import { AppCard, SiteCard } from "../_landing/home/Realisations";
-import { Eyebrow, SideProjects } from "../_landing/home/Sections";
+import { Eyebrow, HomeFooter, SideProjects } from "../_landing/home/Sections";
 
 export const metadata = pageMetadata("Réalisations web et mobiles | Code Céleste, La Réunion", "Découvrez les sites web et applications mobiles réalisés par Code Céleste : SCMOI, L2KJ Services, O'Milles Déco, Smart Power System, Z'Happyro et autres projets.", "/works");
 
 export default function WorksPage() {
   return (
-    <main className="min-h-screen">
-      <Header />
+    <main className="relative min-h-dvh bg-background text-foreground">
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_top,hsl(var(--brand)/0.18),transparent_60%)]"
+      />
 
-      <div className="mx-auto max-w-5xl space-y-20 px-4 pb-16 pt-28 sm:px-6">
+      <PageTopBar />
+
+      <div className="relative mx-auto max-w-5xl space-y-20 px-4 py-12 sm:px-6 lg:py-16">
         <div>
-          <Link
-            href="/"
-            className={buttonVariants({ variant: "ghost", size: "sm" }) + " -ml-3 gap-2"}
-          >
-            <ArrowLeft className="size-4" />
-            Retour à l&apos;accueil
-          </Link>
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Toutes mes{" "}
             <span className="font-serif font-normal italic text-violet-300">
               réalisations
@@ -55,9 +49,9 @@ export default function WorksPage() {
         </section>
 
         <SideProjects />
+        <ContactCTA />
+        <HomeFooter />
       </div>
-
-      <Footer />
     </main>
   );
 }
