@@ -1,0 +1,48 @@
+{
+  "before": {
+    "styles": [
+      {
+        "tag": "div",
+        "style": "opacity:0;transform:translateY(20px)"
+      },
+      {
+        "tag": "h1",
+        "style": "opacity:0;transform:translateY(20px)"
+      },
+      {
+        "tag": "p",
+        "style": "opacity:0;transform:translateY(20px)"
+      },
+      {
+        "tag": "div",
+        "style": "opacity:0;transform:translateY(20px)"
+      }
+    ],
+    "text": "Développeur indépendant · La Réunion 🇷🇪 Vous avez une idée.   On la livre en 7 jours. Applications mobiles et sites web sur mesure à La Réunion. MVP rapide pour tester votre marché, ou solution complète pour scaler. Démarrer un MVP Voir les réalisations"
+  },
+  "local": {
+    "styles": [
+      {
+        "tag": "div",
+        "style": "opacity:1;transform:none"
+      },
+      {
+        "tag": "h1",
+        "style": "opacity:1;transform:none"
+      },
+      {
+        "tag": "p",
+        "style": "opacity:1;transform:none"
+      },
+      {
+        "tag": "div",
+        "style": "opacity:1;transform:none"
+      }
+    ],
+    "text": "Développeur indépendant · La Réunion 🇷🇪 Vous avez une idée.   On la livre en 7 jours. Applications mobiles et sites web sur mesure à La Réunion. MVP rapide pour tester votre marché, ou solution complète pour scaler. Démarrer un MVP Voir les réalisations"
+  },
+  "assets_before": {
+    "/social/code-celeste-logo-v2.png": 200,
+    "/velorun-hero.png": 200
+  }
+}

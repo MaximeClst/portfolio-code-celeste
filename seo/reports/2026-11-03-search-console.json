@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-11-03",
+  "source": "Google Search Console, Chrome, propriété sc-domain:code-celeste.com, compte professionnel",
+  "performance": {
+    "search_type": "Web",
+    "filter": "3 mois",
+    "displayed_from": "2026-10-25",
+    "displayed_to": "2026-10-31",
+    "clicks": 1,
+    "impressions": 27,
+    "ctr_percent": 3.7,
+    "average_position": 11.4,
+    "comparison": "Même période et mêmes chiffres que le relevé du 2 novembre. Aucun rang commercial déduit."
+  },
+  "aggregate_indexing": "Traitement des données en cours",
+  "core_web_vitals": "Aucune donnée mobile/ordinateur",
+  "inspection": {
+    "url": "https://code-celeste.com/application-mobile-reunion",
+    "indexed": false,
+    "status": "Google ne reconnaît pas cette URL",
+    "sitemap_referrer": "Aucun sitemap référent détecté",
+    "last_crawl": "Sans objet",
+    "note": "Page publiée la veille, présente dans le sitemap live et liée. Aucun blocage HTTP observé."
+  },
+  "sitemap": {
+    "url": "https://code-celeste.com/sitemap.xml",
+    "status": "Opération effectuée",
+    "last_read": "2026-11-01",
+    "discovered_pages": 7
+  },
+  "actions": "Aucune soumission ni demande d’indexation. Propriété existante conservée."
+}
