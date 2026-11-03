@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-11-02",
+  "source": "Search Console UI, professional account",
+  "property": "sc-domain:code-celeste.com",
+  "performance": {
+    "search_type": "Web",
+    "filter": "3 months",
+    "data_start": "2026-10-25",
+    "data_end": "2026-10-31",
+    "clicks": 1,
+    "impressions": 27,
+    "ctr_percent": 3.7,
+    "average_position": 11.4,
+    "visible_queries": [
+      {
+        "query": "code celeste",
+        "clicks": 1,
+        "impressions": 4
+      },
+      {
+        "query": "celeste",
+        "clicks": 0,
+        "impressions": 3
+      },
+      {
+        "query": "codigo celeste",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "query": "cómo viajar",
+        "clicks": 0,
+        "impressions": 1
+      }
+    ]
+  },
+  "inspection": {
+    "/creation-site-web-artisan-reunion": {
+      "status": "Discovered - currently not indexed",
+      "sitemap": "https://code-celeste.com/sitemap.xml",
+      "last_crawl": null
+    },
+    "other_urls": "Not reinspected today; dated November 1 statuses retained in context"
+  },
+  "sitemap": {
+    "status": "Success",
+    "last_read": "2026-11-01",
+    "pages_discovered": 7
+  },
+  "aggregate_indexation": "processing",
+  "requests_submitted": 0,
+  "limitations": [
+    "Different date range from November 1 observation",
+    "No performance data yet for the artisan page published November 1",
+    "No connected conversion or keyword-volume dataset"
+  ]
+}

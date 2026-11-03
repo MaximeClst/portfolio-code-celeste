@@ -1869,7 +1869,7 @@ export default function CodeCelesteLanding() {
           {([
             {
               title: "Smart Power System",
-              job: "Coaching Sportif",
+              job: "Coaching en force athlétique",
               city: "La Réunion",
               quote:
                 '"Son investissement dans le projet et le rapport qualité/prix ont été particulièrement appréciés."',

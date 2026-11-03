@@ -25,6 +25,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SiteConfig.prodUrl),
   title: SiteConfig.title,
   description: SiteConfig.description,
 };

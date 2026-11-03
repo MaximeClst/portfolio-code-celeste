@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { ArrowRight, Check } from "lucide-react";
+import Link from "next/link";
 import { useQuoteModal } from "../QuoteModal";
 import { KindTabs, useKind, type Kind } from "./KindTabs";
 
@@ -14,6 +15,20 @@ type Offer = {
   features: string[];
   /** Type de projet pré-rempli dans le formulaire (saute la 1re question) */
   projectType?: "site-artisan" | "app-mobile" | "mvp";
+};
+
+// Pages de service dédiées (SEO) : une par type de projet.
+const servicePages: Record<Kind, { lead: string; label: string; href: string }> = {
+  sites: {
+    lead: "Artisan à La Réunion ?",
+    label: "Découvrez l'offre site vitrine en détail",
+    href: "/creation-site-web-artisan-reunion",
+  },
+  apps: {
+    lead: "Un projet mobile ?",
+    label: "Découvrez l'offre application mobile en détail",
+    href: "/application-mobile-reunion",
+  },
 };
 
 const offers: Record<Kind, Offer[]> = {
@@ -142,6 +157,16 @@ export function Offers() {
           </div>
         ))}
       </div>
+
+      <p className="mt-6 text-center text-sm text-muted-foreground">
+        {servicePages[kind].lead}{" "}
+        <Link
+          href={servicePages[kind].href}
+          className="underline underline-offset-4 transition-colors hover:text-foreground"
+        >
+          {servicePages[kind].label}
+        </Link>
+      </p>
     </section>
   );
 }

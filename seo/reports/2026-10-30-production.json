@@ -1,0 +1,356 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "final_url": "https://code-celeste.com/",
+    "seconds": 1.43,
+    "title": "Sites web et applications à La Réunion | Code Céleste",
+    "description": [
+      "Création de sites web et applications mobiles à La Réunion avec Maxime, développeur indépendant. Découvrez les réalisations et demandez une estimation."
+    ],
+    "canonical": [
+      "https://code-celeste.com"
+    ],
+    "robots": [],
+    "h1": [
+      "Vous avez une idée. On la livre en 7 jours."
+    ],
+    "structured": 1,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "/works",
+      "/works/budget-copain",
+      "https://www.scmoi.re/",
+      "https://www.anthonyceleste-coaching.re/",
+      "/works/smart-power-system",
+      "https://g.page/r/CVMUT2Y0DghoEAE/review",
+      "mailto:maxime@code-celeste.com",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "process",
+      "comparatif",
+      "realisations",
+      "testimonial",
+      "offres",
+      "contact",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works",
+    "seconds": 0.96,
+    "title": "Réalisations web et mobiles | Code Céleste, La Réunion",
+    "description": [
+      "Découvrez les sites web et applications mobiles réalisés par Code Céleste : Smart Power System, VELORUN Festival, Budget Copain et autres projets."
+    ],
+    "canonical": [
+      "https://code-celeste.com/works"
+    ],
+    "robots": [],
+    "h1": [
+      "Mes réalisations web et mobiles"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/",
+      "/works/smart-power-system",
+      "https://smart-power-system.fr",
+      "/works/velorun-festival",
+      "https://velorunfestival.re",
+      "https://www.scmoi.re/",
+      "https://www.anthonyceleste-coaching.re/",
+      "/works/budget-copain",
+      "https://www.budgetcopain.com/",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works/budget-copain",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works/budget-copain",
+    "seconds": 1.72,
+    "title": "Application Budget Copain | Réalisation Code Céleste",
+    "description": [
+      "Découvrez Budget Copain, application mobile de gestion de budget développée par Code Céleste avec React Native et Expo."
+    ],
+    "canonical": [
+      "https://code-celeste.com/works/budget-copain"
+    ],
+    "robots": [],
+    "h1": [
+      "Budget Copain"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "https://www.budgetcopain.com/",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works/smart-power-system",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works/smart-power-system",
+    "seconds": 1.4,
+    "title": "Site Smart Power System | Réalisation Code Céleste",
+    "description": [
+      "Découvrez le site Smart Power System réalisé par Code Céleste : présentation du projet, conception du site et technologies utilisées."
+    ],
+    "canonical": [
+      "https://code-celeste.com/works/smart-power-system"
+    ],
+    "robots": [],
+    "h1": [
+      "Smart Power System"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "https://smartpowersystem.com",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/works/velorun-festival",
+    "status": 200,
+    "final_url": "https://code-celeste.com/works/velorun-festival",
+    "seconds": 1.41,
+    "title": "Site VELORUN Festival | Réalisation Code Céleste",
+    "description": [
+      "Découvrez le site du VELORUN Festival à La Réunion réalisé par Code Céleste : présentation de l’événement, parcours et informations pratiques."
+    ],
+    "canonical": [
+      "https://code-celeste.com/works/velorun-festival"
+    ],
+    "robots": [],
+    "h1": [
+      "VELORUN Festival"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/#process",
+      "/#realisations",
+      "/#offres",
+      "/#contact",
+      "/works",
+      "https://velorunfestival.re",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "mailto:maxime@code-celeste.com",
+      "/mentions-legales"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/mentions-legales",
+    "status": 200,
+    "final_url": "https://code-celeste.com/mentions-legales",
+    "seconds": 0.91,
+    "title": "Mentions légales — Code Celeste",
+    "description": [
+      "Mentions légales, conditions d'utilisation, propriété intellectuelle et politique de confidentialité."
+    ],
+    "canonical": [
+      "https://code-celeste.com/mentions-legales"
+    ],
+    "robots": [],
+    "h1": [
+      "Mentions légales"
+    ],
+    "structured": 0,
+    "links": [
+      "mailto:maxime@code-celeste.com",
+      "https://vercel.com"
+    ],
+    "ids": [
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/ads",
+    "status": 200,
+    "final_url": "https://code-celeste.com/ads",
+    "seconds": 1.0,
+    "title": "Votre site artisan à La Réunion | Code Céleste",
+    "description": [
+      "Découvrez une page personnalisée pour votre entreprise à La Réunion et échangez avec Maxime sur votre projet de site web."
+    ],
+    "canonical": [
+      "https://code-celeste.com/ads"
+    ],
+    "robots": [],
+    "h1": [
+      "Avant d'acheter un site, voyez-le."
+    ],
+    "structured": 0,
+    "links": [
+      "mailto:maxime@code-celeste.com",
+      "https://x.com/maxime_clst",
+      "https://www.linkedin.com/in/code-celeste/",
+      "https://code-celeste.com/mentions-legales"
+    ],
+    "ids": [
+      "ccBg",
+      "ccBorder",
+      "ccBlur",
+      "ccBg",
+      "ccBorder",
+      "ccBlur",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/confirmation",
+    "status": 200,
+    "final_url": "https://code-celeste.com/confirmation",
+    "seconds": 0.9,
+    "title": "Rendez-vous confirmé — Code Celeste",
+    "description": [
+      "Votre appel découverte avec Maxime est réservé."
+    ],
+    "canonical": [],
+    "robots": [
+      "noindex, nofollow"
+    ],
+    "h1": [
+      "Votre appel est réservé"
+    ],
+    "structured": 0,
+    "links": [
+      "/",
+      "/"
+    ],
+    "ids": [
+      "filter0_f_2013_9",
+      "paint0_linear_2013_9",
+      "paint1_linear_2013_9",
+      "clip0_2013_9",
+      "_R_"
+    ],
+    "body": null
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "final_url": "https://code-celeste.com/robots.txt",
+    "seconds": 1.07,
+    "title": "",
+    "description": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "structured": 0,
+    "links": [],
+    "ids": [],
+    "body": "User-Agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: https://code-celeste.com/sitemap.xml\n"
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "final_url": "https://code-celeste.com/sitemap.xml",
+    "seconds": 0.48,
+    "title": "",
+    "description": [],
+    "canonical": [],
+    "robots": [],
+    "h1": [],
+    "structured": 0,
+    "links": [],
+    "ids": [],
+    "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://code-celeste.com</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works/smart-power-system</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works/velorun-festival</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works/budget-copain</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/mentions-legales</loc>\n</url>\n</urlset>\n"
+  }
+]

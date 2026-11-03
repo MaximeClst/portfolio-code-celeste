@@ -2,6 +2,7 @@ import { SiteConfig } from "@/site.config";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/mentions-legales" },
   title: `Mentions légales — ${SiteConfig.title}`,
   description:
     "Mentions légales, conditions d'utilisation, propriété intellectuelle et politique de confidentialité.",

@@ -35,6 +35,12 @@ export const Footer = () => {
         </nav>
 
         <div className="flex flex-col sm:items-end gap-1 text-xs text-muted-foreground">
+          <Link href="/application-mobile-reunion" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            Applications mobiles à La Réunion
+          </Link>
+          <Link href="/creation-site-web-artisan-reunion" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            Sites web pour artisans à La Réunion
+          </Link>
           <span>© {year} Code Celeste — Tous droits réservés.</span>
           <Link
             href="/mentions-legales"

@@ -171,7 +171,13 @@ export function HomeFooter() {
   return (
     <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground">
       <span>© {new Date().getFullYear()} Code Celeste · La Réunion</span>
-      <span className="flex gap-4">
+      <span className="flex flex-wrap gap-4">
+        <Link href="/creation-site-web-artisan-reunion" className="hover:text-foreground">
+          Sites web pour artisans à La Réunion
+        </Link>
+        <Link href="/application-mobile-reunion" className="hover:text-foreground">
+          Applications mobiles à La Réunion
+        </Link>
         <a href="mailto:maxime@code-celeste.com" className="hover:text-foreground">
           maxime@code-celeste.com
         </a>

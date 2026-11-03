@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
@@ -5,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "../../_landing/Footer";
 import { Header } from "../../_landing/Header";
+
+export const metadata = pageMetadata("Site Smart Power System | Réalisation Code Céleste", "Site vitrine réalisé par Code Céleste pour Smart Power System, une équipe de coachs sportifs spécialisés en force athlétique et coaching en ligne.", "/works/smart-power-system");
 
 export default function SmartPowerSystemPage() {
   return (
@@ -39,9 +42,9 @@ export default function SmartPowerSystemPage() {
               </div>
               <h1 className="text-4xl font-bold mb-4">Smart Power System</h1>
               <div className="flex justify-center gap-4">
-                <Link href="https://smartpowersystem.com" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline" }) + " gap-2"}>
+                <Link href="https://smart-power-system.fr" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline" }) + " gap-2"}>
                   <ExternalLink className="size-4" />
-                  smartpowersystem.com
+                  smart-power-system.fr
                 </Link>
               </div>
             </div>
@@ -65,28 +68,29 @@ export default function SmartPowerSystemPage() {
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Contexte</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Un coach sportif souhaitait développer sa présence en ligne
-                    et proposer ses services de manière professionnelle afin
-                    d'attirer de nouveaux clients.
+                    Smart Power System réunit une équipe de coachs sportifs
+                    spécialisés en force athlétique et en coaching en ligne.
+                    Le projet : présenter les coachs et leurs accompagnements,
+                    et faciliter la prise de contact des futurs athlètes.
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Solution</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    J'ai conçu un site en Next.js, moderne et responsive, avec
-                    un design clair et adapté à ses besoins. Le site met en
-                    avant ses services, son expertise et facilite la prise de
-                    contact.
+                    J'ai réalisé un site vitrine qui présente l'équipe,
+                    les formules de suivi personnalisé et les témoignages
+                    d'athlètes. Les visiteurs peuvent découvrir les services
+                    proposés et contacter Smart Power System.
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <h2 className="text-2xl font-semibold mb-4">Résultats</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Le lancement du site a permis de signer 4 nouveaux coachés
-                    dès les premières semaines. Aujourd'hui, le site sert de
-                    véritable vitrine digitale, simple et efficace.
+                    D'après le témoignage d'Alexandre Eydieux publié sur notre
+                    site, la mise en ligne a généré une quinzaine de demandes,
+                    dont 4 à 5 se sont concrétisées.
                   </p>
                 </Card>
               </div>
@@ -99,9 +103,7 @@ export default function SmartPowerSystemPage() {
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Next.js",
-                    "TypeScript",
-                    "Tailwind CSS",
+                    "Hostinger Website Builder",
                     "Responsive Design",
                   ].map((tech) => (
                     <span

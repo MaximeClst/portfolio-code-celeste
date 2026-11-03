@@ -1,6 +1,6 @@
+import { pageMetadata } from "@/lib/seo";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "../_landing/Footer";
 import { Header } from "../_landing/Header";
@@ -8,11 +8,7 @@ import { apps, sites } from "../_landing/home/data";
 import { AppCard, SiteCard } from "../_landing/home/Realisations";
 import { Eyebrow, SideProjects } from "../_landing/home/Sections";
 
-export const metadata: Metadata = {
-  title: "Réalisations | Code Celeste",
-  description:
-    "Sites web et applications mobiles réalisés pour des entreprises de La Réunion.",
-};
+export const metadata = pageMetadata("Réalisations web et mobiles | Code Céleste, La Réunion", "Découvrez les sites web et applications mobiles réalisés par Code Céleste : SCMOI, L2KJ Services, O'Milles Déco, Smart Power System, Z'Happyro et autres projets.", "/works");
 
 export default function WorksPage() {
   return (

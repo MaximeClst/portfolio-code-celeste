@@ -1,0 +1,38 @@
+[
+  {
+    "user_agent": "facebookexternalhit/1.1",
+    "page_status": 200,
+    "og_image": "https://code-celeste.com/social/code-celeste-logo-v2.png",
+    "image_status": 200,
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 254628,
+    "canonical": "https://code-celeste.com/ads"
+  },
+  {
+    "user_agent": "WhatsApp/2.24.1",
+    "page_status": 200,
+    "og_image": "https://code-celeste.com/social/code-celeste-logo-v2.png",
+    "image_status": 200,
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 254628,
+    "canonical": "https://code-celeste.com/ads"
+  },
+  {
+    "user_agent": "Twitterbot/1.0",
+    "page_status": 200,
+    "og_image": "https://code-celeste.com/social/code-celeste-logo-v2.png",
+    "image_status": 200,
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 254628,
+    "canonical": "https://code-celeste.com/ads"
+  }
+]

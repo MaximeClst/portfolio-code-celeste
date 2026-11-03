@@ -1,0 +1,613 @@
+{
+  "base": "https://code-celeste.com",
+  "sitemap_urls": [
+    "/",
+    "/works",
+    "/works/smart-power-system",
+    "/works/velorun-festival",
+    "/works/budget-copain",
+    "/mentions-legales"
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "final_url": "https://code-celeste.com/",
+      "seconds": 0.39,
+      "title": "Sites web et applications à La Réunion | Code Céleste",
+      "description": "Création de sites web et applications mobiles à La Réunion avec Maxime, développeur indépendant. Découvrez les réalisations et demandez une estimation.",
+      "canonical": [
+        "https://code-celeste.com"
+      ],
+      "robots": null,
+      "h1": [
+        "Vous avez une idée. On la livre en 7 jours."
+      ],
+      "links": [
+        "/",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/works",
+        "/works",
+        "/works/budget-copain",
+        "https://www.scmoi.re/",
+        "https://www.anthonyceleste-coaching.re/",
+        "/works/smart-power-system",
+        "https://g.page/r/CVMUT2Y0DghoEAE/review",
+        "mailto:maxime@code-celeste.com",
+        "https://x.com/maxime_clst",
+        "https://www.linkedin.com/in/code-celeste/",
+        "mailto:maxime@code-celeste.com",
+        "/mentions-legales"
+      ],
+      "ids": [
+        "filter0_f_2013_9",
+        "paint0_linear_2013_9",
+        "paint1_linear_2013_9",
+        "clip0_2013_9",
+        "process",
+        "comparatif",
+        "realisations",
+        "testimonial",
+        "offres",
+        "contact",
+        "_R_"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fadaptive-icon.png&w=256&q=75",
+          "alt": "Budget Copain"
+        },
+        {
+          "src": "/_next/image?url=%2Flogo-scmoi.jpg&w=256&q=75",
+          "alt": "SCMOI"
+        },
+        {
+          "src": "/_next/image?url=%2Fanthony-celeste.png&w=256&q=75",
+          "alt": "Anthony Celeste Coaching"
+        },
+        {
+          "src": "/_next/image?url=%2FSPS%20LOGO%20-%20BASELINE%20CLAIR.png&w=256&q=75",
+          "alt": "Smart Power System"
+        }
+      ],
+      "server_text_chars": 3253,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Création de sites web et applications mobiles à La Réunion avec Maxime, développeur indépendant. Découvrez les réalisations et demandez une estimation.",
+        "og:title": "Sites web et applications à La Réunion | Code Céleste",
+        "og:description": "Création de sites web et applications mobiles à La Réunion avec Maxime, développeur indépendant. Découvrez les réalisations et demandez une estimation.",
+        "og:url": "https://code-celeste.com",
+        "og:site_name": "Code Celeste",
+        "og:locale": "fr_FR",
+        "og:type": "website",
+        "twitter:card": "summary",
+        "twitter:title": "Sites web et applications à La Réunion | Code Céleste",
+        "twitter:description": "Création de sites web et applications mobiles à La Réunion avec Maxime, développeur indépendant. Découvrez les réalisations et demandez une estimation."
+      },
+      "body": null
+    },
+    {
+      "path": "/works",
+      "status": 200,
+      "final_url": "https://code-celeste.com/works",
+      "seconds": 0.61,
+      "title": "Réalisations web et mobiles | Code Céleste, La Réunion",
+      "description": "Découvrez les sites web et applications mobiles réalisés par Code Céleste : Smart Power System, VELORUN Festival, Budget Copain et autres projets.",
+      "canonical": [
+        "https://code-celeste.com/works"
+      ],
+      "robots": null,
+      "h1": [
+        "Mes réalisations web et mobiles"
+      ],
+      "links": [
+        "/",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/",
+        "/works/smart-power-system",
+        "https://smart-power-system.fr",
+        "/works/velorun-festival",
+        "https://velorunfestival.re",
+        "https://www.scmoi.re/",
+        "https://www.anthonyceleste-coaching.re/",
+        "/works/budget-copain",
+        "https://www.budgetcopain.com/",
+        "https://x.com/maxime_clst",
+        "https://www.linkedin.com/in/code-celeste/",
+        "mailto:maxime@code-celeste.com",
+        "/mentions-legales"
+      ],
+      "ids": [
+        "filter0_f_2013_9",
+        "paint0_linear_2013_9",
+        "paint1_linear_2013_9",
+        "clip0_2013_9",
+        "_R_"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2FSPS%20LOGO%20-%20BASELINE%20CLAIR.png&w=256&q=75",
+          "alt": "Smart Power System"
+        },
+        {
+          "src": "/_next/image?url=%2FVeloRunFest.png&w=256&q=75",
+          "alt": "VELORUN Festival"
+        },
+        {
+          "src": "/_next/image?url=%2Flogo-scmoi.jpg&w=256&q=75",
+          "alt": "SCMOI"
+        },
+        {
+          "src": "/_next/image?url=%2Fanthony-celeste.png&w=256&q=75",
+          "alt": "Anthony Celeste Coaching"
+        },
+        {
+          "src": "/_next/image?url=%2Fmossly-icon.png&w=256&q=75",
+          "alt": "Mossly"
+        },
+        {
+          "src": "/_next/image?url=%2Fadaptive-icon.png&w=256&q=75",
+          "alt": "Budget Copain"
+        },
+        {
+          "src": "/_next/image?url=%2Ffoodhub-logo.png&w=256&q=75",
+          "alt": "FoodHub"
+        },
+        {
+          "src": "/pokedex-logo.svg",
+          "alt": "Pokédex"
+        }
+      ],
+      "server_text_chars": 1707,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Découvrez les sites web et applications mobiles réalisés par Code Céleste : Smart Power System, VELORUN Festival, Budget Copain et autres projets.",
+        "og:title": "Réalisations web et mobiles | Code Céleste, La Réunion",
+        "og:description": "Découvrez les sites web et applications mobiles réalisés par Code Céleste : Smart Power System, VELORUN Festival, Budget Copain et autres projets.",
+        "og:url": "https://code-celeste.com/works",
+        "og:site_name": "Code Celeste",
+        "og:locale": "fr_FR",
+        "og:type": "website",
+        "twitter:card": "summary",
+        "twitter:title": "Réalisations web et mobiles | Code Céleste, La Réunion",
+        "twitter:description": "Découvrez les sites web et applications mobiles réalisés par Code Céleste : Smart Power System, VELORUN Festival, Budget Copain et autres projets."
+      },
+      "body": null
+    },
+    {
+      "path": "/works/smart-power-system",
+      "status": 200,
+      "final_url": "https://code-celeste.com/works/smart-power-system",
+      "seconds": 0.66,
+      "title": "Site Smart Power System | Réalisation Code Céleste",
+      "description": "Site vitrine réalisé par Code Céleste pour Smart Power System, une équipe de coachs sportifs spécialisés en force athlétique et coaching en ligne.",
+      "canonical": [
+        "https://code-celeste.com/works/smart-power-system"
+      ],
+      "robots": null,
+      "h1": [
+        "Smart Power System"
+      ],
+      "links": [
+        "/",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/works",
+        "https://smart-power-system.fr",
+        "https://x.com/maxime_clst",
+        "https://www.linkedin.com/in/code-celeste/",
+        "mailto:maxime@code-celeste.com",
+        "/mentions-legales"
+      ],
+      "ids": [
+        "filter0_f_2013_9",
+        "paint0_linear_2013_9",
+        "paint1_linear_2013_9",
+        "clip0_2013_9",
+        "_R_"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2FSPS%20LOGO%20-%20BASELINE%20CLAIR.png&w=256&q=75",
+          "alt": "Smart Power System"
+        },
+        {
+          "src": "/_next/image?url=%2Fscreen-SPS.png&w=1200&q=75",
+          "alt": "Capture d'écran du site Smart Power System"
+        }
+      ],
+      "server_text_chars": 970,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Site vitrine réalisé par Code Céleste pour Smart Power System, une équipe de coachs sportifs spécialisés en force athlétique et coaching en ligne.",
+        "og:title": "Site Smart Power System | Réalisation Code Céleste",
+        "og:description": "Site vitrine réalisé par Code Céleste pour Smart Power System, une équipe de coachs sportifs spécialisés en force athlétique et coaching en ligne.",
+        "og:url": "https://code-celeste.com/works/smart-power-system",
+        "og:site_name": "Code Celeste",
+        "og:locale": "fr_FR",
+        "og:type": "website",
+        "twitter:card": "summary",
+        "twitter:title": "Site Smart Power System | Réalisation Code Céleste",
+        "twitter:description": "Site vitrine réalisé par Code Céleste pour Smart Power System, une équipe de coachs sportifs spécialisés en force athlétique et coaching en ligne."
+      },
+      "body": null
+    },
+    {
+      "path": "/works/velorun-festival",
+      "status": 200,
+      "final_url": "https://code-celeste.com/works/velorun-festival",
+      "seconds": 0.61,
+      "title": "Site VELORUN Festival | Réalisation Code Céleste",
+      "description": "Découvrez le site du VELORUN Festival à La Réunion réalisé par Code Céleste : présentation de l’événement, parcours et informations pratiques.",
+      "canonical": [
+        "https://code-celeste.com/works/velorun-festival"
+      ],
+      "robots": null,
+      "h1": [
+        "VELORUN Festival"
+      ],
+      "links": [
+        "/",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/works",
+        "https://velorunfestival.re",
+        "https://x.com/maxime_clst",
+        "https://www.linkedin.com/in/code-celeste/",
+        "mailto:maxime@code-celeste.com",
+        "/mentions-legales"
+      ],
+      "ids": [
+        "filter0_f_2013_9",
+        "paint0_linear_2013_9",
+        "paint1_linear_2013_9",
+        "clip0_2013_9",
+        "_R_"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2FVeloRunFest.png&w=256&q=75",
+          "alt": "VELORUN Festival"
+        },
+        {
+          "src": "/_next/image?url=%2FVeloRunFest.png&w=1200&q=75",
+          "alt": "Capture d'écran du site VELORUN Festival"
+        }
+      ],
+      "server_text_chars": 986,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Découvrez le site du VELORUN Festival à La Réunion réalisé par Code Céleste : présentation de l’événement, parcours et informations pratiques.",
+        "og:title": "Site VELORUN Festival | Réalisation Code Céleste",
+        "og:description": "Découvrez le site du VELORUN Festival à La Réunion réalisé par Code Céleste : présentation de l’événement, parcours et informations pratiques.",
+        "og:url": "https://code-celeste.com/works/velorun-festival",
+        "og:site_name": "Code Celeste",
+        "og:locale": "fr_FR",
+        "og:type": "website",
+        "twitter:card": "summary",
+        "twitter:title": "Site VELORUN Festival | Réalisation Code Céleste",
+        "twitter:description": "Découvrez le site du VELORUN Festival à La Réunion réalisé par Code Céleste : présentation de l’événement, parcours et informations pratiques."
+      },
+      "body": null
+    },
+    {
+      "path": "/works/budget-copain",
+      "status": 200,
+      "final_url": "https://code-celeste.com/works/budget-copain",
+      "seconds": 0.66,
+      "title": "Application Budget Copain | Réalisation Code Céleste",
+      "description": "Découvrez Budget Copain, application mobile de gestion de budget développée par Code Céleste avec React Native et Expo.",
+      "canonical": [
+        "https://code-celeste.com/works/budget-copain"
+      ],
+      "robots": null,
+      "h1": [
+        "Budget Copain"
+      ],
+      "links": [
+        "/",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/#process",
+        "/#realisations",
+        "/#offres",
+        "/#contact",
+        "/works",
+        "https://www.budgetcopain.com/",
+        "https://x.com/maxime_clst",
+        "https://www.linkedin.com/in/code-celeste/",
+        "mailto:maxime@code-celeste.com",
+        "/mentions-legales"
+      ],
+      "ids": [
+        "filter0_f_2013_9",
+        "paint0_linear_2013_9",
+        "paint1_linear_2013_9",
+        "clip0_2013_9",
+        "_R_"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fadaptive-icon.png&w=256&q=75",
+          "alt": "Budget Copain"
+        },
+        {
+          "src": "/_next/image?url=%2Fadaptive-icon.png&w=1200&q=75",
+          "alt": "Capture d'écran de Budget Copain"
+        }
+      ],
+      "server_text_chars": 1156,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Découvrez Budget Copain, application mobile de gestion de budget développée par Code Céleste avec React Native et Expo.",
+        "og:title": "Application Budget Copain | Réalisation Code Céleste",
+        "og:description": "Découvrez Budget Copain, application mobile de gestion de budget développée par Code Céleste avec React Native et Expo.",
+        "og:url": "https://code-celeste.com/works/budget-copain",
+        "og:site_name": "Code Celeste",
+        "og:locale": "fr_FR",
+        "og:type": "website",
+        "twitter:card": "summary",
+        "twitter:title": "Application Budget Copain | Réalisation Code Céleste",
+        "twitter:description": "Découvrez Budget Copain, application mobile de gestion de budget développée par Code Céleste avec React Native et Expo."
+      },
+      "body": null
+    },
+    {
+      "path": "/mentions-legales",
+      "status": 200,
+      "final_url": "https://code-celeste.com/mentions-legales",
+      "seconds": 0.52,
+      "title": "Mentions légales — Code Celeste",
+      "description": "Mentions légales, conditions d'utilisation, propriété intellectuelle et politique de confidentialité.",
+      "canonical": [
+        "https://code-celeste.com/mentions-legales"
+      ],
+      "robots": null,
+      "h1": [
+        "Mentions légales"
+      ],
+      "links": [
+        "mailto:maxime@code-celeste.com",
+        "https://vercel.com"
+      ],
+      "ids": [
+        "_R_"
+      ],
+      "images": [],
+      "server_text_chars": 1737,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Mentions légales, conditions d'utilisation, propriété intellectuelle et politique de confidentialité."
+      },
+      "body": null
+    },
+    {
+      "path": "/ads",
+      "status": 200,
+      "final_url": "https://code-celeste.com/ads",
+      "seconds": 0.3,
+      "title": "Votre site artisan à La Réunion | Code Céleste",
+      "description": "Découvrez une page personnalisée pour votre entreprise à La Réunion et échangez avec Maxime sur votre projet de site web.",
+      "canonical": [
+        "https://code-celeste.com/ads"
+      ],
+      "robots": null,
+      "h1": [
+        "Avant d'acheter un site, voyez-le."
+      ],
+      "links": [
+        "mailto:maxime@code-celeste.com",
+        "https://x.com/maxime_clst",
+        "https://www.linkedin.com/in/code-celeste/",
+        "https://code-celeste.com/mentions-legales"
+      ],
+      "ids": [
+        "ccBg",
+        "ccBorder",
+        "ccBlur",
+        "ccBg",
+        "ccBorder",
+        "ccBlur",
+        "_R_"
+      ],
+      "images": [
+        {
+          "src": "https://www.facebook.com/tr?id=1053001147475338&ev=PageView&noscript=1",
+          "alt": ""
+        },
+        {
+          "src": "data:image/jpeg;base64,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",
+          "alt": "Maxime, fondateur de Code Céleste"
+        },
+        {
+          "src": "/_next/image?url=%2Fpp-AlexEydieux.jpg&w=128&q=75",
+          "alt": "Alexandre Eydieux, Smart Power System"
+        },
+        {
+          "src": "/_next/image?url=%2Fscreen-SPS.png&w=3840&q=75",
+          "alt": "Capture du site livré pour Smart Power System"
+        },
+        {
+          "src": "/_next/image?url=%2Fvelorun-hero.png&w=3840&q=75",
+          "alt": "Capture du site livré pour VELORUN Festival"
+        },
+        {
+          "src": "/_next/image?url=%2Fscmoi-hero.png&w=3840&q=75",
+          "alt": "Capture du site livré pour SCMOI"
+        }
+      ],
+      "server_text_chars": 4599,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Découvrez une page personnalisée pour votre entreprise à La Réunion et échangez avec Maxime sur votre projet de site web.",
+        "og:title": "Votre site artisan à La Réunion | Code Céleste",
+        "og:description": "Découvrez une page personnalisée pour votre entreprise à La Réunion et échangez avec Maxime sur votre projet de site web.",
+        "og:url": "https://code-celeste.com/ads",
+        "og:site_name": "Code Celeste",
+        "og:locale": "fr_FR",
+        "og:image": "https://code-celeste.com/social/code-celeste-logo-v2.png",
+        "og:image:width": "512",
+        "og:image:height": "512",
+        "og:image:type": "image/png",
+        "og:image:alt": "Logo Code Céleste",
+        "og:type": "website",
+        "twitter:card": "summary",
+        "twitter:title": "Votre site artisan à La Réunion | Code Céleste",
+        "twitter:description": "Découvrez une page personnalisée pour votre entreprise à La Réunion et échangez avec Maxime sur votre projet de site web.",
+        "twitter:image": "https://code-celeste.com/social/code-celeste-logo-v2.png",
+        "twitter:image:alt": "Logo Code Céleste"
+      },
+      "body": null
+    },
+    {
+      "path": "/confirmation",
+      "status": 200,
+      "final_url": "https://code-celeste.com/confirmation",
+      "seconds": 0.57,
+      "title": "Rendez-vous confirmé — Code Celeste",
+      "description": "Votre appel découverte avec Maxime est réservé.",
+      "canonical": [],
+      "robots": "noindex, nofollow",
+      "h1": [
+        "Votre appel est réservé"
+      ],
+      "links": [
+        "/",
+        "/"
+      ],
+      "ids": [
+        "filter0_f_2013_9",
+        "paint0_linear_2013_9",
+        "paint1_linear_2013_9",
+        "clip0_2013_9",
+        "_R_"
+      ],
+      "images": [
+        {
+          "src": "https://www.facebook.com/tr?id=1053001147475338&ev=PageView&noscript=1",
+          "alt": ""
+        }
+      ],
+      "server_text_chars": 518,
+      "meta": {
+        "": "",
+        "viewport": "width=device-width, initial-scale=1",
+        "next-size-adjust": "",
+        "description": "Votre appel découverte avec Maxime est réservé.",
+        "robots": "noindex, nofollow"
+      },
+      "body": null
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "final_url": "https://code-celeste.com/robots.txt",
+      "seconds": 0.51,
+      "title": "",
+      "description": null,
+      "canonical": [],
+      "robots": null,
+      "h1": [],
+      "links": [],
+      "ids": [],
+      "images": [],
+      "server_text_chars": 86,
+      "meta": {},
+      "body": "User-Agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: https://code-celeste.com/sitemap.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "final_url": "https://code-celeste.com/sitemap.xml",
+      "seconds": 0.96,
+      "title": "",
+      "description": null,
+      "canonical": [],
+      "robots": null,
+      "h1": [],
+      "links": [],
+      "ids": [],
+      "images": [],
+      "server_text_chars": 282,
+      "meta": {},
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://code-celeste.com</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works/smart-power-system</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works/velorun-festival</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/works/budget-copain</loc>\n</url>\n<url>\n<loc>https://code-celeste.com/mentions-legales</loc>\n</url>\n</urlset>\n"
+    }
+  ],
+  "incoming": {
+    "/": [
+      "/confirmation",
+      "/works",
+      "/works/budget-copain",
+      "/works/smart-power-system",
+      "/works/velorun-festival"
+    ],
+    "/works": [
+      "/",
+      "/works/budget-copain",
+      "/works/smart-power-system",
+      "/works/velorun-festival"
+    ],
+    "/works/smart-power-system": [
+      "/",
+      "/works"
+    ],
+    "/works/velorun-festival": [
+      "/works"
+    ],
+    "/works/budget-copain": [
+      "/",
+      "/works"
+    ],
+    "/mentions-legales": [
+      "/",
+      "/ads",
+      "/works",
+      "/works/budget-copain",
+      "/works/smart-power-system",
+      "/works/velorun-festival"
+    ]
+  },
+  "issues": []
+}
