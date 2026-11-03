@@ -3,8 +3,10 @@ import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { SiteConfig } from "@/site.config";
-import { Header } from "../_landing/Header";
-import { Footer } from "../_landing/Footer";
+import { PageTopBar } from "../_landing/home/ContactCTA";
+import { apps } from "../_landing/home/data";
+import { AppCard } from "../_landing/home/Realisations";
+import { Eyebrow, HomeFooter } from "../_landing/home/Sections";
 import { QuoteButton } from "./QuoteButton";
 
 const path = "/application-mobile-reunion";
@@ -30,8 +32,12 @@ const brief = [
 
 export default function MobilePage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Header />
+    <main className="relative min-h-dvh bg-background text-foreground">
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-x-0 top-0 h-[70vh] bg-[radial-gradient(ellipse_at_top,hsl(var(--brand)/0.18),transparent_60%)]"
+      />
+      <PageTopBar />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Service",
@@ -43,79 +49,102 @@ export default function MobilePage() {
         areaServed: { "@type": "AdministrativeArea", name: "La Réunion" },
       }).replace(/</g, "\\u003c") }} />
 
-      <div className="mx-auto max-w-6xl px-4 pt-28 lg:px-12">
-        <nav aria-label="Fil d’Ariane" className="mb-10 text-sm text-muted-foreground">
-          <Link href="/" className="underline underline-offset-4 hover:text-foreground">Accueil</Link>
-          <span aria-hidden className="mx-3">/</span><span>Applications mobiles</span>
-        </nav>
-
-        <section className="grid items-start gap-10 pb-16 lg:grid-cols-[1.45fr_1fr] lg:gap-14 md:pb-24">
+      <div className="relative mx-auto max-w-5xl space-y-20 px-4 py-12 sm:px-6 lg:py-16">
+        <section className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-14">
           <div>
-            <p className="text-xs font-medium uppercase tracking-widest text-violet-400">iOS · Android · Code Céleste</p>
-            <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Développement d’application mobile à La Réunion</h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Je développe des applications mobiles iOS et Android pour les entrepreneurs et les entreprises à La Réunion. Vous pouvez commencer par un MVP pour tester votre idée, ou cadrer une application sur mesure.</p>
-            <p className="mt-4 leading-relaxed text-muted-foreground">Je suis Maxime, développeur indépendant chez Code Céleste. Nous définissons ensemble ce que votre première version doit permettre de faire, avant de choisir les fonctionnalités à construire.</p>
-            <div className="mt-8"><QuoteButton /></div>
-            <a href="#projets-mobiles" className="mt-5 inline-flex items-center gap-2 text-sm underline underline-offset-4 hover:text-violet-300">Découvrir les projets mobiles <ArrowUpRight className="size-4" aria-hidden /></a>
+            <nav aria-label="Fil d’Ariane" className="text-xs text-muted-foreground">
+              <Link href="/" className="hover:text-foreground">Accueil</Link>
+              <span aria-hidden className="mx-2">/</span>
+              <span>Applications mobiles</span>
+            </nav>
+            <h1 className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight text-balance sm:text-5xl">
+              Développement d’application mobile{" "}
+              <span className="font-serif font-normal italic text-violet-300">à La Réunion</span>
+            </h1>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/90">Je développe des applications mobiles iOS et Android pour les entrepreneurs et les entreprises à La Réunion. Vous pouvez commencer par un MVP pour tester votre idée, ou cadrer une application sur mesure.</p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">Je suis Maxime, de Code Céleste. Nous définissons ensemble ce que votre première version doit permettre de faire, avant de choisir les fonctionnalités à construire.</p>
+            <div className="mt-8 flex flex-wrap items-center gap-5">
+              <QuoteButton />
+              <a href="#projets-mobiles" className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-300 transition-colors hover:text-foreground">Découvrir les apps publiées <ArrowUpRight className="size-4" aria-hidden /></a>
+            </div>
           </div>
-          <aside aria-label="Offre MVP mobile" className="rounded-2xl border border-brand/40 bg-card p-7 sm:p-8">
-            <p className="text-sm text-muted-foreground">Pour tester une idée · MVP mobile</p>
-            <p className="mt-3 text-4xl font-semibold tracking-tight"><span className="block pb-2 text-sm font-normal text-muted-foreground">À partir de</span>2 000 €</p>
-            <p className="mt-5 leading-relaxed text-muted-foreground">Une première application fonctionnelle pour tester votre marché avant d’investir davantage.</p>
-            <div className="mt-7 space-y-3 border-t border-border pt-6">
-              <p className="font-medium">Offre annoncée en 7 jours</p>
-              <p className="text-sm leading-relaxed text-muted-foreground">Le périmètre du MVP et le calendrier sont cadrés ensemble au devis.</p>
-              <p className="text-sm text-muted-foreground">Maintenance MVP : 120 €/mois</p>
-              <Link href="/#offres" className="inline-block text-sm underline underline-offset-4 hover:text-violet-300">Consulter les offres Code Céleste</Link>
+          <aside aria-label="Offre MVP mobile" className="rounded-2xl border border-brand/50 bg-card p-6 sm:p-7">
+            <div className="flex items-center justify-between gap-2">
+              <p className="font-medium">MVP mobile</p>
+              <span className="rounded-full bg-brand/15 px-2.5 py-0.5 text-xs text-violet-300">Livré en 7 jours</span>
+            </div>
+            <p className="mt-4 text-4xl font-semibold tracking-tight">2 000 €<span className="text-sm font-normal text-muted-foreground"> à partir de</span></p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Une première application fonctionnelle pour tester votre marché avant d’investir davantage. Le périmètre et le calendrier sont cadrés ensemble au devis.</p>
+            <div className="mt-6 border-t border-border pt-5">
+              <p className="font-medium">Maintenance MVP : 120 €/mois</p>
+              <Link href="/#offres" className="mt-4 inline-block text-sm text-violet-300 hover:text-foreground">Consulter toutes les offres</Link>
             </div>
           </aside>
         </section>
 
-        <section id="projets-mobiles" className="scroll-mt-28 border-t border-border py-16 md:py-20">
-          <p className="text-xs font-medium uppercase tracking-widest text-violet-400">Des projets concrets</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">Deux usages, deux applications du portfolio</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <article className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-              <Image src="/adaptive-icon.png" alt="Icône de Budget Copain" width={80} height={80} className="rounded-2xl" />
-              <h3 className="mt-5 text-2xl font-semibold">Budget Copain</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">Une application de gestion de budget personnel, développée avec React Native et Expo. Son site présente la saisie des dépenses et des revenus, les catégories personnalisables et la visualisation des dépenses.</p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">Ce projet illustre un parcours récurrent : enregistrer une opération puis retrouver une vue compréhensible de son budget. C’est le type d’usage à préciser avant d’ajouter d’autres fonctions.</p>
-              <Link href="/works/budget-copain" className="mt-6 inline-flex items-center gap-2 text-sm underline underline-offset-4 hover:text-violet-300">Voir le projet Budget Copain <ArrowUpRight className="size-4" aria-hidden /></Link>
-              <p className="mt-3"><a href="https://www.budgetcopain.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground">Visiter le site de l’application<span className="sr-only"> (nouvel onglet)</span></a></p>
+        <section id="projets-mobiles" className="scroll-mt-24">
+          <Eyebrow>Apps clientes publiées</Eyebrow>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Disponibles sur les stores</h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {apps.map((a) => <AppCard key={a.title} app={a} />)}
+          </div>
+        </section>
+
+        <section>
+          <Eyebrow>Mes propres apps</Eyebrow>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Deux usages, deux applications</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <article className="rounded-2xl border border-border bg-card p-6">
+              <Image src="/adaptive-icon.png" alt="Icône de Budget Copain" width={56} height={56} className="size-14 rounded-2xl bg-brand/20" />
+              <h3 className="mt-4 text-lg font-medium">Budget Copain</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Une application de gestion de budget personnel, développée avec React Native et Expo : saisie des dépenses et des revenus, catégories personnalisables et visualisation des dépenses. Un parcours récurrent : enregistrer une opération puis retrouver une vue claire de son budget.</p>
+              <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                <Link href="/works/budget-copain" className="text-violet-300 hover:text-foreground">Voir le projet</Link>
+                <a href="https://www.budgetcopain.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">Site de l’application<span className="sr-only"> (nouvel onglet)</span></a>
+              </div>
             </article>
-            <article className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-              <Image src="/mossly-icon.png" alt="Icône de Mossly" width={80} height={80} className="rounded-2xl" />
-              <h3 className="mt-5 text-2xl font-semibold">Mossly</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">Une application de suivi d’hydratation gamifié, présentée dans le portfolio Code Céleste : objectifs quotidiens, statistiques, séries et univers végétal qui évolue avec les habitudes.</p>
-              <p className="mt-4 leading-relaxed text-muted-foreground">Ici, le point de départ est une action quotidienne et sa progression dans le temps. Un autre exemple pour réfléchir à ce qui donne envie de revenir dans une application.</p>
-              <Link href="/works" className="mt-6 inline-flex items-center gap-2 text-sm underline underline-offset-4 hover:text-violet-300">Parcourir le portfolio mobile <ArrowUpRight className="size-4" aria-hidden /></Link>
+            <article className="rounded-2xl border border-border bg-card p-6">
+              <Image src="/apps/mossly.webp" alt="Icône de Mossly" width={56} height={56} className="size-14 rounded-2xl" />
+              <h3 className="mt-4 text-lg font-medium">Mossly</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Une application de suivi d’hydratation gamifié : objectifs quotidiens, statistiques, séries et univers végétal qui évolue avec les habitudes. Le point de départ est une action quotidienne et sa progression dans le temps.</p>
+              <div className="mt-5 flex flex-wrap gap-4 text-sm">
+                <a href="https://apps.apple.com/fr/app/mossly/id6783483520" target="_blank" rel="noopener noreferrer" className="text-violet-300 hover:text-foreground">Voir sur l’App Store<span className="sr-only"> (nouvel onglet)</span></a>
+              </div>
             </article>
           </div>
         </section>
 
-        <section className="border-t border-border py-16 md:py-20">
-          <h2 className="text-3xl font-semibold tracking-tight">MVP ou application sur mesure ?</h2>
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
-            <div><h3 className="text-lg font-medium">Tester un premier usage</h3><p className="mt-3 leading-relaxed text-muted-foreground">Le MVP concentre la première version sur le parcours indispensable pour éprouver votre idée. Listez ce qui permet réellement de faire ce test, puis ce qui peut attendre les retours. L’offre démarre à 2 000 €, avec une maintenance à 120 €/mois.</p></div>
-            <div><h3 className="text-lg font-medium">Construire un besoin plus complet</h3><p className="mt-3 leading-relaxed text-muted-foreground">L’application mobile sur mesure est chiffrée sur devis. Décrivez les différents profils d’utilisateurs, les parcours et les outils à connecter : ces éléments permettent de définir le travail à prévoir et son calendrier.</p></div>
+        <section>
+          <Eyebrow>Choisir sa formule</Eyebrow>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">MVP ou application sur mesure ?</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-card p-6"><h3 className="font-medium">Tester un premier usage</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">Le MVP concentre la première version sur le parcours indispensable pour éprouver votre idée. Listez ce qui permet réellement de faire ce test, puis ce qui peut attendre les retours. L’offre démarre à 2 000 €, avec une maintenance à 120 €/mois.</p></div>
+            <div className="rounded-2xl border border-border bg-card p-6"><h3 className="font-medium">Construire un besoin plus complet</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">L’application mobile sur mesure est chiffrée sur devis. Décrivez les différents profils d’utilisateurs, les parcours et les outils à connecter : ces éléments permettent de définir le travail à prévoir et son calendrier.</p></div>
           </div>
         </section>
 
-        <section className="border-t border-border py-16 md:py-20">
-          <h2 className="text-3xl font-semibold tracking-tight">Quatre points pour préparer votre devis</h2>
-          <p className="mt-5 max-w-2xl leading-relaxed text-muted-foreground">Vous n’avez pas besoin d’arriver avec un cahier des charges technique. Ces informations permettent de démarrer un échange utile.</p>
-          <ul className="mt-8 grid gap-7 md:grid-cols-2">
-            {brief.map((item) => <li key={item.title} className="flex gap-3"><Check aria-hidden className="mt-1 size-5 shrink-0 text-violet-400" /><div><h3 className="text-lg font-medium">{item.title}</h3><p className="mt-2 leading-relaxed text-muted-foreground">{item.text}</p></div></li>)}
+        <section>
+          <Eyebrow>Avant le devis</Eyebrow>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Quatre points pour préparer votre devis</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">Vous n’avez pas besoin d’arriver avec un cahier des charges technique. Ces informations permettent de démarrer un échange utile.</p>
+          <ul className="mt-6 grid gap-4 md:grid-cols-2">
+            {brief.map((item) => (
+              <li key={item.title} className="flex gap-3 rounded-2xl border border-border bg-card p-5">
+                <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-violet-300" />
+                <div><h3 className="font-medium">{item.title}</h3><p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{item.text}</p></div>
+              </li>
+            ))}
           </ul>
         </section>
 
-        <section className="rounded-2xl border border-brand/30 bg-card px-6 py-10 sm:px-10">
+        <section className="rounded-3xl border border-brand/40 bg-gradient-to-br from-brand/25 via-card to-card p-8 sm:p-10">
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Votre idée commence par un usage clair</h2>
-          <p className="mb-7 mt-4 max-w-2xl leading-relaxed text-muted-foreground">Expliquez à qui s’adresse votre application et ce qu’elle doit permettre de faire. Le parcours d’estimation prépare notre échange sur votre projet.</p>
+          <p className="mb-7 mt-3 max-w-2xl text-muted-foreground">Expliquez à qui s’adresse votre application et ce qu’elle doit permettre de faire. Le parcours d’estimation prépare notre échange sur votre projet.</p>
           <QuoteButton />
         </section>
+
+        <HomeFooter />
       </div>
-      <Footer />
     </main>
   );
 }
