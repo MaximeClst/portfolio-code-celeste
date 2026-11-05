@@ -13,7 +13,19 @@ export function pageMetadata(title: string, description: string, path: string): 
       title,
       description,
       url: path,
+      images: [{
+        url: "/social/code-celeste-logo-v2.png",
+        width: 512,
+        height: 512,
+        type: "image/png",
+        alt: "Logo Code Céleste",
+      }],
     },
-    twitter: { card: "summary", title, description },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+      images: [{ url: "/social/code-celeste-logo-v2.png", alt: "Logo Code Céleste" }],
+    },
   };
 }

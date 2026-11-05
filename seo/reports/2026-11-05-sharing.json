@@ -1,0 +1,18 @@
+{
+  "local": [
+    {
+      "ua": "facebookexternalhit/1.1",
+      "image": "https://code-celeste.com/social/code-celeste-logo-v2.png"
+    },
+    {
+      "ua": "Twitterbot/1.0",
+      "image": "https://code-celeste.com/social/code-celeste-logo-v2.png"
+    },
+    {
+      "ua": "WhatsApp/2.0",
+      "image": "https://code-celeste.com/social/code-celeste-logo-v2.png"
+    }
+  ],
+  "content_unchanged": true,
+  "ads_metadata_unchanged": true
+}

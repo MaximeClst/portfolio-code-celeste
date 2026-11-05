@@ -1,0 +1,50 @@
+{
+  "observed_at": "2026-11-05",
+  "source": "Search Console, propriété sc-domain:code-celeste.com, compte professionnel Chrome",
+  "performance": {
+    "type": "Web",
+    "filter": "3 mois",
+    "from": "2026-10-25",
+    "to": "2026-11-02",
+    "clicks": 2,
+    "impressions": 36,
+    "ctr_percent": 5.6,
+    "average_position": 10.6,
+    "brand_query": {
+      "query": "code celeste",
+      "clicks": 2,
+      "impressions": 6
+    },
+    "interpretation": "Période plus longue que le relevé précédent ; aucun gain causal ni position commerciale déduit."
+  },
+  "aggregate_indexing": "Traitement des données en cours",
+  "sitemap": {
+    "status": "Opération effectuée",
+    "last_read": "2026-11-04",
+    "discovered": 8
+  },
+  "mobile_page": {
+    "url": "https://code-celeste.com/application-mobile-reunion",
+    "status": "Détectée, actuellement non indexée",
+    "sitemap": "https://code-celeste.com/sitemap.xml",
+    "last_crawl": "Sans objet"
+  },
+  "core_web_vitals": {
+    "source": "Rapport expérience utilisateur Chrome",
+    "updated": "2026-11-02",
+    "first_detection": "2026-11-03",
+    "device": "mobile",
+    "status": "Amélioration nécessaire",
+    "group_LCP_seconds": 3.0,
+    "affected_urls": 3,
+    "examples": [
+      "https://code-celeste.com/",
+      "https://code-celeste.com/works",
+      "https://code-celeste.com/mentions-legales"
+    ],
+    "scope": "Évaluation basée sur toutes les pages de l’origine ; données LCP insuffisantes par URL. Pas une mesure isolée de chacune. Données antérieures à la refonte du 3 novembre.",
+    "desktop": "Données insuffisantes",
+    "validation_started": false
+  },
+  "actions": "Aucune resoumission, demande indexation, validation de correction ou modification de propriété."
+}
