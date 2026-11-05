@@ -14,5 +14,25 @@
     }
   ],
   "content_unchanged": true,
-  "ads_metadata_unchanged": true
+  "ads_metadata_unchanged": true,
+  "production": [
+    {
+      "ua": "facebookexternalhit/1.1",
+      "image": "https://code-celeste.com/social/code-celeste-logo-v2.png"
+    },
+    {
+      "ua": "Twitterbot/1.0",
+      "image": "https://code-celeste.com/social/code-celeste-logo-v2.png"
+    },
+    {
+      "ua": "WhatsApp/2.0",
+      "image": "https://code-celeste.com/social/code-celeste-logo-v2.png"
+    }
+  ],
+  "asset": {
+    "status": 200,
+    "type": "image/png",
+    "sha256": "cb474684868eeb9267db5d30fcd089f5ff3b9a4d528b9989157e31dcb6c57297",
+    "identical_to_owner_asset": true
+  }
 }
