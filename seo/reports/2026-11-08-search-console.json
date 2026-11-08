@@ -1,0 +1,164 @@
+{
+  "observed_date": "2026-11-08",
+  "source": "Interface Search Console, Chrome, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-06",
+    "clicks": 3,
+    "impressions": 52,
+    "CTR_percent": 5.8,
+    "average_position": 9.6,
+    "queries": [
+      {
+        "query": "code celeste",
+        "clicks": 2,
+        "impressions": 6,
+        "position": 1.3
+      },
+      {
+        "query": "celeste code",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 2.7
+      },
+      {
+        "query": "celeste",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 6.7
+      },
+      {
+        "query": "codigo celeste",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 36
+      },
+      {
+        "query": "anthony celeste",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 12
+      },
+      {
+        "query": "cómo viajar",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 15
+      }
+    ],
+    "limitations": [
+      "Petit échantillon, requêtes visibles non exhaustives ; ne pas attribuer le troisième clic à une requête absente.",
+      "Aucune requête commerciale qualifiée identifiée parmi les positions 8–20 visibles."
+    ]
+  },
+  "weekly_comparison": {
+    "selected_filter": "Comparer les 7 derniers jours à la période précédente",
+    "current": {
+      "start": "2026-10-31",
+      "end": "2026-11-06",
+      "clicks": 2,
+      "impressions": 31,
+      "CTR_percent": 6.5,
+      "average_position": 11.6
+    },
+    "previous": {
+      "start": "2026-10-25",
+      "end": "2026-10-30",
+      "clicks": 1,
+      "impressions": 21,
+      "CTR_percent": 4.8,
+      "average_position": 6.6
+    },
+    "date_evidence": "Dates lues dans les quatre champs du sélecteur de comparaison ; le graphique AX affichait Invalid Date.",
+    "limitation": "La période précédente affichée ne couvre que six jours disponibles. Ne pas annoncer une comparaison à durée égale ni une amélioration causale."
+  },
+  "sitemap": {
+    "url": "https://code-celeste.com/sitemap.xml",
+    "last_read": "2026-11-08",
+    "status": "Opération effectuée",
+    "discovered_pages": 8,
+    "resubmitted": false
+  },
+  "aggregate_index_report": "Traitement des données en cours",
+  "inspections": [
+    {
+      "path": "/",
+      "observed_date": "2026-11-08",
+      "status": "URL est sur Google"
+    },
+    {
+      "path": "/works",
+      "observed_date": "2026-11-08",
+      "status": "URL est sur Google"
+    },
+    {
+      "path": "/works/budget-copain",
+      "observed_date": "2026-11-08",
+      "status": "URL est sur Google"
+    },
+    {
+      "path": "/mentions-legales",
+      "observed_date": "2026-11-08",
+      "status": "URL est sur Google"
+    },
+    {
+      "path": "/creation-site-web-artisan-reunion",
+      "observed_date": "2026-11-08",
+      "status": "Détectée, actuellement non indexée",
+      "last_crawl": null,
+      "sitemap_reference": true
+    },
+    {
+      "path": "/works/smart-power-system",
+      "observed_date": "2026-11-08",
+      "status": "Détectée, actuellement non indexée",
+      "last_crawl": null,
+      "sitemap_reference": true
+    },
+    {
+      "path": "/works/velorun-festival",
+      "observed_date": "2026-11-08",
+      "status": "Détectée, actuellement non indexée",
+      "last_crawl": null,
+      "sitemap_reference": true
+    },
+    {
+      "path": "/application-mobile-reunion",
+      "observed_date": "2026-11-08",
+      "status": "Google ne reconnaît pas cette URL",
+      "last_crawl": null,
+      "sitemap_reference": false,
+      "note": "Variation par rapport à détectée non indexée le 5 novembre ; jamais confirmée indexée. HTTP 200, présente dans le sitemap public, six pages entrantes. Ne pas conclure désindexation."
+    }
+  ],
+  "indexing_actions": {
+    "request_indexing": false,
+    "live_test": false,
+    "reconnect_property": false
+  },
+  "CWV_mobile": {
+    "needs_improvement": 3,
+    "good": 0,
+    "poor": 0,
+    "desktop": "Données insuffisantes"
+  },
+  "generative_AI": {
+    "report_label": "Performances dans les fonctionnalités d’IA générative sur la Recherche",
+    "beta": true,
+    "filter": "3 mois, Web (texte)",
+    "start": "2026-10-25",
+    "end": "2026-11-06",
+    "impressions": 15,
+    "pages": [
+      {
+        "url": "https://code-celeste.com/",
+        "impressions": 15
+      }
+    ],
+    "limitations": "Première observation de ce rapport. Pas de détail des questions, réponses ou citations. Ne démontre ni présence ChatGPT/Perplexity ni performance des 25 prompts de la grille."
+  },
+  "conversions": null
+}

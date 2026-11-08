@@ -1,0 +1,17 @@
+{
+  "index_added": [],
+  "index_removed": [],
+  "index_lastmod_changed": [
+    {
+      "url": "https://www.webananas.re/page-sitemap.xml",
+      "before": "2026-10-27T15:32:46+00:00",
+      "after": "2026-11-06T09:37:51+00:00"
+    },
+    {
+      "url": "https://www.webananas.re/post-sitemap.xml",
+      "before": "2026-10-28T13:49:48+00:00",
+      "after": "2026-11-05T14:29:27+00:00"
+    }
+  ],
+  "limitation": "Aucun snapshot enfant le 30 octobre : impossible de prouver quelles pages ont été ajoutées depuis. lastmod ne prouve pas une nouvelle publication ni un gain de requêtes."
+}

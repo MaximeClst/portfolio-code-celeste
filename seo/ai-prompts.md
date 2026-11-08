@@ -27,3 +27,7 @@ Aucune interrogation contrôlée des assistants effectuée. Ne pas interpréter 
 23. Quelles informations afficher sur un site artisan ? — ChatGPT : non mesuré ; Perplexity : non mesuré ; AI Overviews : non mesuré.
 24. Faut-il un site web avant une application mobile ? — ChatGPT : non mesuré ; Perplexity : non mesuré ; AI Overviews : non mesuré.
 25. Comment préparer un appel de découverte pour mon projet web ? — ChatGPT : non mesuré ; Perplexity : non mesuré ; AI Overviews : non mesuré.
+
+
+## Observation distincte — 8 novembre 2026
+Le rapport Search Console « Fonctionnalités d’IA générative » (bêta), Web texte / trois mois, affiche **15 impressions pour l’accueil**, données du 25 octobre au 6 novembre. Source : `reports/2026-11-08-search-console.json`. Il ne fournit pas ici les questions ni les réponses ; ces impressions ne valident aucune des 25 lignes ci-dessus, ni une présence sur ChatGPT ou Perplexity. Aucun accès de mesure contrôlée à ces assistants utilisé ce jour ; statuts « non mesuré » conservés.

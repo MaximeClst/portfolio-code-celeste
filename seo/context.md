@@ -1,6 +1,6 @@
 # Code Céleste — SEO autopilot
 
-Initialisation : 2026-10-30 (Indian/Reunion). Dernière reconstruction de la carte : 2026-10-30. Première revue hebdomadaire à partir du 2026-11-06.
+Initialisation : 2026-10-30 (Indian/Reunion). Dernière reconstruction de la carte : 2026-10-30. Première revue hebdomadaire effectuée le 2026-11-08 (échéance initiale le 6). Prochain Weekly : 2026-11-15 ; Monthly : 2026-11-29.
 
 ## Cadre autorisé
 - Site : https://code-celeste.com ; origine confirmée par `site.config.ts` et crawl HTTP.
@@ -86,3 +86,14 @@ Recherche le 2026-10-30 : « création site internet La Réunion artisan ». Ré
 - Nouveau rapport Core Web Vitals mobile : groupe LCP 3,0 s, trois URL à améliorer (/ ; /works ; /mentions-legales), données mises à jour le 2 novembre et première détection affichée le 3. Groupe basé sur l’origine faute de données individuelles suffisantes ; il précède la refonte. Mesurer la version actuelle avant d’attribuer une cause ou de lancer la validation. Aucun diagnostic par URL ou gain inventé.
 - Weekly prévu le 6 novembre, Monthly le 29 novembre. Données de conversions Datafast et volumes toujours indisponibles ; pas de nouvelle connexion requise.
 - Publication `35d3293`, Vercel réussi : douze URL 200, logo exact vérifié par empreinte, trois user-agents sociaux ; métadonnées identiques au build. Lint, TypeScript, build et contrôle visuel local réussis. Stash conservé.
+
+
+## Mise à jour du 2026-11-08 — Daily et Weekly
+- Dernier main distant `aea3c2e`, aucun changement distant ni commit local en avance ; stash `e3a9817ad675618683c1f8719d3185545db3a251` préservé. Pas de rapport des 6 et 7 novembre dans le dépôt : aucune action inventée. Automatisation ACTIVE vérifiée, reprise du 4 novembre confirmée dans le suivi central `Clients/SEO/` ; l’ancienne pause du 3 novembre est obsolète.
+- Crawl public : douze réponses 200, huit URL sitemap, aucun problème détecté, métadonnées identiques au 5 novembre ; logo propriétaire conservé, /confirmation noindex, /ads hors sitemap. Lint, build et TypeScript réussis ; contrôle visuel public réussi. Aucun changement du site justifié ce jour : seuls les documents de suivi évoluent.
+- Search Console : 3 clics, 52 impressions, CTR 5,8 %, position 9,6 (Web texte, filtre trois mois, données du 25 octobre au 6 novembre). Comparaison demandée sur sept jours : 31 octobre–6 novembre, 2 clics / 31 impressions ; période précédente réellement affichée 25–30 octobre, 1 clic / 21 impressions. Six jours seulement dans la référence : pas de comparaison à durée égale ni de gain causal. Requêtes visibles aux positions 8–20 non qualifiées ; aucune réécriture opportuniste.
+- Huit inspections renouvelées : accueil, /works, Budget Copain et mentions légales indexés ; artisan, SPS et VELORUN détectés non indexés, sans exploration. Page mobile de nouveau « Google ne reconnaît pas cette URL » ; variation de rapport, pas une désindexation démontrée. Sitemap lu avec succès le 8 novembre, huit pages découvertes, page mobile publique 200 avec six liens entrants. Rapport agrégé toujours en traitement. Aucune demande répétée ni reconnexion.
+- Mesure PageSpeed mobile actuelle : performance 98, LCP laboratoire 0,9 s, TBT 60 ms, CLS 0. CrUX à l’origine reste à 3,0 s sur 28 jours ; mesures différentes, aucun gain réel déclaré. Datafast retourne 403 dans Lighthouse mais aucune erreur n’est observée lors du contrôle Chrome ordinaire : réception analytics non vérifiée, intégration préservée. Détails dans `reports/2026-11-08-performance.json`.
+- Premier relevé du rapport GSC IA générative (bêta) : 15 impressions sur l’accueil du 25 octobre au 6 novembre. Aucun détail de requête ou réponse, aucune conclusion sur ChatGPT/Perplexity ; grille de 25 prompts toujours non mesurée. Conversions toujours indisponibles.
+- Concurrence : trois sous-sitemaps WEBANANAS inchangés, lastmod de deux modifiés ; snapshots enfants désormais conservés. Aucun historique enfant pour prouver les ajouts, aucun gain de requête concurrent mesuré. Article sur le paiement fractionné repéré, sans transposer ses affirmations juridiques ni modifier nos offres. HCG 404 et Tampon Web Conception 403 limitent le relevé comme au setup.
+- Prochain Weekly le 15 novembre, Monthly le 29. Maintenir les pages de service jusqu’au bilan de février 2027 et l’offre /ads intacte.

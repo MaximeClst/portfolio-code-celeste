@@ -1,0 +1,42 @@
+{
+  "observed_at": "2026-11-08T19:56:56+04:00",
+  "url": "https://code-celeste.com/",
+  "report_url": "https://pagespeed.web.dev/analysis/https-code-celeste-com/eanw1ce4hn?form_factor=mobile",
+  "source": "PageSpeed Insights interface visible Chrome",
+  "lab": {
+    "device": "Moto G Power émulé",
+    "lighthouse": "13.6.0",
+    "network": "4G lente",
+    "performance_score": 98,
+    "accessibility_score": 100,
+    "best_practices_score": 96,
+    "seo_score": 100,
+    "FCP_seconds": 0.9,
+    "LCP_seconds": 0.9,
+    "TBT_ms": 60,
+    "CLS": 0,
+    "speed_index_seconds": 3.8,
+    "lcp_element": "aside > p.mt-4, paragraphe Autodidacte du profil",
+    "caution": "Mesure ponctuelle de laboratoire, pas une preuve de gain réel ni un classement Google."
+  },
+  "field": {
+    "scope": "origine",
+    "period": "28 derniers jours",
+    "CWV": "échec",
+    "LCP_seconds": 3,
+    "FCP_seconds": 2.4,
+    "TTFB_seconds": 0.7,
+    "CLS": 0,
+    "INP": null
+  },
+  "console": {
+    "lighthouse": "DataFast pageview HTTP 403, /api/events 403",
+    "regular_chrome_page": "Aucune erreur renvoyée par dev.logs lors de la visite de contrôle. Ne prouve pas réception analytics ; ne pas conclure panne pour tous visiteurs."
+  },
+  "API_attempt": {
+    "status": 429,
+    "reason": "quota public indisponible",
+    "fallback": "Interface PageSpeed Insights réussie, aucune clé ni achat."
+  },
+  "decision": "Pas de modification de performance spéculative ; conserver intégrations et surveiller CrUX après refonte."
+}
