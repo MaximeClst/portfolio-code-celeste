@@ -18,3 +18,6 @@
 
 
 - 2026-11-08 — Daily et premier Weekly : aucun changement du site justifié, seuls les relevés SEO sont actualisés. Douze URL 200, huit entrées sitemap, métadonnées stables ; lint, build, TypeScript et contrôle visuel public réussis. Huit inspections GSC, quatre URL indexées ; 3 clics / 52 impressions cumulés, comparaison partielle documentée. Premier relevé IA GSC : 15 impressions ; laboratoire mobile performance 98, LCP 0,9 s, distinct du LCP CrUX origine 3,0 s. Diff concurrent documenté avec ses limites, stash utilisateur conservé ; aucun formulaire, dépense ou resoumission. Voir `reports/2026-11-08.md`. Prochain Weekly le 15, Monthly le 29 novembre.
+
+
+- 2026-11-09 — Daily : aucune modification du site publiée ; suivi actualisé dans `reports/2026-11-09.md`. Douze URL 200 et métadonnées stables sur https://code-celeste.com ; GSC 3 clics / 52 impressions (jusqu’au 7 novembre), sitemap réussi, indexation agrégée toujours en traitement. Aucun nouveau commit métier distant ; stash, prix et /ads préservés.

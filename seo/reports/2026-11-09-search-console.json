@@ -1,0 +1,37 @@
+{
+  "observed_date": "2026-11-09",
+  "source": "Search Console, interface Chrome, propriété professionnelle existante",
+  "property": "sc-domain:code-celeste.com",
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-07",
+    "clicks": 3,
+    "impressions": 52,
+    "CTR_percent": 5.8,
+    "average_position": 9.6,
+    "comparison": "Totaux identiques au relevé du 8 novembre, fenêtre étendue au 7 novembre. Aucun gain ou classement commercial déduit."
+  },
+  "aggregate_index_report": "Traitement des données en cours",
+  "individual_inspections": {
+    "refreshed_today": false,
+    "latest_evidence": "2026-11-08-search-console.json",
+    "reason": "Huit inspections effectuées hier ; prochain contrôle complet au Weekly. Ne pas présenter leurs statuts comme revérifiés ce jour."
+  },
+  "sitemap": {
+    "last_read": "2026-11-08",
+    "status": "Opération effectuée",
+    "discovered_pages": 8,
+    "resubmitted": false
+  },
+  "CWV": {
+    "mobile_good": 0,
+    "mobile_needs_improvement": 3,
+    "mobile_poor": 0,
+    "desktop": "Aucune donnée",
+    "lab_rerun": false
+  },
+  "conversions": null,
+  "limitations": "Datafast et Ahrefs sans connecteur exploitable : devis attribués au SEO, volumes et concurrence quantitative non mesurés. Relevé IA non renouvelé ce jour."
+}

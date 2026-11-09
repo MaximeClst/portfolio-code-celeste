@@ -97,3 +97,9 @@ Recherche le 2026-10-30 : « création site internet La Réunion artisan ». Ré
 - Premier relevé du rapport GSC IA générative (bêta) : 15 impressions sur l’accueil du 25 octobre au 6 novembre. Aucun détail de requête ou réponse, aucune conclusion sur ChatGPT/Perplexity ; grille de 25 prompts toujours non mesurée. Conversions toujours indisponibles.
 - Concurrence : trois sous-sitemaps WEBANANAS inchangés, lastmod de deux modifiés ; snapshots enfants désormais conservés. Aucun historique enfant pour prouver les ajouts, aucun gain de requête concurrent mesuré. Article sur le paiement fractionné repéré, sans transposer ses affirmations juridiques ni modifier nos offres. HCG 404 et Tampon Web Conception 403 limitent le relevé comme au setup.
 - Prochain Weekly le 15 novembre, Monthly le 29. Maintenir les pages de service jusqu’au bilan de février 2027 et l’offre /ads intacte.
+
+
+## Mise à jour du 2026-11-09 — Daily
+- Main distant `94b7bbd` inchangé ; copie de travail propre au départ et stash utilisateur conservé. Aucun changement métier ni correction du site justifiée. Douze URL publiques 200, métadonnées/texte/maillage identiques au 8 novembre, aucun problème de crawl ; /ads contrôlée visuellement.
+- GSC accessible : 3 clics / 52 impressions / CTR 5,8 % / position 9,6, Web texte, données du 25 octobre au 7 novembre. Totaux inchangés ; sitemap réussi, lu le 8, huit découvertes. Rapport agrégé toujours en traitement, trois URL mobiles CWV à améliorer. Inspections individuelles et mesure laboratoire restent datées du 8 novembre, non répétées aujourd’hui.
+- Daily documenté dans `reports/2026-11-09.md`. Weekly le 15 novembre, Monthly le 29 ; priorités d’hier et décisions propriétaire conservées, aucune nouvelle page ni modification de maintenance.
