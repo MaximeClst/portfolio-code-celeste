@@ -1,0 +1,104 @@
+{
+  "observed_date": "2026-11-10",
+  "source": "Search Console, interface Chrome, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-08",
+    "clicks": 3,
+    "impressions": 53,
+    "CTR_percent": 5.7,
+    "average_position": 9.5,
+    "interpretation": "Une impression supplémentaire sur une fenêtre élargie ; échantillon faible, aucun gain causal ni classement commercial déduit."
+  },
+  "index_report": {
+    "available": true,
+    "updated_at": "2026-11-06",
+    "filter": "Toutes les pages connues",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {
+      "not_found_404": 3,
+      "redirect": 3,
+      "discovered_not_indexed": 4
+    },
+    "discovered_not_indexed": [
+      {
+        "url": "https://code-celeste.com/application-mobile-reunion",
+        "last_crawl": "Sans objet"
+      },
+      {
+        "url": "https://code-celeste.com/creation-site-web-artisan-reunion",
+        "last_crawl": "Sans objet"
+      },
+      {
+        "url": "https://code-celeste.com/works/smart-power-system",
+        "last_crawl": "Sans objet"
+      },
+      {
+        "url": "https://code-celeste.com/works/velorun-festival",
+        "last_crawl": "Sans objet"
+      }
+    ],
+    "historical_404": [
+      {
+        "url": "https://code-celeste.com/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2",
+        "last_crawl": "2026-06-01",
+        "live_status": 404
+      },
+      {
+        "url": "http://code-celeste.com/lander",
+        "last_crawl": "2026-06-01",
+        "live_status_chain": [
+          308,
+          404
+        ],
+        "final_url": "https://code-celeste.com/lander"
+      },
+      {
+        "url": "https://code-celeste.com/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+        "last_crawl": "2026-05-30",
+        "live_status": 404
+      }
+    ],
+    "redirects": [
+      {
+        "url": "http://code-celeste.com/",
+        "live_final_url": "https://code-celeste.com/",
+        "live_final_status": 200,
+        "redirect_count": 1
+      },
+      {
+        "url": "https://www.code-celeste.com/",
+        "live_final_url": "https://code-celeste.com/",
+        "live_final_status": 200,
+        "redirect_count": 1
+      },
+      {
+        "url": "http://www.code-celeste.com/",
+        "live_final_url": "https://code-celeste.com/",
+        "live_final_status": 200,
+        "redirect_count": 2
+      }
+    ],
+    "interpretation": "Le total inclut des variantes de domaine et anciennes ressources hors sitemap. Les trois 404 ne sont référencées ni dans app/lib/public ni dans le maillage du crawl actuel. Aucune redirection de convenance ajoutée ; quatre pages éditoriales restent en attente. Le rapport agrégé daté du 6 novembre ne remplace pas une inspection individuelle actuelle."
+  },
+  "actions": {
+    "validation_requested": false,
+    "indexing_requested": false,
+    "sitemap_submitted": false,
+    "reconnected": false
+  },
+  "CWV": {
+    "mobile_good": 0,
+    "mobile_needs_improvement": 3,
+    "mobile_poor": 0,
+    "desktop": "Aucune donnée"
+  },
+  "sitemap_console_refreshed": false,
+  "individual_inspections_refreshed": false,
+  "conversions": null,
+  "limitations": "Datafast/Ahrefs sans source de métriques exploitable ; conversions attribuées et volumes inconnus. Dernières inspections individuelles le 8 novembre."
+}

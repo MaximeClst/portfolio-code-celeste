@@ -30,3 +30,9 @@
 3. Obtenir une mesure de devis attribués au SEO quand l’accès Datafast sera disponible. HTTP 403 uniquement observé dans l’audit Lighthouse, pas de panne générale démontrée ; intégration inchangée, aucun lead de test envoyé.
 4. Visibilité IA : baseline GSC 15 impressions sur l’accueil ; ne remplace pas les observations contrôlées des 25 prompts, toujours non mesurés. Relevé suivant avec la même fenêtre si possible.
 5. Comparaison hebdomadaire : la référence disponible du 25–30 octobre ne fait que six jours ; attendre des fenêtres complètes avant d’en tirer une tendance. Aucune requête acheteur visible en positions 8–20 à renforcer aujourd’hui.
+
+
+## Complément du 10 novembre — rapport agrégé disponible
+- Priorité inchangée : suivre l’exploration des quatre pages artisan, mobile, SPS et VELORUN, toutes listées « Détectée, actuellement non indexée » dans les données du 6 novembre. Aucun obstacle technique identifié ; ne pas confondre ce relevé agrégé avec une inspection individuelle actuelle.
+- Trois anciennes 404 hors maillage/sitemap (deux polices, `/lander`) : ne pas reconstruire ces ressources ni rediriger arbitrairement vers l’accueil. Réexaminer seulement si un lien actif ou un usage légitime est identifié.
+- Variantes de domaine : destinations correctes. HTTP+www utilise deux sauts ; faible priorité, configuration d’hébergement inchangée. Les liens internes utilisent déjà HTTPS sans www.

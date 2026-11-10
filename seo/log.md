@@ -21,3 +21,6 @@
 
 
 - 2026-11-09 — Daily : aucune modification du site publiée ; suivi actualisé dans `reports/2026-11-09.md`. Douze URL 200 et métadonnées stables sur https://code-celeste.com ; GSC 3 clics / 52 impressions (jusqu’au 7 novembre), sitemap réussi, indexation agrégée toujours en traitement. Aucun nouveau commit métier distant ; stash, prix et /ads préservés.
+
+
+- 2026-11-10 — Daily : aucun changement du site ; rapport agrégé GSC désormais accessible, quatre URL indexées, quatre éditoriales détectées non explorées, trois variantes redirigées et trois anciennes 404 hors maillage. Douze URL courantes 200, lint/build/TypeScript et affichage public réussis, stash conservé. Sources et décisions dans `reports/2026-11-10.md` ; aucune resoumission ou validation lancée.
