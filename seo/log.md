@@ -24,3 +24,9 @@
 
 
 - 2026-11-10 — Daily : aucun changement du site ; rapport agrégé GSC désormais accessible, quatre URL indexées, quatre éditoriales détectées non explorées, trois variantes redirigées et trois anciennes 404 hors maillage. Douze URL courantes 200, lint/build/TypeScript et affichage public réussis, stash conservé. Sources et décisions dans `reports/2026-11-10.md` ; aucune resoumission ou validation lancée.
+
+
+- 2026-11-11 — Daily sans publication : douze URL publiques 200 et métadonnées stables ; accès Search Console non revérifié à cause de deux échecs de navigation, aucun contrôle visuel. Aucun changement du site ; relevés locaux dans `reports/2026-11-11.md`, dernière observation Google conservée avec sa date du 10 novembre. Stash utilisateur intact, aucune reconnexion ni resoumission.
+
+
+- 2026-11-12 — Daily : accès Search Console de nouveau fonctionnel sans reconnexion ; 4 clics / 70 impressions, données jusqu’au 9 novembre, rapport agrégé 4 indexées / 10 non indexées. Aucune correction du site ; douze URL 200, lint/build/TypeScript et contrôle visuel public réussis. Relevés locaux du 11 conservés et synchronisés avec ceux du 12 ; stash et /ads préservés. Voir `reports/2026-11-12.md`.

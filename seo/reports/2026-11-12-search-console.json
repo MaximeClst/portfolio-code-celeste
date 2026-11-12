@@ -1,0 +1,74 @@
+{
+  "observed_date": "2026-11-12",
+  "source": "Interface Search Console Chrome, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "access": "Rétabli sans reconnexion ni changement de configuration après le blocage navigateur du 11 novembre.",
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-09",
+    "clicks": 4,
+    "impressions": 70,
+    "CTR_percent": 5.7,
+    "average_position": 7.7,
+    "queries": [
+      {
+        "query": "code celeste",
+        "clicks": 2,
+        "impressions": 16
+      },
+      {
+        "query": "celeste code",
+        "clicks": 0,
+        "impressions": 3
+      },
+      {
+        "query": "celeste",
+        "clicks": 0,
+        "impressions": 3
+      },
+      {
+        "query": "codigo celeste",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "query": "anthony celeste",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "query": "cómo viajar",
+        "clicks": 0,
+        "impressions": 1
+      }
+    ],
+    "interpretation": "Fenêtre étendue depuis le relevé du 10 novembre, très petit échantillon. La marque explique dix impressions visibles supplémentaires ; les lignes de requêtes sont incomplètes. Ne pas attribuer les deux clics hors lignes visibles ni revendiquer une page 1 commerciale."
+  },
+  "index_report": {
+    "available": true,
+    "updated_at": "2026-11-09",
+    "filter": "Toutes les pages connues",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {
+      "not_found_404": 3,
+      "redirect": 3,
+      "discovered_not_indexed": 4
+    },
+    "category_examples_refreshed_today": false,
+    "last_examples": "2026-11-10-search-console.json"
+  },
+  "individual_inspections_refreshed": false,
+  "sitemap_console_refreshed": false,
+  "actions": {
+    "reconnected": false,
+    "indexing_requested": false,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  },
+  "visual_check": "Page application-mobile-reunion chargée et affichée correctement sur ordinateur",
+  "conversions": null,
+  "limits": "Conversions Datafast, volumes Ahrefs et observations contrôlées IA non mesurés. Weekly le 15 novembre, Monthly le 29."
+}

@@ -1,0 +1,13 @@
+{
+  "observed_date": "2026-11-11",
+  "property": "sc-domain:code-celeste.com",
+  "access_today": "Non vérifié : navigation du navigateur restée sur about:blank après deux tentatives expirées.",
+  "cause_scope": "Échec technique du contrôle navigateur, pas une preuve de suppression de propriété ni de perte des droits Google.",
+  "last_successful_observation": "2026-11-10-search-console.json",
+  "metrics_refreshed": false,
+  "indexing_refreshed": false,
+  "reconnection_attempted": false,
+  "visual_check_today": false,
+  "publication": false,
+  "follow_up": "Retenter le navigateur au prochain passage ; conserver la propriété existante et les dernières mesures avec leur date."
+}
