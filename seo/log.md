@@ -30,3 +30,6 @@
 
 
 - 2026-11-12 — Daily : accès Search Console de nouveau fonctionnel sans reconnexion ; 4 clics / 70 impressions, données jusqu’au 9 novembre, rapport agrégé 4 indexées / 10 non indexées. Aucune correction du site ; douze URL 200, lint/build/TypeScript et contrôle visuel public réussis. Relevés locaux du 11 conservés et synchronisés avec ceux du 12 ; stash et /ads préservés. Voir `reports/2026-11-12.md`.
+
+
+- 2026-11-13 — Daily : aucune modification du site ; douze URL 200, métadonnées stables, lint/build/TypeScript et affichage public réussis. GSC 4 clics / 75 impressions jusqu’au 10 novembre ; indexation agrégée inchangée. Suivi documenté dans `reports/2026-11-13.md`, stash et offres préservés, aucune demande d’indexation.

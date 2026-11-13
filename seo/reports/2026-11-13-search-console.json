@@ -1,0 +1,78 @@
+{
+  "observed_date": "2026-11-13",
+  "source": "Search Console, interface Chrome, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-10",
+    "clicks": 4,
+    "impressions": 75,
+    "CTR_percent": 5.3,
+    "average_position": 7.4,
+    "queries": [
+      {
+        "query": "code celeste",
+        "clicks": 2,
+        "impressions": 16
+      },
+      {
+        "query": "celeste",
+        "clicks": 0,
+        "impressions": 4
+      },
+      {
+        "query": "celeste code",
+        "clicks": 0,
+        "impressions": 3
+      },
+      {
+        "query": "codigo celeste",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "query": "anthony celeste",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "query": "cómo viajar",
+        "clicks": 0,
+        "impressions": 1
+      }
+    ],
+    "interpretation": "Clics inchangés, cinq impressions supplémentaires sur fenêtre étendue. Pas de tendance causale ou classement commercial déduit. Les lignes de requêtes restent non exhaustives."
+  },
+  "index_report": {
+    "updated_at": "2026-11-09",
+    "filter": "Toutes les pages connues",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {
+      "not_found_404": 3,
+      "redirect": 3,
+      "discovered_not_indexed": 4
+    },
+    "category_examples_refreshed_today": false,
+    "last_examples": "2026-11-10-search-console.json"
+  },
+  "individual_inspections_refreshed": false,
+  "sitemap_console_refreshed": false,
+  "actions": {
+    "reconnected": false,
+    "indexing_requested": false,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  },
+  "checks": {
+    "lint": "pass",
+    "typescript": "pass",
+    "build": "pass",
+    "visual": "Page artisan publique sur ordinateur, conforme"
+  },
+  "conversions": null,
+  "limitations": "Conversions Datafast, volumes Ahrefs et réponses contrôlées IA non mesurés. L’indexation individuelle ne se déduit pas du crawl HTTP."
+}
