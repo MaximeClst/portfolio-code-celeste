@@ -1,0 +1,47 @@
+{
+  "observed_date": "2026-11-14",
+  "source": "Interface Search Console dans Chrome, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-10",
+    "clicks": 4,
+    "impressions": 75,
+    "CTR_percent": 5.3,
+    "average_position": 7.4,
+    "comparison": "Même période et mêmes totaux que le 13 novembre ; aucune progression mesurée."
+  },
+  "index_report": {
+    "updated_at": "2026-11-09",
+    "filter": "Toutes les pages connues",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {
+      "not_found_404": 3,
+      "redirect": 3,
+      "discovered_not_indexed": 4
+    },
+    "category_examples_refreshed_today": false,
+    "last_examples": "2026-11-10-search-console.json"
+  },
+  "individual_inspections_refreshed": false,
+  "sitemap_console_refreshed": false,
+  "actions": {
+    "reconnected": false,
+    "indexing_requested": false,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  },
+  "checks": {
+    "lint": "pass",
+    "typescript": "pass",
+    "build": "pass",
+    "visual": "Portfolio /works public sur ordinateur, conforme",
+    "environment": "npm absent du PATH initial ; outils Homebrew existants utilisés via PATH=/opt/homebrew/bin:$PATH, aucune installation."
+  },
+  "conversions": null,
+  "limitations": "Conversions Datafast et volumes Ahrefs non disponibles ; attribution des devis et priorisation quantitative non vérifiées. Aucun gain commercial extrapolé."
+}

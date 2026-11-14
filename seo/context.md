@@ -128,3 +128,9 @@ Recherche le 2026-10-30 : « création site internet La Réunion artisan ». Ré
 - Main distant `1b8578f` inchangé, copie initialement propre et stash conservé. Douze URL 200, huit entrées sitemap, métadonnées/texte/maillage inchangés ; lint, TypeScript, build et contrôle visuel public de la page artisan réussis. Aucune correction applicative justifiée.
 - GSC accessible : 4 clics / 75 impressions / CTR 5,3 % / position 7,4, Web texte, données du 25 octobre au 10 novembre. Fenêtre étendue et faible échantillon, aucune tendance causale déduite. Rapport agrégé identique, actualisé le 9 : 4 indexées / 10 non indexées (3 anciennes 404, 3 redirections, 4 détectées non indexées). Pas de nouvelle inspection individuelle, resoumission ou validation.
 - Sources `reports/2026-11-13*.json`. Priorités inchangées ; Weekly le 15, Monthly le 29 novembre. Offres et parcours /ads préservés.
+
+
+## Mise à jour du 2026-11-14 — Daily
+- Main distant `b388d12` inchangé, copie initialement propre et stash préservé. Douze URL 200, huit au sitemap, aucun problème ni variation de métadonnées/texte/maillage. Lint, TypeScript, build et affichage du portfolio réussis avec les outils Homebrew existants (/opt/homebrew/bin à ajouter au PATH du shell si nécessaire). Aucun changement applicatif.
+- GSC accessible : mêmes données qu’au 13, du 25 octobre au 10 novembre, 4 clics / 75 impressions / CTR 5,3 % / position 7,4. Rapport agrégé toujours daté du 9 : 4 indexées / 10 non indexées, mêmes catégories. Aucune progression mesurée ni inspection individuelle répétée ; aucune resoumission ou validation.
+- Sources `reports/2026-11-14*.json`. Weekly à effectuer le 15 novembre (dernier le 8), Monthly le 29 ; prix et /ads conservés.

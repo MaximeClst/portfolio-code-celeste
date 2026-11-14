@@ -33,3 +33,6 @@
 
 
 - 2026-11-13 — Daily : aucune modification du site ; douze URL 200, métadonnées stables, lint/build/TypeScript et affichage public réussis. GSC 4 clics / 75 impressions jusqu’au 10 novembre ; indexation agrégée inchangée. Suivi documenté dans `reports/2026-11-13.md`, stash et offres préservés, aucune demande d’indexation.
+
+
+- 2026-11-14 — Daily : aucun changement du site ; douze URL 200, métadonnées stables, lint/build/TypeScript et contrôle visuel du portfolio réussis. Données GSC identiques au 13 novembre ; suivi actualisé dans `reports/2026-11-14.md`. Stash et offres préservés. Weekly prévu le 15 novembre.
