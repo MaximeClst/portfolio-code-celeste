@@ -31,3 +31,7 @@ Aucune interrogation contrôlée des assistants effectuée. Ne pas interpréter 
 
 ## Observation distincte — 8 novembre 2026
 Le rapport Search Console « Fonctionnalités d’IA générative » (bêta), Web texte / trois mois, affiche **15 impressions pour l’accueil**, données du 25 octobre au 6 novembre. Source : `reports/2026-11-08-search-console.json`. Il ne fournit pas ici les questions ni les réponses ; ces impressions ne valident aucune des 25 lignes ci-dessus, ni une présence sur ChatGPT ou Perplexity. Aucun accès de mesure contrôlée à ces assistants utilisé ce jour ; statuts « non mesuré » conservés.
+
+
+## Observation distincte — 15 novembre 2026
+GSC IA générative (bêta), trois mois, 25 octobre–13 novembre : **19 impressions de l’accueil**. Source : `reports/2026-11-15-search-console.json`. Fenêtre plus longue que le 8, aucune progression comparable déduite. Les 25 prompts restent non mesurés : aucune interface connectée de mesure contrôlée ChatGPT/Perplexity/AI Overviews utilisée ; aucune absence de citation déduite et aucune réponse inventée.

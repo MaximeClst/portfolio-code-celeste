@@ -1,0 +1,187 @@
+{
+  "observed_date": "2026-11-15",
+  "source": "Interface Google Search Console, Chrome, compte maxime@code-celeste.com",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-13",
+    "clicks": 5,
+    "impressions": 83,
+    "CTR_percent": 6,
+    "average_position": 7.2
+  },
+  "queries_3_months": [
+    {
+      "query": "code celeste",
+      "clicks": 2,
+      "impressions": 17,
+      "position": 1.6
+    },
+    {
+      "query": "celeste",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 5.2
+    },
+    {
+      "query": "celeste code",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 2.7
+    },
+    {
+      "query": "codigo celeste",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 36
+    },
+    {
+      "query": "anthony celeste",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12
+    },
+    {
+      "query": "cómo viajar",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 15
+    }
+  ],
+  "weekly_comparison": {
+    "date_verification": "Dates relues dans le sélecteur Comparer après application ; deux fenêtres complètes de sept jours. Le libellé accessible du graphique affiche Invalid Date, non utilisé comme source de dates.",
+    "current": {
+      "start": "2026-11-07",
+      "end": "2026-11-13",
+      "clicks": 2,
+      "impressions": 31,
+      "CTR_percent": 6.5,
+      "average_position": 3.1
+    },
+    "previous": {
+      "start": "2026-10-31",
+      "end": "2026-11-06",
+      "clicks": 2,
+      "impressions": 31,
+      "CTR_percent": 6.5,
+      "average_position": 11.6
+    },
+    "interpretation": "Clics et impressions stables. Position agrégée meilleure avec un mélange de requêtes différent ; aucun gain de position commerciale établi. code celeste : 0 clic / 11 impressions / position 1,7 contre 1 / 2 / 1,5. Aucun mot-clé acheteur pertinent visible en position 8–20 ; pas de réécriture justifiée."
+  },
+  "index_report": {
+    "updated_at": "2026-11-09",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {
+      "not_found_404": 3,
+      "redirect": 3,
+      "discovered_not_indexed": 4
+    },
+    "category_examples_refreshed_today": false
+  },
+  "individual_inspections": [
+    {
+      "url": "https://code-celeste.com/",
+      "status": "indexed",
+      "last_crawl": "non développé"
+    },
+    {
+      "url": "https://code-celeste.com/works",
+      "status": "indexed",
+      "last_crawl": "non développé"
+    },
+    {
+      "url": "https://code-celeste.com/creation-site-web-artisan-reunion",
+      "status": "URL inconnue de Google",
+      "last_crawl": null
+    },
+    {
+      "url": "https://code-celeste.com/application-mobile-reunion",
+      "status": "Détectée, actuellement non indexée",
+      "last_crawl": null
+    },
+    {
+      "url": "https://code-celeste.com/works/smart-power-system",
+      "status": "URL inconnue de Google",
+      "last_crawl": null
+    },
+    {
+      "url": "https://code-celeste.com/works/velorun-festival",
+      "status": "Détectée, actuellement non indexée",
+      "last_crawl": null
+    },
+    {
+      "url": "https://code-celeste.com/works/budget-copain",
+      "status": "indexed",
+      "last_crawl": "non développé"
+    },
+    {
+      "url": "https://code-celeste.com/mentions-legales",
+      "status": "indexed",
+      "last_crawl": "non développé"
+    }
+  ],
+  "live_tests": [
+    {
+      "url": "https://code-celeste.com/creation-site-web-artisan-reunion",
+      "result": "Google a accès à cette URL ; la page peut être indexée",
+      "tested_at_local": "2026-11-15 20:57 Indian/Reunion",
+      "indexing_requested": true,
+      "request_result": "Indexation demandée ; URL ajoutée à une file d’attente d’exploration prioritaire"
+    },
+    {
+      "url": "https://code-celeste.com/application-mobile-reunion",
+      "result": "Google a accès à cette URL ; la page peut être indexée",
+      "tested_at_local": "2026-11-15 20:57 Indian/Reunion",
+      "indexing_requested": true,
+      "request_result": "Indexation demandée ; URL ajoutée à une file d’attente d’exploration prioritaire"
+    }
+  ],
+  "indexing_caveat": "Tests et demandes ne prouvent pas une indexation. Variations inconnue/détectée sans preuve de désindexation ; aucune cause thin/duplicate inventée. Ne pas redemander quotidiennement.",
+  "sitemap": {
+    "url": "https://code-celeste.com/sitemap.xml",
+    "submitted": "2026-10-30",
+    "last_read": "2026-11-13",
+    "status": "Opération effectuée",
+    "discovered": 8,
+    "resubmitted": false
+  },
+  "ai_generative": {
+    "filter": "3 mois",
+    "start": "2026-10-25",
+    "end": "2026-11-13",
+    "impressions": 19,
+    "pages": [
+      {
+        "url": "https://code-celeste.com/",
+        "impressions": 19
+      }
+    ],
+    "limitation": "Pas de prompts ni réponses observés. Aucun résultat ChatGPT/Perplexity déduit."
+  },
+  "core_web_vitals": {
+    "updated_at": "2026-11-09",
+    "mobile_good": 0,
+    "mobile_needs_improvement": 3,
+    "mobile_poor": 0,
+    "desktop": "données insuffisantes",
+    "new_lighthouse_measurement": false
+  },
+  "checks": {
+    "lint": "pass",
+    "typescript": "pass",
+    "build": "pass",
+    "visual": "Page artisan publique, ordinateur, conforme"
+  },
+  "conversions": null,
+  "limitations": "Aucun connecteur Search Console/Ahrefs/Datafast dédié disponible ; GSC consultée via navigateur connecté. Conversions et volumes non accessibles. Suivi contrôlé des 25 prompts ChatGPT/Perplexity/AI Overviews non effectué : aucune interface de mesure connectée dans cette session.",
+  "actions": {
+    "reconnected": false,
+    "indexing_requests_count": 2,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  }
+}

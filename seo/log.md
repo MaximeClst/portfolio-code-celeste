@@ -36,3 +36,5 @@
 
 
 - 2026-11-14 — Daily : aucun changement du site ; douze URL 200, métadonnées stables, lint/build/TypeScript et contrôle visuel du portfolio réussis. Données GSC identiques au 13 novembre ; suivi actualisé dans `reports/2026-11-14.md`. Stash et offres préservés. Weekly prévu le 15 novembre.
+
+- 2026-11-15 — Daily + Weekly : deux tests Google en direct réussis, demandes d’indexation artisan/mobile acceptées une fois chacune (indexation effective non confirmée). Huit inspections renouvelées ; quatre pages indexées. Comparaison 7 jours : clics/impressions stables à 2/31. Aucun changement applicatif ; douze URL 200, lint/build/TypeScript et contrôle visuel réussis. Concurrence et IA actualisées, stash et offres préservés. Voir `reports/2026-11-15.md` ; Weekly 22 novembre, Monthly 29.

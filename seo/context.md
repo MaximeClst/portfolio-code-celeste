@@ -1,6 +1,6 @@
 # Code Céleste — SEO autopilot
 
-Initialisation : 2026-10-30 (Indian/Reunion). Dernière reconstruction de la carte : 2026-10-30. Première revue hebdomadaire effectuée le 2026-11-08 (échéance initiale le 6). Prochain Weekly : 2026-11-15 ; Monthly : 2026-11-29.
+Initialisation : 2026-10-30 (Indian/Reunion). Dernière reconstruction de la carte : 2026-10-30. Dernière revue hebdomadaire effectuée le 2026-11-15 (première le 8). Prochain Weekly : 2026-11-22 ; Monthly : 2026-11-29.
 
 ## Cadre autorisé
 - Site : https://code-celeste.com ; origine confirmée par `site.config.ts` et crawl HTTP.
@@ -134,3 +134,12 @@ Recherche le 2026-10-30 : « création site internet La Réunion artisan ». Ré
 - Main distant `b388d12` inchangé, copie initialement propre et stash préservé. Douze URL 200, huit au sitemap, aucun problème ni variation de métadonnées/texte/maillage. Lint, TypeScript, build et affichage du portfolio réussis avec les outils Homebrew existants (/opt/homebrew/bin à ajouter au PATH du shell si nécessaire). Aucun changement applicatif.
 - GSC accessible : mêmes données qu’au 13, du 25 octobre au 10 novembre, 4 clics / 75 impressions / CTR 5,3 % / position 7,4. Rapport agrégé toujours daté du 9 : 4 indexées / 10 non indexées, mêmes catégories. Aucune progression mesurée ni inspection individuelle répétée ; aucune resoumission ou validation.
 - Sources `reports/2026-11-14*.json`. Weekly à effectuer le 15 novembre (dernier le 8), Monthly le 29 ; prix et /ads conservés.
+
+
+## Mise à jour du 2026-11-15 — Daily et Weekly
+- Main distant `63d9248` inchangé, copie initialement propre, stash `e3a9817ad675618683c1f8719d3185545db3a251` préservé. Douze URL publiques 200, huit au sitemap, aucun problème ni modification de métadonnées/texte/maillage. Lint/build/TypeScript et affichage public artisan réussis. Aucune correction applicative justifiée.
+- GSC professionnelle accessible via Chrome, sans reconnexion : 5 clics / 83 impressions / CTR 6 % / position 7,2, 25 octobre–13 novembre. Comparaison de fenêtres complètes 7–13 novembre et 31 octobre–6 novembre : 2 clics / 31 impressions dans chacune ; position agrégée 3,1 contre 11,6, mélange de requêtes différent, pas de preuve de page 1 commerciale. Pas de requête acheteur visible en position 8–20. Conversions non disponibles.
+- Huit inspections actuelles : accueil, /works, Budget Copain et mentions légales indexés ; artisan/SPS inconnus, mobile/VELORUN détectés non indexés sans exploration. Rapport agrégé toujours daté du 9 (4 / 10) ; variations individuelles non assimilées à une désindexation. Sitemap réussi, lu le 13 novembre, huit découvertes.
+- Tests en direct artisan/mobile réussis le 15 novembre à 20:57, Google peut accéder et indexer les pages. Une demande d’indexation pour chacune a été acceptée dans la file prioritaire ; aucune indexation effective encore confirmée, ne pas redemander quotidiennement. Aucun renvoi du sitemap.
+- Concurrence : nouvel article WEBANANAS /intelligence-artificielle-tpe-pme/, ajouté au sitemap depuis le 8, mise à jour affichée le 11. Aucun classement ni statistique repris, pas de nouvelle page sans valeur propriétaire démontrée. HCG 404 / Tampon 403 persistent.
+- IA GSC : 19 impressions de l’accueil sur fenêtre élargie, sans détail des réponses ; 25 prompts contrôlés toujours non mesurés faute d’interface de mesure connectée. CWV trois URL mobiles à améliorer (9 novembre), pas de nouveau Lighthouse. Prochain Weekly le 22, Monthly le 29. Décisions de février et maintenance /ads préservées.

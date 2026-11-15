@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://www.webananas.re/page-sitemap.xml",
+    "added": [],
+    "removed": [],
+    "lastmod_changed": []
+  },
+  {
+    "url": "https://www.webananas.re/post-sitemap.xml",
+    "added": [
+      "https://www.webananas.re/intelligence-artificielle-tpe-pme/"
+    ],
+    "removed": [],
+    "lastmod_changed": []
+  },
+  {
+    "url": "https://www.webananas.re/realisation-sitemap.xml",
+    "added": [],
+    "removed": [],
+    "lastmod_changed": []
+  }
+]

@@ -36,3 +36,11 @@
 - Priorité inchangée : suivre l’exploration des quatre pages artisan, mobile, SPS et VELORUN, toutes listées « Détectée, actuellement non indexée » dans les données du 6 novembre. Aucun obstacle technique identifié ; ne pas confondre ce relevé agrégé avec une inspection individuelle actuelle.
 - Trois anciennes 404 hors maillage/sitemap (deux polices, `/lander`) : ne pas reconstruire ces ressources ni rediriger arbitrairement vers l’accueil. Réexaminer seulement si un lien actif ou un usage légitime est identifié.
 - Variantes de domaine : destinations correctes. HTTP+www utilise deux sauts ; faible priorité, configuration d’hébergement inchangée. Les liens internes utilisent déjà HTTPS sans www.
+
+
+## Priorités après Weekly du 15 novembre
+1. Artisan/mobile : tests en direct réussis et demandes d’indexation acceptées le 15. Suivre leur exploration au prochain passage, sans répéter les demandes ni renvoyer le sitemap ; ne pas annoncer d’indexation effective avant confirmation.
+2. SPS/VELORUN : respectivement inconnue et détectée non indexée lors des inspections du 15 ; pas de blocage HTTP/canonical/maillage trouvé, ne pas inventer la cause.
+3. Mesure commerciale : fenêtres complètes de sept jours désormais comparables, 2 clics / 31 impressions dans chacune. Aucune requête acheteur en position 8–20 ; aucune réécriture forcée ni quota de douze modifications sans valeur.
+4. Concurrence : article IA/TPE-PME WEBANANAS identifié, aucun gain de requêtes connu ni contenu propriétaire distinct à opposer ; pas de nouvelle page ajoutée au backlog.
+5. Mesure Datafast et grille IA restent indisponibles/non mesurées ; CWV à suivre. Prochain Weekly 22 novembre, Monthly 29 novembre.
