@@ -1,0 +1,82 @@
+{
+  "observed_date": "2026-11-16",
+  "source": "Search Console dans Chrome, compte professionnel existant maxime@code-celeste.com",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "browser_note": "Chrome DevTools indisponible (profil déjà utilisé) ; accès via extension Chrome/CUA réussi, aucun processus arrêté ni reconnexion.",
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-13",
+    "clicks": 5,
+    "impressions": 83,
+    "CTR_percent": 6,
+    "average_position": 7.2,
+    "comparison": "Mêmes données et même période que le 15 novembre, pas de gain mesuré."
+  },
+  "index_report": {
+    "updated_at": "2026-11-13",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {
+      "not_found_404": 3,
+      "redirect": 3,
+      "discovered_not_indexed": 4
+    },
+    "category_examples_refreshed_today": false,
+    "caveat": "Rapport antérieur aux explorations du 15 novembre ; ne reflète pas encore les deux nouvelles indexations confirmées individuellement."
+  },
+  "individual_inspections": [
+    {
+      "url": "https://code-celeste.com/creation-site-web-artisan-reunion",
+      "status": "indexed",
+      "message": "Cette URL est sur Google ; La page est indexée",
+      "last_crawl_displayed": "15 nov. 2026, 20:58:48",
+      "crawler": "Googlebot pour smartphone",
+      "crawl_allowed": true,
+      "fetch": "Réussie",
+      "indexing_allowed": true,
+      "user_canonical": "https://code-celeste.com/creation-site-web-artisan-reunion",
+      "google_canonical": "URL inspectée",
+      "sitemap_detail": "Erreur de traitement temporaire"
+    },
+    {
+      "url": "https://code-celeste.com/application-mobile-reunion",
+      "status": "indexed",
+      "message": "Cette URL est sur Google ; La page est indexée",
+      "last_crawl_displayed": "15 nov. 2026, 21:00:26",
+      "crawler": "Googlebot pour smartphone",
+      "crawl_allowed": true,
+      "fetch": "Réussie",
+      "indexing_allowed": true,
+      "user_canonical": "https://code-celeste.com/application-mobile-reunion",
+      "google_canonical": "URL inspectée",
+      "sitemap_detail": "https://code-celeste.com/sitemap.xml"
+    }
+  ],
+  "other_individual_inspections": "Non renouvelées ; conserver les dates du 15 novembre. SPS et VELORUN non confirmés indexés à cette date.",
+  "sitemap": {
+    "url": "https://code-celeste.com/sitemap.xml",
+    "submitted": "2026-10-30",
+    "last_read": "2026-11-13",
+    "status": "Opération effectuée",
+    "discovered": 8,
+    "resubmitted": false
+  },
+  "actions": {
+    "reconnected": false,
+    "indexing_requested": false,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  },
+  "checks": {
+    "lint": "pass",
+    "typescript": "pass",
+    "build": "pass",
+    "visual": "Page mobile publique sur ordinateur, conforme",
+    "crawl": "12 URL 200, 8 URL sitemap, aucun problème ; métadonnées, texte serveur et maillage identiques au 15 novembre."
+  },
+  "conversions": null,
+  "limitations": "Volumes Ahrefs, conversions Datafast et mesure contrôlée des assistants non disponibles. Aucune progression de classement commercial extrapolée. Weekly du 15 non répété ; prochain le 22, Monthly le 29 novembre."
+}

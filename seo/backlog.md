@@ -44,3 +44,10 @@
 3. Mesure commerciale : fenêtres complètes de sept jours désormais comparables, 2 clics / 31 impressions dans chacune. Aucune requête acheteur en position 8–20 ; aucune réécriture forcée ni quota de douze modifications sans valeur.
 4. Concurrence : article IA/TPE-PME WEBANANAS identifié, aucun gain de requêtes connu ni contenu propriétaire distinct à opposer ; pas de nouvelle page ajoutée au backlog.
 5. Mesure Datafast et grille IA restent indisponibles/non mesurées ; CWV à suivre. Prochain Weekly 22 novembre, Monthly 29 novembre.
+
+
+## Priorités actualisées le 16 novembre — indexation commerciale confirmée
+1. **Artisan/mobile indexées** lors des inspections actuelles, explorées le 15 au soir. Ne plus demander leur indexation par routine. Suivre leurs impressions/requêtes commerciales puis leurs devis attribués au SEO ; aucun classement commercial encore établi.
+2. SPS/VELORUN : restent sans indexation confirmée selon les inspections du 15, non renouvelées aujourd’hui. Réexaminer au prochain suivi utile sans leur attribuer la progression des services.
+3. Rapport agrégé du 13 encore en retard sur les explorations du 15 : ne pas confondre ce total de quatre avec le statut individuel actuel. Sitemap réussi, pas de renvoi malgré le détail temporaire de la page artisan.
+4. Préserver les pages jusqu’au bilan de février et les offres. Weekly 22 novembre / Monthly 29 ; mesures Datafast et volumes restent manquantes.
