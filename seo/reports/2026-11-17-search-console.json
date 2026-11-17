@@ -1,0 +1,40 @@
+{
+  "observed_date": "2026-11-17",
+  "source": "Search Console dans Chrome, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-14",
+    "clicks": 5,
+    "impressions": 85,
+    "CTR_percent": 5.9,
+    "average_position": 7.2,
+    "interpretation": "Deux impressions supplémentaires sur une fenêtre élargie, clics stables. Données antérieures aux explorations commerciales du 15 : aucun effet de leur indexation déduit."
+  },
+  "queries": [
+    {"query": "code celeste", "clicks": 2, "impressions": 17},
+    {"query": "celeste", "clicks": 0, "impressions": 6},
+    {"query": "celeste code", "clicks": 0, "impressions": 3},
+    {"query": "codigo celeste", "clicks": 0, "impressions": 2},
+    {"query": "anthony celeste", "clicks": 0, "impressions": 1},
+    {"query": "cómo viajar", "clicks": 0, "impressions": 1}
+  ],
+  "index_report": {
+    "updated_at": "2026-11-13",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {"not_found_404": 3, "redirect": 3, "discovered_not_indexed": 4},
+    "category_examples_refreshed_today": false,
+    "caveat": "Rapport antérieur aux explorations du 15 ; ne remet pas en cause les indexations artisan/mobile confirmées individuellement le 16."
+  },
+  "individual_inspections_refreshed": false,
+  "last_service_inspections": "2026-11-16-search-console.json",
+  "sitemap_console_refreshed": false,
+  "actions": {"reconnected": false, "indexing_requested": false, "validation_requested": false, "sitemap_submitted": false},
+  "checks": {"lint": "pass", "typescript": "pass", "build": "pass", "visual": "Portfolio public sur ordinateur conforme", "crawl": "12 réponses 200, 8 URL sitemap, aucune anomalie, métadonnées/texte/maillage identiques au 16."},
+  "conversions": null,
+  "limitations": "Conversions Datafast, volumes Ahrefs et mesure contrôlée des assistants non disponibles. Weekly le 22 novembre, Monthly le 29."
+}

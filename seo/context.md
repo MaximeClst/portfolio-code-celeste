@@ -151,3 +151,8 @@ Recherche le 2026-10-30 : « création site internet La Réunion artisan ». Ré
 - Rapport agrégé mis à jour au 13 novembre : toujours 4 indexées / 10 non indexées ; antérieur aux deux explorations, ne remplace pas les inspections actuelles. Autres URL non réinspectées aujourd’hui. Détail artisan : erreur temporaire de traitement sitemap ; rapport Sitemaps réussi, lu le 13, huit découvertes. Pas de resoumission.
 - GSC 5 clics / 83 impressions / CTR 6 % / position 7,2, même fenêtre 25 octobre–13 novembre. Pas de gain de classement ou conversion extrapolé. Chrome DevTools occupé, accès professionnel obtenu par extension Chrome/CUA sans reconnexion.
 - Priorité désormais aux premières impressions commerciales des deux services, plus suivi SPS/VELORUN et mesure des devis. Weekly le 22, Monthly le 29. Conversions et volumes non disponibles ; offres, /ads et décision février préservés.
+
+## Mise à jour du 2026-11-17 — Daily
+- Main distant `73cdfe4` inchangé, copie initialement propre et stash utilisateur conservé. Douze URL 200, huit au sitemap, aucun problème ni variation de métadonnées/texte/maillage. Lint/build/TypeScript et affichage public du portfolio réussis ; aucune modification applicative justifiée.
+- GSC accessible : 5 clics / 85 impressions / CTR 5,9 % / position 7,2, 25 octobre–14 novembre. Fenêtre élargie, clics stables ; données antérieures aux explorations commerciales du 15, aucun effet SEO déduit.
+- Rapport agrégé toujours daté du 13, 4 indexées / 10 non indexées, mêmes catégories. Inspections artisan/mobile du 16 restent la dernière preuve de leur indexation ; aucune inspection individuelle répétée ni resoumission aujourd’hui. Prochain Weekly 22, Monthly 29 novembre.
