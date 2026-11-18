@@ -1,0 +1,107 @@
+{
+  "observed_date": "2026-11-18",
+  "source": "Search Console dans Chrome, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-15",
+    "clicks": 5,
+    "impressions": 88,
+    "CTR_percent": 5.7,
+    "average_position": 7.1,
+    "interpretation": "Trois impressions de plus sur une journee supplementaire, clics stables. Aucun effet commercial des indexations du 15 demontre."
+  },
+  "queries": [
+    {
+      "query": "code celeste",
+      "clicks": 2,
+      "impressions": 17
+    },
+    {
+      "query": "celeste",
+      "clicks": 0,
+      "impressions": 7
+    },
+    {
+      "query": "celeste code",
+      "clicks": 0,
+      "impressions": 3
+    },
+    {
+      "query": "codigo celeste",
+      "clicks": 0,
+      "impressions": 2
+    },
+    {
+      "query": "internet",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "anthony celeste",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "cómo viajar",
+      "clicks": 0,
+      "impressions": 1
+    }
+  ],
+  "index_report": {
+    "updated_at": "2026-11-13",
+    "indexed": 4,
+    "not_indexed": 10,
+    "categories": {
+      "not_found_404": 3,
+      "redirect": 3,
+      "discovered_not_indexed": 4
+    },
+    "category_examples_refreshed_today": false,
+    "caveat": "Rapport antérieur aux explorations du 15 ; ne remet pas en cause les indexations artisan/mobile confirmées individuellement le 16."
+  },
+  "individual_inspections_refreshed": false,
+  "last_service_inspections": "2026-11-16-search-console.json",
+  "sitemap_console_refreshed": false,
+  "actions": {
+    "reconnected": false,
+    "indexing_requested": false,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  },
+  "checks": {
+    "lint": "pass",
+    "typescript": "pass",
+    "build": "pass",
+    "visual": "Accueil public sur ordinateur conforme",
+    "crawl": "12 reponses 200, 8 URL sitemap, aucune anomalie ; metadonnees/texte/maillage identiques au 17."
+  },
+  "conversions": null,
+  "limitations": "Conversions Datafast, volumes Ahrefs et mesure contrôlée des assistants non disponibles. Weekly le 22 novembre, Monthly le 29.",
+  "page_rows": [
+    {
+      "url": "https://code-celeste.com/",
+      "clicks": 5,
+      "impressions": 82
+    },
+    {
+      "url": "https://code-celeste.com/works",
+      "clicks": 0,
+      "impressions": 26
+    },
+    {
+      "url": "https://code-celeste.com/mentions-legales",
+      "clicks": 0,
+      "impressions": 7
+    },
+    {
+      "url": "https://code-celeste.com/works/budget-copain",
+      "clicks": 0,
+      "impressions": 3
+    }
+  ],
+  "service_page_observation": "Aucune ligne artisan/mobile dans le tableau des pages du 25 octobre au 15 novembre. Ne prouve ni une desindexation ni une absence future de visibilite. Les totaux par page ne se somment pas au total de propriete."
+}

@@ -156,3 +156,7 @@ Recherche le 2026-10-30 : « création site internet La Réunion artisan ». Ré
 - Main distant `73cdfe4` inchangé, copie initialement propre et stash utilisateur conservé. Douze URL 200, huit au sitemap, aucun problème ni variation de métadonnées/texte/maillage. Lint/build/TypeScript et affichage public du portfolio réussis ; aucune modification applicative justifiée.
 - GSC accessible : 5 clics / 85 impressions / CTR 5,9 % / position 7,2, 25 octobre–14 novembre. Fenêtre élargie, clics stables ; données antérieures aux explorations commerciales du 15, aucun effet SEO déduit.
 - Rapport agrégé toujours daté du 13, 4 indexées / 10 non indexées, mêmes catégories. Inspections artisan/mobile du 16 restent la dernière preuve de leur indexation ; aucune inspection individuelle répétée ni resoumission aujourd’hui. Prochain Weekly 22, Monthly 29 novembre.
+
+## Mise à jour du 2026-11-18 — Daily
+- Main `c87859d` inchangé, copie propre et stash préservé. Douze URL 200, métadonnées/texte/maillage stables ; lint/build/TypeScript et affichage public de l’accueil réussis. Aucun changement applicatif.
+- GSC : 5 clics / 88 impressions / CTR 5,7 % / position 7,1 jusqu’au 15 novembre. Aucune ligne artisan/mobile dans le tableau des pages à cette date, sans désindexation déduite. Rapport agrégé toujours daté du 13 ; conserver les inspections positives des services du 16. Aucun gain commercial extrapolé, aucune nouvelle demande. Weekly 22, Monthly 29.
