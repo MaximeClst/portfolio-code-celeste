@@ -160,3 +160,8 @@ Recherche le 2026-10-30 : « création site internet La Réunion artisan ». Ré
 ## Mise à jour du 2026-11-18 — Daily
 - Main `c87859d` inchangé, copie propre et stash préservé. Douze URL 200, métadonnées/texte/maillage stables ; lint/build/TypeScript et affichage public de l’accueil réussis. Aucun changement applicatif.
 - GSC : 5 clics / 88 impressions / CTR 5,7 % / position 7,1 jusqu’au 15 novembre. Aucune ligne artisan/mobile dans le tableau des pages à cette date, sans désindexation déduite. Rapport agrégé toujours daté du 13 ; conserver les inspections positives des services du 16. Aucun gain commercial extrapolé, aucune nouvelle demande. Weekly 22, Monthly 29.
+
+## Mise à jour du 2026-11-19 — Daily
+- Main `307b064` inchangé, copie propre et stash conservé. Douze URL 200, métadonnées/texte/maillage stables ; lint/build/TypeScript et affichage public artisan en fenêtre étroite réussis. Aucun changement applicatif.
+- GSC : 5 clics / 91 impressions / CTR 5,5 % / position 7,3 jusqu’au 16. Première impression mobile observée, filtre de page : « code celeste », 0 clic / 1 impression, position moyenne 1 sur ce seul signal de marque. Aucun classement commercial déduit ; artisan absent du tableau, pas de désindexation déduite.
+- Agrégat toujours daté du 13 : 4 indexées / 10 non indexées ; inspections des services du 16 conservées, aucune nouvelle demande. Chrome DevTools occupé, extension Chrome utilisée sans reconnexion. Weekly 22, Monthly 29.

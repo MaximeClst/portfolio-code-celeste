@@ -44,3 +44,5 @@
 - 2026-11-17 — Daily : aucune modification applicative ; douze URL 200, métadonnées stables, lint/build/TypeScript et contrôle visuel du portfolio réussis. GSC 5 clics / 85 impressions jusqu’au 14, aucun effet des indexations du 15 encore mesurable ; confirmation individuelle du 16 conservée. Suivi dans `reports/2026-11-17.md`, stash et offres préservés, aucune nouvelle demande.
 
 - 2026-11-18 — Daily : site inchangé, douze URL 200, lint/build/TypeScript et contrôle visuel de l’accueil réussis. GSC 5 clics / 88 impressions jusqu’au 15 ; aucune ligne de service dans le tableau des pages, sans désindexation déduite. Inspections positives du 16 conservées. Suivi dans `reports/2026-11-18.md`, stash et offres préservés, aucune nouvelle demande.
+
+- 2026-11-19 — Daily : aucun changement applicatif ; douze URL 200, lint/build/TypeScript et affichage artisan réussis. Première impression mobile sur la marque, sans clic ni classement commercial déduit ; total 5 clics / 91 impressions jusqu’au 16. Suivi dans `reports/2026-11-19.md`, stash et offres préservés, aucune nouvelle demande.
