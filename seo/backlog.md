@@ -51,3 +51,7 @@
 2. SPS/VELORUN : restent sans indexation confirmée selon les inspections du 15, non renouvelées aujourd’hui. Réexaminer au prochain suivi utile sans leur attribuer la progression des services.
 3. Rapport agrégé du 13 encore en retard sur les explorations du 15 : ne pas confondre ce total de quatre avec le statut individuel actuel. Sitemap réussi, pas de renvoi malgré le détail temporaire de la page artisan.
 4. Préserver les pages jusqu’au bilan de février et les offres. Weekly 22 novembre / Monthly 29 ; mesures Datafast et volumes restent manquantes.
+
+## Actualisation du 20 novembre
+- Première requête commerciale locale visible : « développeur web la réunion », accueil, une impression sans clic, position moyenne 2. Suivre sa répétition et les clics au Weekly du 22 ; ne pas réécrire l’accueil ni annoncer une position durable sur un seul signal.
+- Le rapport agrégé daté du 16 recense désormais les six pages indexées, dont les deux services. La nouvelle exclusion canonique concerne une variante de suivi AppAgg/UTM de l’accueil ; pas de correction nécessaire pour cette variante. Les autres exemples d’exclusion n’ont pas été renouvelés aujourd’hui.

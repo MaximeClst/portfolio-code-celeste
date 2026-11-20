@@ -1,0 +1,143 @@
+{
+  "observed_date": "2026-11-20",
+  "source": "Search Console dans Chrome via extension/CUA, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-17",
+    "clicks": 6,
+    "impressions": 94,
+    "CTR_percent": 6.4,
+    "average_position": 7.1,
+    "interpretation": "Premier signal local commercial visible, une seule impression sans clic : aucun classement durable ni conversion deduit. Fenetre cumulative elargie."
+  },
+  "queries": [
+    {
+      "query": "code celeste",
+      "clicks": 3,
+      "impressions": 19
+    },
+    {
+      "query": "celeste",
+      "clicks": 0,
+      "impressions": 8
+    },
+    {
+      "query": "celeste code",
+      "clicks": 0,
+      "impressions": 3
+    },
+    {
+      "query": "codigo celeste",
+      "clicks": 0,
+      "impressions": 2
+    },
+    {
+      "query": "développeur web la réunion",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "internet",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "anthony celeste",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "cómo viajar",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "pokéapi",
+      "clicks": 0,
+      "impressions": 1
+    }
+  ],
+  "commercial_query_filter": {
+    "query": "développeur web la réunion",
+    "clicks": 0,
+    "impressions": 1,
+    "CTR_percent": 0,
+    "average_position": 2,
+    "page": "https://code-celeste.com/",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-17"
+  },
+  "page_rows": [
+    {
+      "url": "https://code-celeste.com/",
+      "clicks": 6,
+      "impressions": 87
+    },
+    {
+      "url": "https://code-celeste.com/works",
+      "clicks": 0,
+      "impressions": 29
+    },
+    {
+      "url": "https://code-celeste.com/mentions-legales",
+      "clicks": 0,
+      "impressions": 7
+    },
+    {
+      "url": "https://code-celeste.com/works/budget-copain",
+      "clicks": 0,
+      "impressions": 3
+    },
+    {
+      "url": "https://code-celeste.com/application-mobile-reunion",
+      "clicks": 0,
+      "impressions": 2
+    }
+  ],
+  "index_report": {
+    "updated_at": "2026-11-16",
+    "indexed": 6,
+    "not_indexed": 10,
+    "categories": {
+      "redirect": 4,
+      "not_found_404": 3,
+      "alternate_proper_canonical": 1,
+      "discovered_not_indexed": 2
+    },
+    "indexed_examples": [
+      "/",
+      "/application-mobile-reunion",
+      "/creation-site-web-artisan-reunion",
+      "/works",
+      "/works/budget-copain",
+      "/mentions-legales"
+    ],
+    "alternate_example": "https://code-celeste.com/?from=AppAgg.com&utm_campaign=AppAgg.com&utm_medium=referral&utm_source=AppAgg.com",
+    "alternate_last_crawl": "2026-11-16",
+    "other_category_examples_refreshed": false,
+    "interpretation": "Le rapport agrege rejoint les inspections positives des deux services du 16. La variante canonique est une URL de suivi, pas une page commerciale perdue."
+  },
+  "individual_inspections_refreshed": false,
+  "last_service_inspections": "2026-11-16-search-console.json",
+  "sitemap_console_refreshed": false,
+  "actions": {
+    "reconnected": false,
+    "indexing_requested": false,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  },
+  "checks": {
+    "lint": "pass",
+    "typescript": "pass",
+    "build": "pass",
+    "visual": "Page mobile publique, affichage bureau conforme",
+    "crawl": "12 reponses 200, 8 URL sitemap, issues vides ; identique au 19 hors temps de reponse."
+  },
+  "conversions": null,
+  "limitations": "Volumes et conversions indisponibles. Une impression ne prouve pas un classement commercial stable. Impressions par page non additives. Detail des deux impressions mobiles non refiltre aujourd hui. Weekly 22 novembre, Monthly 29.",
+  "browser_note": "DevTools occupe ; extension Chrome utilisee sans fermer de navigateur ni reconnecter la propriete."
+}
