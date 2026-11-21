@@ -48,3 +48,5 @@
 - 2026-11-19 — Daily : aucun changement applicatif ; douze URL 200, lint/build/TypeScript et affichage artisan réussis. Première impression mobile sur la marque, sans clic ni classement commercial déduit ; total 5 clics / 91 impressions jusqu’au 16. Suivi dans `reports/2026-11-19.md`, stash et offres préservés, aucune nouvelle demande.
 
 - 2026-11-20 — Daily : première impression commerciale « développeur web la réunion » sur l’accueil, position moyenne 2 sans clic, aucun classement durable déduit. Total 6 clics / 94 impressions jusqu’au 17 ; agrégat six pages indexées incluant artisan/mobile. Douze URL 200, lint/build/TypeScript et contrôle visuel mobile réussis, aucun changement applicatif. Voir `reports/2026-11-20.md` ; stash et offres préservés, aucune nouvelle demande.
+
+- 2026-11-21 — Daily : site sain et inchangé, douze URL 200, lint/build/TypeScript et contrôle visuel artisan réussis. GSC 6 clics / 97 impressions jusqu’au 18 ; requêtes visibles et agrégat d’indexation inchangés, aucun progrès commercial durable déduit. Aucun changement applicatif ; relevés dans `reports/2026-11-21.md`, stash et offres préservés. Weekly le 22.

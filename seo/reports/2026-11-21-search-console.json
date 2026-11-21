@@ -1,0 +1,123 @@
+{
+  "observed_date": "2026-11-21",
+  "source": "Search Console via Chrome DevTools, compte professionnel existant",
+  "property": "sc-domain:code-celeste.com",
+  "access": true,
+  "performance": {
+    "type": "Web (texte)",
+    "filter": "3 mois",
+    "visible_start": "2026-10-25",
+    "visible_end": "2026-11-18",
+    "clicks": 6,
+    "impressions": 97,
+    "CTR_percent": 6.2,
+    "average_position": 7.2,
+    "interpretation": "Trois impressions supplementaires sur fenetre cumulative elargie ; clics et requetes visibles inchanges. Signal commercial toujours limite a une impression, sans clic."
+  },
+  "queries": [
+    {
+      "query": "code celeste",
+      "clicks": 3,
+      "impressions": 19
+    },
+    {
+      "query": "celeste",
+      "clicks": 0,
+      "impressions": 8
+    },
+    {
+      "query": "celeste code",
+      "clicks": 0,
+      "impressions": 3
+    },
+    {
+      "query": "codigo celeste",
+      "clicks": 0,
+      "impressions": 2
+    },
+    {
+      "query": "développeur web la réunion",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "internet",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "anthony celeste",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "cómo viajar",
+      "clicks": 0,
+      "impressions": 1
+    },
+    {
+      "query": "pokéapi",
+      "clicks": 0,
+      "impressions": 1
+    }
+  ],
+  "page_rows": [
+    {
+      "url": "https://code-celeste.com/",
+      "clicks": 6,
+      "impressions": 90
+    },
+    {
+      "url": "https://code-celeste.com/works",
+      "clicks": 0,
+      "impressions": 29
+    },
+    {
+      "url": "https://code-celeste.com/mentions-legales",
+      "clicks": 0,
+      "impressions": 7
+    },
+    {
+      "url": "https://code-celeste.com/works/budget-copain",
+      "clicks": 0,
+      "impressions": 3
+    },
+    {
+      "url": "https://code-celeste.com/application-mobile-reunion",
+      "clicks": 0,
+      "impressions": 2
+    }
+  ],
+  "index_report": {
+    "updated_at": "2026-11-16",
+    "indexed": 6,
+    "not_indexed": 10,
+    "categories": {
+      "redirect": 4,
+      "not_found_404": 3,
+      "alternate_proper_canonical": 1,
+      "discovered_not_indexed": 2
+    },
+    "examples_refreshed_today": false,
+    "last_examples_source": "2026-11-20-search-console.json"
+  },
+  "individual_inspections_refreshed": false,
+  "sitemap_console_refreshed": false,
+  "commercial_query_filter_refreshed": false,
+  "last_commercial_query_filter": "2026-11-20-search-console.json",
+  "actions": {
+    "reconnected": false,
+    "indexing_requested": false,
+    "validation_requested": false,
+    "sitemap_submitted": false
+  },
+  "checks": {
+    "lint": "pass",
+    "typescript": "pass",
+    "build": "pass",
+    "visual": "Page artisan publique en fenetre etroite, conforme",
+    "crawl": "12 URL 200, 8 au sitemap, aucune anomalie ; identique au 20 hors durees"
+  },
+  "conversions": null,
+  "limitations": "Volumes, conversions et mesure controlee IA indisponibles. Aucun classement durable etabli. Weekly 22 novembre, Monthly 29."
+}
