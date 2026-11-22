@@ -13,5 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/works/velorun-festival",
     "/works/budget-copain",
     "/mentions-legales",
+    "/politique-de-confidentialite",
   ].map((path) => ({ url: `${SiteConfig.prodUrl}${path}` }));
 }

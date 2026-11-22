@@ -150,6 +150,7 @@ export const sideProjects: SideProject[] = [
   {
     title: "Snapflick",
     description: "Convertir ses images en un éclair, sans rien envoyer · Web",
+    icon: "/apps/snapflick.svg",
     url: "https://snapflick.dev/",
   },
 ];

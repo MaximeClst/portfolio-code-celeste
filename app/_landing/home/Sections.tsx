@@ -1,9 +1,10 @@
-import { ArrowUpRight, ImageIcon, Quote } from "lucide-react";
+import { ArrowUpRight, ImageIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { sideProjects } from "./data";
 import { reviews } from "./offer";
+import { ScrollingTestimonials } from "@/components/ui/scrolling-testimonials";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
@@ -57,27 +58,32 @@ function Stat({
 }
 
 export function Reviews({ exclude = [] }: { exclude?: string[] }) {
+  const list = reviews.filter((r) => !exclude.includes(r.name));
+  // Liste répétée 3 fois : avec 5 avis sur 3 colonnes, chaque colonne reçoit
+  // les 5 avis dans un ordre différent et reste assez haute pour boucler.
+  const testimonials = [0, 1, 2].flatMap((n) =>
+    list.map((r) => ({ id: `${r.name}-${n}`, quote: r.quote, name: r.name, role: r.company }))
+  );
   return (
-    <section>
+    <section id="avis" className="scroll-mt-28">
       <Eyebrow>Avis clients</Eyebrow>
       <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
         Ils en parlent mieux que moi
       </h2>
-      <div className="mt-6 gap-4 sm:columns-2 lg:columns-3">
-        {reviews.filter((r) => !exclude.includes(r.name)).map((r) => (
-          <figure
-            key={r.name}
-            className="mb-4 break-inside-avoid rounded-2xl border border-border bg-card p-6"
-          >
-            <Quote className="size-5 text-violet-300" aria-hidden />
-            <blockquote className="mt-3 font-serif text-xl leading-snug text-foreground">
-              « {r.quote} »
-            </blockquote>
-            <figcaption className="mt-4 text-sm text-muted-foreground">
-              <span className="text-foreground/90">{r.name}</span> · {r.company}
-            </figcaption>
-          </figure>
-        ))}
+      {/* Annule la marge interne du composant pour l'aligner sur le titre. */}
+      <div className="-mx-4 mt-6 sm:-mx-6 lg:-mx-8">
+        <ScrollingTestimonials
+          testimonials={testimonials}
+          showHeader={false}
+          showStars={false}
+          reverseColumns={[false, true, false]}
+          className="py-0"
+          backgroundColor="hsl(var(--background))"
+          cardBackground="hsl(var(--card))"
+          borderColor="hsl(var(--border))"
+          textColor="hsl(var(--foreground))"
+          mutedTextColor="hsl(var(--muted-foreground))"
+        />
       </div>
     </section>
   );
@@ -134,7 +140,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section>
+    <section id="methode" className="scroll-mt-28">
       <Eyebrow>Comment on travaille</Eyebrow>
       <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
         Simple, du premier appel à la mise en ligne
@@ -170,6 +176,9 @@ export function HomeFooter() {
         </a>
         <Link href="/mentions-legales" className="hover:text-foreground">
           Mentions légales
+        </Link>
+        <Link href="/politique-de-confidentialite" className="hover:text-foreground">
+          Confidentialité
         </Link>
       </span>
     </footer>

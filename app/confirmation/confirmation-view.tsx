@@ -2,6 +2,7 @@
 
 import { CustomIcon } from "@/components/icons/CustomIcon";
 import { MetaPixel, newEventId, trackMeta } from "@/components/meta-pixel";
+import { hasAdsConsent } from "@/lib/consent";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -49,6 +50,8 @@ export function ConfirmationView() {
       }
     }
 
+    // Sans accord aux cookies publicitaires, rien n'est envoyé à Meta.
+    if (!hasAdsConsent()) return;
     const eventId = newEventId();
     trackMeta("Schedule", eventId);
     fetch("/api/meta/schedule", {

@@ -1,112 +1,89 @@
+import { pageMetadata } from "@/lib/seo";
 import { SiteConfig } from "@/site.config";
-import type { Metadata } from "next";
+import { A, LegalPage, LegalSection } from "../_landing/LegalPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/mentions-legales" },
-  title: `Mentions légales — ${SiteConfig.title}`,
-  description:
-    "Mentions légales, conditions d'utilisation, propriété intellectuelle et politique de confidentialité.",
-};
+export const metadata = pageMetadata(
+  "Mentions légales | Code Céleste",
+  "Mentions légales du site code-celeste.com : éditeur, hébergeur, propriété intellectuelle et données personnelles.",
+  "/mentions-legales"
+);
 
+const email = SiteConfig.email.contact;
+
+// Informations reprises de la synthèse d’immatriculation (Guichet unique, 17/09/2025).
 export default function MentionsLegalesPage() {
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-16 leading-relaxed">
-      <h1 className="text-3xl font-bold mb-6">Mentions légales</h1>
-
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Éditeur du site</h2>
+    <LegalPage title="Mentions légales" updated="22 novembre 2026">
+      <LegalSection title="Éditeur du site">
         <p>
-          <strong>{SiteConfig.company.name}</strong> —{" "}
-          {SiteConfig.company.address}
+          Le site {SiteConfig.domain} est édité par <strong className="text-foreground">Maxime Céleste EI</strong>,
+          exerçant sous le nom commercial Code Celeste.
+        </p>
+        <ul className="space-y-1">
+          <li>Statut : entrepreneur individuel (EI), sous le régime de la micro-entreprise</li>
+          <li>SIRET : 831 141 635 00027 — immatriculé au Registre national des entreprises (RNE)</li>
+          <li>Adresse : 30 rue de la Bourgogne, Sainte-Clotilde, 97490 Saint-Denis, La Réunion</li>
+          <li>Téléphone : <A href="tel:+262693651405">0693 65 14 05</A></li>
+          <li>E-mail : <A href={`mailto:${email}`}>{email}</A></li>
+          <li>TVA non applicable, art. 293 B du CGI</li>
+        </ul>
+      </LegalSection>
+
+      <LegalSection title="Directeur de la publication">
+        <p>Maxime Céleste.</p>
+      </LegalSection>
+
+      <LegalSection title="Hébergement">
+        <p>
+          Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis —{" "}
+          <A href="https://vercel.com">vercel.com</A>.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Activité">
+        <p>
+          Création de sites web et d’applications mobiles pour les professionnels,
+          principalement à La Réunion.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Propriété intellectuelle">
+        <p>
+          Les textes, images, logos, éléments graphiques et le code de ce site
+          sont protégés par le droit de la propriété intellectuelle. Toute
+          reproduction, représentation, modification ou adaptation, totale ou
+          partielle, est interdite sans autorisation écrite préalable.
         </p>
         <p>
-          Email :{" "}
-          <a className="underline" href={`mailto:${SiteConfig.email.contact}`}>
-            {SiteConfig.email.contact}
-          </a>
+          Les sites et applications présentés dans les réalisations, ainsi que
+          leurs logos et contenus, appartiennent à leurs titulaires respectifs.
+          Les images d’appareils Apple sont des ressources fournies par Apple
+          Inc.
         </p>
-        <p>Site : {SiteConfig.domain}</p>
-      </section>
+      </LegalSection>
 
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Responsable de la publication</h2>
-        <p>{SiteConfig.maker.name}</p>
-      </section>
-
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Hébergement</h2>
+      <LegalSection title="Données personnelles et cookies">
         <p>
-          Le site est hébergé par Vercel Inc. —{" "}
-          <a
-            className="underline"
-            href="https://vercel.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            vercel.com
-          </a>
+          La façon dont les données transmises par les formulaires sont
+          utilisées, ainsi que l’usage des cookies, sont détaillés dans la{" "}
+          <A href="/politique-de-confidentialite">politique de confidentialité</A>.
         </p>
-      </section>
+      </LegalSection>
 
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Activité</h2>
+      <LegalSection title="Liens externes">
         <p>
-          Développement d’applications web et mobiles, intégration
-          Front-end/Back-end, conception d’expériences utilisateurs, et
-          accompagnement technique autour de React, Next.js, React Native et
-          l’écosystème moderne.
+          Les liens vers des sites tiers sont fournis à titre informatif.
+          Code Celeste n’est pas responsable de leur contenu ni de leurs
+          pratiques.
         </p>
-      </section>
+      </LegalSection>
 
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Propriété intellectuelle</h2>
+      <LegalSection title="Contact">
         <p>
-          L’ensemble des contenus de ce site (textes, images, logos, éléments
-          graphiques et code) est protégé par le droit de la propriété
-          intellectuelle. Toute reproduction, représentation, modification,
-          publication, adaptation, totale ou partielle, de ces éléments, quel
-          que soit le moyen ou le procédé utilisé, est interdite, sauf
-          autorisation écrite préalable.
+          Pour toute question sur ces mentions légales :{" "}
+          <A href={`mailto:${email}`}>{email}</A>.
         </p>
-      </section>
-
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Données personnelles</h2>
-        <p>
-          Les informations éventuellement collectées via les formulaires (prise
-          de contact, prise de rendez-vous) sont limitées au strict nécessaire
-          pour répondre à votre demande. Vous disposez d’un droit d’accès, de
-          rectification et d’effacement de vos données. Pour l’exercer,
-          contactez-nous à l’adresse : {SiteConfig.email.contact}.
-        </p>
-      </section>
-
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Cookies et mesure d’audience</h2>
-        <p>
-          Le site peut utiliser des cookies techniques nécessaires à son bon
-          fonctionnement et, le cas échéant, des outils de mesure d’audience
-          respectueux de la vie privée. Vous pouvez configurer votre navigateur
-          pour refuser tout ou partie des cookies.
-        </p>
-      </section>
-
-      <section className="space-y-2 mb-8">
-        <h2 className="text-xl font-semibold">Liens externes</h2>
-        <p>
-          Les liens sortants vers des sites tiers sont fournis à titre
-          informatif. Nous ne sommes pas responsables de leur contenu ni de
-          leurs pratiques.
-        </p>
-      </section>
-
-      <section className="space-y-2">
-        <h2 className="text-xl font-semibold">Contact</h2>
-        <p>
-          Pour toute question concernant ces mentions légales, vous pouvez
-          écrire à : {SiteConfig.email.contact}
-        </p>
-      </section>
-    </main>
+      </LegalSection>
+    </LegalPage>
   );
 }

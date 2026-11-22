@@ -15,6 +15,7 @@ import {
 } from "@/app/_landing/home/offer";
 import { Reviews } from "@/app/_landing/home/Sections";
 import { MetaPixel, newEventId, trackMeta } from "@/components/meta-pixel";
+import { hasAdsConsent } from "@/lib/consent";
 
 // Correspondance des réponses du funnel /ads vers les clés attendues par /api/lead.
 const ADS_HAS_SITE: Record<string, "oui" | "non"> = {
@@ -497,11 +498,14 @@ export default function CodeCelesteLanding() {
           pain: ADS_PAIN[formData.problematique] ?? null,
           metier: formData.metier,
           source: "Landing Ads Code Celeste",
-          meta: {
-            eventId,
-            eventSourceUrl:
-              typeof window !== "undefined" ? window.location.href : undefined,
-          },
+          // Envoi serveur à Meta (CAPI) seulement si le visiteur a accepté les cookies publicitaires.
+          meta: hasAdsConsent()
+            ? {
+                eventId,
+                eventSourceUrl:
+                  typeof window !== "undefined" ? window.location.href : undefined,
+              }
+            : undefined,
         }),
       });
     } catch {
@@ -792,6 +796,25 @@ export default function CodeCelesteLanding() {
                           />
                         </div>
                       ))}
+                      <p
+                        style={{
+                          fontSize: 12,
+                          lineHeight: 1.5,
+                          color: MUT,
+                          margin: "2px 0 0",
+                        }}
+                      >
+                        Vos informations servent uniquement à répondre à votre
+                        demande et à organiser notre échange.{" "}
+                        <a
+                          href="/politique-de-confidentialite"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: MUT, textDecoration: "underline" }}
+                        >
+                          Politique de confidentialité
+                        </a>
+                      </p>
                       <button
                         onClick={submitLead}
                         disabled={contactIncomplete || sending}
@@ -2198,6 +2221,14 @@ export default function CodeCelesteLanding() {
             style={{ color: MUT, textDecoration: "none" }}
           >
             Mentions légales
+          </a>
+          <a
+            href="https://code-celeste.com/politique-de-confidentialite"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: MUT, textDecoration: "none" }}
+          >
+            Confidentialité
           </a>
         </div>
       </footer>

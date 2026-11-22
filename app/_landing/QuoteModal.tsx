@@ -574,6 +574,19 @@ function StepContact({
         />
       </div>
 
+      <p className="text-xs leading-relaxed text-muted-foreground">
+        Vos informations servent uniquement à répondre à votre demande et à
+        organiser notre échange.{" "}
+        <a
+          href="/politique-de-confidentialite"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-foreground"
+        >
+          Politique de confidentialité
+        </a>
+      </p>
+
       <Button
         type="submit"
         size="lg"

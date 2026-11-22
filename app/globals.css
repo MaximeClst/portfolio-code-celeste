@@ -112,6 +112,11 @@
   * {
     @apply border-border;
   }
+  /* Tailwind v4 ne met plus de curseur main sur les boutons : on le rétablit. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;

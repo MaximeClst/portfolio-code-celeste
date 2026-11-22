@@ -1,8 +1,9 @@
 "use client";
 
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useQuoteModal } from "../QuoteModal";
 import { RESPONSE_DELAY } from "./offer";
 
@@ -42,22 +43,102 @@ export function ContactCTA() {
   );
 }
 
-// Barre collée en haut sur mobile : la colonne profil n'y est pas collante.
+// Ancres vers les sections de l'accueil (4 au maximum), dans l'ordre de la page.
+const navLinks = [
+  { href: "#realisations", label: "Réalisations" },
+  { href: "#offres", label: "Offres" },
+  { href: "#avis", label: "Avis" },
+  { href: "#contact", label: "Contact" },
+];
+
+// Barre de navigation collée en haut de l'accueil, avec les ancres.
 export function MobileBar() {
   const { open } = useQuoteModal();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Échap ferme le menu ; passer en largeur tablette aussi.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
+    const mq = window.matchMedia("(min-width: 768px)");
+    const onMq = () => mq.matches && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    mq.addEventListener("change", onMq);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      mq.removeEventListener("change", onMq);
+    };
+  }, [menuOpen]);
+
   return (
-    <div className="sticky top-0 z-30 flex items-center justify-between border-b border-border bg-background/80 px-4 py-3 backdrop-blur lg:hidden">
-      <Link href="/" className="text-sm font-medium">
-        Code <span className="font-serif text-base italic text-violet-300">Celeste</span>
-      </Link>
-      <button
-        type="button"
-        onClick={() => open()}
-        className="rounded-lg bg-brand px-3 py-1.5 text-xs font-medium text-white"
-      >
-        Estimer mon projet
-      </button>
-    </div>
+    <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-6 px-4 py-3 sm:px-6">
+        <Link href="/" className="flex shrink-0 items-center gap-2 text-sm font-medium">
+          <Image
+            src="/social/code-celeste-logo-v2.png"
+            alt=""
+            width={64}
+            height={64}
+            priority
+            className="size-7"
+          />
+          <span>
+            Code <span className="font-serif text-base italic text-violet-300">Celeste</span>
+          </span>
+        </Link>
+        <nav aria-label="Sections de la page" className="hidden md:block">
+          <ul className="flex items-center gap-1 text-sm">
+            {navLinks.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  className="rounded-lg px-3 py-1.5 text-muted-foreground transition-colors hover:bg-card hover:text-foreground"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="flex shrink-0 items-center gap-2">
+          <button
+            type="button"
+            onClick={() => open()}
+            className="rounded-lg bg-brand px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-brand/90 md:text-sm"
+          >
+            Estimer mon projet
+          </button>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            aria-controls="menu-mobile"
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            className="flex size-9 items-center justify-center rounded-lg border border-border text-foreground transition-colors hover:bg-card md:hidden"
+          >
+            {menuOpen ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
+          </button>
+        </div>
+      </div>
+      {/* Sur mobile, les ancres sont dans un menu burger qui se déplie sous la barre. */}
+      {menuOpen && (
+        <nav id="menu-mobile" aria-label="Sections de la page" className="border-t border-border md:hidden">
+          <ul className="px-2 py-2">
+            {navLinks.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block rounded-lg px-3 py-3 text-base text-foreground/90 transition-colors hover:bg-card hover:text-foreground"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+    </header>
   );
 }
 

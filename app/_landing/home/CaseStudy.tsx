@@ -66,13 +66,14 @@ export function CaseStudy() {
             sizes="(min-width: 1024px) 420px, 100vw"
             className="w-full rounded-xl border border-border shadow-2xl shadow-black/50"
           />
+          {/* Capture Safari réelle sur iPhone 17 Pro, dans le bezel officiel Apple (Deep Blue). */}
           <Image
-            src="/works/scmoi-mobile.webp"
-            alt="Le site SCMOI sur mobile"
-            width={390}
-            height={844}
-            sizes="120px"
-            className="absolute bottom-4 right-4 w-[26%] rounded-xl border-4 border-neutral-900 shadow-2xl shadow-black/60"
+            src="/works/scmoi-iphone-17-pro.webp"
+            alt="Le site SCMOI dans Safari sur iPhone 17 Pro"
+            width={659}
+            height={1358}
+            sizes="(min-width: 768px) 160px, 30vw"
+            className="absolute -bottom-2 right-3 w-[30%] drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] md:right-5"
           />
         </div>
       </div>
