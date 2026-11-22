@@ -24,7 +24,7 @@ export function Realisations() {
 
       {kind === "sites" ? (
         <>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {sites.slice(0, FEATURED_SITES).map((s) => (
               <SiteCard key={s.title} site={s} />
             ))}

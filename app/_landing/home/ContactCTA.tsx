@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useQuoteModal } from "../QuoteModal";
+import { RESPONSE_DELAY } from "./offer";
 
 export function ContactCTA() {
   const { open } = useQuoteModal();
@@ -25,7 +26,7 @@ export function ContactCTA() {
             Un projet en tête ?
           </h2>
           <p className="mt-1 text-muted-foreground">
-            Répondez à 4 questions, je vous envoie une estimation sous 24 h.
+            Répondez à 4 questions, je vous réponds sous {RESPONSE_DELAY}.
           </p>
         </div>
         <button

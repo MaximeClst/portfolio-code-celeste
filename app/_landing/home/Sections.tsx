@@ -1,8 +1,9 @@
-import { ArrowUpRight, ImageIcon } from "lucide-react";
+import { ArrowUpRight, ImageIcon, Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { sideProjects } from "./data";
+import { reviews } from "./offer";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
@@ -55,34 +56,20 @@ function Stat({
   );
 }
 
-const reviews = [
-  {
-    quote:
-      "Depuis la mise en ligne, le site nous a permis de générer une quinzaine de demandes, dont 4 à 5 se sont concrétisées.",
-    name: "Alexandre Eydieux",
-    company: "Smart Power System",
-  },
-  {
-    quote:
-      "C'est allé très vite pour une première version. Il a fait preuve d'autonomie. Le site est performant !",
-    name: "Grégory Maillot",
-    company: "VELORUN Festival",
-  },
-];
-
-export function Reviews() {
+export function Reviews({ exclude = [] }: { exclude?: string[] }) {
   return (
     <section>
       <Eyebrow>Avis clients</Eyebrow>
       <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
         Ils en parlent mieux que moi
       </h2>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        {reviews.map((r) => (
-          <figure key={r.name} className="rounded-2xl border border-border bg-card p-6">
-            <p className="text-amber-300" aria-label="5 étoiles sur 5">
-              ★★★★★
-            </p>
+      <div className="mt-6 gap-4 sm:columns-2 lg:columns-3">
+        {reviews.filter((r) => !exclude.includes(r.name)).map((r) => (
+          <figure
+            key={r.name}
+            className="mb-4 break-inside-avoid rounded-2xl border border-border bg-card p-6"
+          >
+            <Quote className="size-5 text-violet-300" aria-hidden />
             <blockquote className="mt-3 font-serif text-xl leading-snug text-foreground">
               « {r.quote} »
             </blockquote>
@@ -139,7 +126,7 @@ export function SideProjects() {
 }
 
 const steps = [
-  { title: "Appel de 30 min", text: "On parle de votre activité et de vos besoins." },
+  { title: "Appel de 15 min", text: "On parle de votre activité et de vos besoins." },
   { title: "Devis clair", text: "Prix fixe, délai annoncé." },
   { title: "Création", text: "Vous voyez l'avancement à chaque étape." },
   { title: "En ligne et suivi", text: "Je reste joignable après." },
@@ -152,7 +139,7 @@ export function Process() {
       <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
         Simple, du premier appel à la mise en ligne
       </h2>
-      <ol className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <ol className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((s, i) => (
           <li key={s.title} className="rounded-2xl border border-border bg-card p-5">
             <span className="font-serif text-2xl italic text-violet-300">

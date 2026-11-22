@@ -3,7 +3,7 @@ import { SiteConfig } from "@/site.config";
 import { CaseStudy } from "./_landing/home/CaseStudy";
 import { ContactCTA, MobileBar } from "./_landing/home/ContactCTA";
 import { KindProvider } from "./_landing/home/KindTabs";
-import { Offers } from "./_landing/home/Offers";
+import { Formulas, Guarantees, Suivi } from "./_landing/home/Offers";
 import { Profile } from "./_landing/home/Profile";
 import { Realisations } from "./_landing/home/Realisations";
 import {
@@ -45,22 +45,25 @@ export default function Home() {
 
       <MobileBar />
 
-      <div className="relative mx-auto grid max-w-[1200px] gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-14 lg:py-16">
-        <Profile />
-
-        <div className="min-w-0 space-y-20">
+      <div className="relative mx-auto max-w-[1200px] space-y-20 px-4 py-10 sm:px-6 lg:py-16">
+        {/* La colonne profil n'accompagne que l'accroche ; le reste est en pleine largeur. */}
+        <div className="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-center lg:gap-14">
+          <Profile />
           <Intro />
-          <KindProvider>
-            <Realisations />
-            <CaseStudy />
-            <Offers />
-          </KindProvider>
-          <Reviews />
-          <SideProjects />
-          <Process />
-          <ContactCTA />
-          <HomeFooter />
         </div>
+
+        <KindProvider>
+          <Realisations />
+        </KindProvider>
+        <CaseStudy />
+        <Guarantees />
+        <Formulas servicePageLink />
+        <Suivi />
+        <Reviews />
+        <Process />
+        <SideProjects />
+        <ContactCTA />
+        <HomeFooter />
       </div>
     </main>
   );

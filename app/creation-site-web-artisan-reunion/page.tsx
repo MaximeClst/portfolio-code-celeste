@@ -6,12 +6,14 @@ import { CaseStudy } from "../_landing/home/CaseStudy";
 import { PageTopBar } from "../_landing/home/ContactCTA";
 import { sites } from "../_landing/home/data";
 import { SiteCard } from "../_landing/home/Realisations";
-import { Eyebrow, HomeFooter } from "../_landing/home/Sections";
+import { Formulas, Guarantees, Suivi } from "../_landing/home/Offers";
+import { NOT_INCLUDED, PRICING_SUMMARY, RESPONSE_DELAY, VAT_NOTICE } from "../_landing/home/offer";
+import { Eyebrow, HomeFooter, Reviews } from "../_landing/home/Sections";
 import { QuoteButton } from "./QuoteButton";
 
 const path = "/creation-site-web-artisan-reunion";
 const title = "Création de site web artisan à La Réunion | Code Céleste";
-const description = "Un site vitrine pour votre activité artisanale à La Réunion, dès 1 000 €. Découvrez le projet SCMOI et préparez votre demande de devis avec Maxime.";
+const description = "Site vitrine pour artisan à La Réunion : 1 000 € prix fixe ou 169 €/mois sans avance, maquette offerte, en ligne en 7 jours. Découvrez le projet SCMOI.";
 
 export const metadata = {
   ...pageMetadata(title, description, path),
@@ -36,7 +38,7 @@ const checklist = [
 
 const faq = [
   { q: "Un site remplace-t-il ma page Facebook ?", a: "Les deux peuvent se compléter. Votre site rassemble vos prestations, vos réalisations et vos coordonnées à une adresse que vous pouvez partager sur vos réseaux sociaux, vos cartes et vos devis." },
-  { q: "Quel budget prévoir ?", a: "L’offre site vitrine démarre à 1 000 €, avec une maintenance à 75 €/mois. Le périmètre exact se définit dans le devis. Une réservation en ligne, un espace client ou une autre fonction particulière doit être précisé lors du cadrage." },
+  { q: "Quel budget prévoir ?", a: `${PRICING_SUMMARY} ${NOT_INCLUDED} ${VAT_NOTICE}.` },
   { q: "Mon site sera-t-il premier sur Google ?", a: "Aucune position n’est garantie. Un contenu précis sur votre métier, des réalisations réelles et une zone d’intervention claire donnent des informations utiles aux visiteurs. Le référencement se suit après publication, notamment avec Google Search Console." },
   { q: "Par où commencer ?", a: "Ouvrez l’estimation ci-dessous, indiquez votre activité et votre objectif. Le parcours permet de préparer votre demande puis d’échanger sur le projet, avant de fixer son périmètre." },
 ];
@@ -79,18 +81,25 @@ export default function ArtisanPage() {
               <a href="#realisations" className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-300 transition-colors hover:text-foreground">Voir les sites d’artisans réalisés <ArrowUpRight className="size-4" aria-hidden /></a>
             </div>
           </div>
-          <aside aria-label="Tarif du site vitrine" className="rounded-2xl border border-brand/50 bg-card p-6 sm:p-7">
-            <div className="flex items-center justify-between gap-2">
-              <p className="font-medium">Site vitrine</p>
-              <span className="rounded-full bg-brand/15 px-2.5 py-0.5 text-xs text-violet-300">Le plus demandé</span>
+          <aside aria-label="Mes deux formules" className="rounded-2xl border border-brand/50 bg-card p-6 sm:p-7">
+            <p className="font-mono text-xs uppercase tracking-wide text-muted-foreground">Deux formules</p>
+            <div className="mt-4 flex items-baseline justify-between gap-3 border-b border-dashed border-border pb-4">
+              <p className="font-medium">Achat du site</p>
+              <p className="font-mono text-2xl font-semibold">1 000 €</p>
             </div>
-            <p className="mt-4 text-4xl font-semibold tracking-tight">1 000 €<span className="text-sm font-normal text-muted-foreground"> à partir de</span></p>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Le devis précise les pages et les fonctionnalités retenues pour votre projet.</p>
-            <div className="mt-6 border-t border-border pt-5">
-              <p className="font-medium">Maintenance : 75 €/mois</p>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Mises à jour et sécurité incluses, sans engagement.</p>
-              <Link href="/#offres" className="mt-4 inline-block text-sm text-violet-300 hover:text-foreground">Consulter toutes les offres</Link>
+            <p className="mt-2 text-xs text-muted-foreground">Sans frais, en 1, 3 ou 4 fois.</p>
+            <div className="mt-4 flex items-baseline justify-between gap-3 border-b border-dashed border-border pb-4">
+              <p className="font-medium">Zéro Avance</p>
+              <p className="font-mono text-2xl font-semibold">169 €<span className="text-sm font-normal text-muted-foreground">/mois</span></p>
             </div>
+            <p className="mt-2 text-xs text-muted-foreground">Pendant 12 mois, rien à payer avant la mise en ligne.</p>
+            <ul className="mt-5 space-y-2 text-sm text-foreground/85">
+              <li className="flex gap-2"><Check aria-hidden className="mt-0.5 size-4 shrink-0 text-violet-300" />Maquette offerte : elle ne vous plaît pas, vous ne signez pas et ne payez rien</li>
+              <li className="flex gap-2"><Check aria-hidden className="mt-0.5 size-4 shrink-0 text-violet-300" />En ligne 7 jours après réception de tous vos éléments</li>
+              <li className="flex gap-2"><Check aria-hidden className="mt-0.5 size-4 shrink-0 text-violet-300" />Réponse sous {RESPONSE_DELAY}</li>
+            </ul>
+            <a href="#offres" className="mt-5 inline-block text-sm text-violet-300 hover:text-foreground">Voir le détail des formules</a>
+            <p className="mt-3 text-xs text-muted-foreground">{VAT_NOTICE}</p>
           </aside>
         </section>
 
@@ -105,6 +114,11 @@ export default function ArtisanPage() {
           </div>
           <p className="mt-5 text-sm"><Link href="/works" className="text-violet-300 hover:text-foreground">Voir toutes les réalisations web et mobiles</Link></p>
         </section>
+
+        <Guarantees />
+        <Formulas />
+        <Suivi />
+        <Reviews />
 
         <section className="grid gap-10 lg:grid-cols-2">
           <div>

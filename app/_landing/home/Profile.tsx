@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, Instagram, Youtube } from "lucide-react";
 import Image from "next/image";
 import { CONTACT_STEP, useQuoteModal } from "../QuoteModal";
+import { RESPONSE_DELAY } from "./offer";
 
 const socials = [
   {
@@ -44,7 +45,7 @@ export function BookingButtons({ className }: { className?: string }) {
         onClick={() => open(undefined, CONTACT_STEP)}
         className="inline-flex h-11 items-center justify-center rounded-xl border border-border bg-card px-5 text-sm font-medium text-foreground/90 transition-colors hover:border-brand/50"
       >
-        Réserver un appel de 30 min
+        Réserver un appel de 15 min
       </button>
     </div>
   );
@@ -52,7 +53,7 @@ export function BookingButtons({ className }: { className?: string }) {
 
 export function Profile() {
   return (
-    <aside className="lg:sticky lg:top-12 lg:self-start">
+    <aside>
       <Image
         src="/maxime-celeste.webp"
         alt="Maxime Céleste"
@@ -83,7 +84,7 @@ export function Profile() {
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-brand" />
-          Réponse sous 24 h, sans engagement
+          Réponse sous {RESPONSE_DELAY}, sans engagement
         </li>
         <li className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-brand" />

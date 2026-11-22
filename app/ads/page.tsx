@@ -3,6 +3,17 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { GhlBooking } from "@/app/_landing/GhlBooking";
+import { Formulas, Suivi } from "@/app/_landing/home/Offers";
+import {
+  guarantees,
+  NOT_GUARANTEED,
+  PRICING_SUMMARY,
+  RESPONSE_DELAY,
+  suivi,
+  SUIVI_END,
+  VAT_NOTICE,
+} from "@/app/_landing/home/offer";
+import { Reviews } from "@/app/_landing/home/Sections";
 import { MetaPixel, newEventId, trackMeta } from "@/components/meta-pixel";
 
 // Correspondance des réponses du funnel /ads vers les clés attendues par /api/lead.
@@ -315,23 +326,27 @@ const formSteps: FormStep[] = [
 const faqs = [
   {
     q: "C'est quoi le piège ?",
-    a: "Aucun piège. On crée votre première page gratuitement, sans engagement. Si ça vous plaît pas, vous ne devez rien.",
+    a: "Aucun piège. Je crée d'abord la maquette de votre page d'accueil, offerte et sans engagement. Si elle ne vous plaît pas, vous ne signez pas et ne payez rien.",
   },
   {
     q: "Pourquoi c'est moins cher qu'une agence ?",
-    a: "On a optimisé nos process avec des outils modernes. Moins de temps perdu = prix plus bas pour vous.",
+    a: "Je travaille seul, avec des outils modernes et une méthode rodée. Moins de temps perdu, donc un prix plus bas pour vous.",
   },
   {
-    q: "3 mois de maintenance offerte, ça inclut quoi ?",
-    a: "Hébergement, maintenance technique, mises à jour de sécurité et modifications mineures de contenu. Tout est inclus pendant 3 mois.",
+    q: "3 mois de Suivi offerts, ça inclut quoi ?",
+    a: `${suivi.items.join(". ")}. Ensuite, le Suivi est à 99 €/mois sans engagement, seulement si vous le souhaitez.`,
   },
   {
     q: "Je peux arrêter quand je veux ?",
-    a: "Oui. Sans engagement, sans frais de résiliation.",
+    a: `Le Suivi est sans engagement et sans frais de résiliation. ${SUIVI_END} Avec le Site Péi Zéro Avance, le site vous appartient après la 12e mensualité ; vous pouvez le racheter à tout moment en réglant les mensualités restantes. Si vous arrêtez avant 12 mois sans régler le solde, le site est retiré et reste à Code Céleste.`,
   },
   {
     q: "Combien ça coûte ?",
-    a: "Le tarif dépend du nombre de pages et des options de votre site — c'est pourquoi Maxime vous donne un prix précis lors de l'appel, toujours bien en dessous des 4 000-5 000€ pratiqués par les agences. Vous aurez le prix exact avant de décider quoi que ce soit, et la première page est offerte dans tous les cas.",
+    a: `${PRICING_SUMMARY} Dans les deux cas, la maquette de votre page d'accueil est offerte. ${VAT_NOTICE}.`,
+  },
+  {
+    q: "Et si mon site ne m'apporte aucune demande ?",
+    a: `${guarantees[2].text} ${NOT_GUARANTEED}`,
   },
 ];
 
@@ -344,20 +359,24 @@ const compRows = [
   {
     label: "Recevoir des demandes",
     bad: "Dans 1 à 3 mois",
-    good: "Site en ligne en 7 jours",
+    good: "En ligne 7 jours après tous vos éléments",
   },
   {
     label: "Un site qui donne envie d'appeler",
     bad: "Design daté et générique",
     good: "Moderne, à votre image",
   },
-  { label: "Prix", bad: "4 000 — 5 000€", good: "Abordable" },
+  { label: "Prix", bad: "4 000 — 5 000€", good: "1 000 € ou 169 €/mois" },
   {
-    label: "Maintenance",
-    bad: "Payante dès le jour 1",
+    label: "Suivi",
+    bad: "Payant dès le jour 1",
     good: "3 mois offerts",
   },
-  { label: "Engagement", bad: "12 mois minimum", good: "Aucun" },
+  {
+    label: "Engagement",
+    bad: "12 mois minimum",
+    good: "Suivi facultatif, sans engagement · Zéro Avance : 12 mensualités",
+  },
 ];
 
 /* ── CSS injection ── */
@@ -819,7 +838,7 @@ export default function CodeCelesteLanding() {
             ) : (
               <div style={{ textAlign: "center" }}>
                 <h3 style={{ fontSize: 19, fontWeight: 700, marginBottom: 8 }}>
-                  Votre première page offerte commence ici
+                  Votre maquette offerte commence ici
                 </h3>
                 <p
                   style={{
@@ -830,9 +849,9 @@ export default function CodeCelesteLanding() {
                   }}
                 >
                   Choisissez simplement le créneau qui vous convient. En 15
-                  minutes, nous faisons le point sur votre activité et nous
-                  préparons votre première maquette offerte, personnalisée pour
-                  votre entreprise.
+                  minutes, je fais le point sur votre activité et je prépare la
+                  maquette offerte de votre page d&apos;accueil, personnalisée
+                  pour votre entreprise.
                 </p>
                 <div
                   style={{
@@ -1049,9 +1068,9 @@ export default function CodeCelesteLanding() {
               lineHeight: 1.65,
             }}
           >
-            On crée la première page de votre site,{" "}
+            Je crée la maquette de votre page d&apos;accueil,{" "}
             <strong style={{ color: TEXT }}>offerte</strong>. Elle vous plaît ?
-            On continue. Sinon, vous ne payez rien.
+            Je continue. Sinon, vous ne signez pas et ne payez rien.
           </p>
           <button
             onClick={openModal}
@@ -1086,7 +1105,7 @@ export default function CodeCelesteLanding() {
           >
             <span style={{ fontSize: 16 }}>⚡</span>
             <span style={{ fontSize: 13, fontWeight: 600, color: "#fbbf24" }}>
-              Seulement 5 maquettes offertes ce mois-ci
+              5 nouveaux sites par mois maximum, dont 3 en Zéro Avance
             </span>
           </div>
         </div>
@@ -1562,7 +1581,7 @@ export default function CodeCelesteLanding() {
             </p>
             {[
               "Développeur basé à La Réunion",
-              "Rappel dans les 24-48h",
+              `Réponse sous ${RESPONSE_DELAY}`,
               "Votre interlocuteur unique, du 1er appel à la mise en ligne",
             ].map((t, i) => (
               <div
@@ -1638,10 +1657,10 @@ export default function CodeCelesteLanding() {
             {
               n: 7,
               suffix: " jours",
-              label: "Pour commencer à recevoir des demandes",
+              label: "Pour être en ligne, après réception de tous vos éléments",
             },
-            { n: 3, suffix: " mois", label: "Maintenance offerte" },
-            { n: 0, suffix: "€", label: "Pour voir votre page personnalisée" },
+            { n: 3, suffix: " mois", label: "De Suivi offerts" },
+            { n: 0, suffix: "€", label: "Pour voir votre maquette" },
           ].map((s, i) => (
             <div key={i} style={{ padding: 24 }}>
               <div
@@ -1700,7 +1719,7 @@ export default function CodeCelesteLanding() {
                 marginBottom: 12,
               }}
             >
-              Notre garantie <span style={{ color: GRN }}>zéro risque</span>
+              Mes garanties <span style={{ color: GRN }}>zéro risque</span>
             </h2>
             <p
               style={{
@@ -1711,47 +1730,71 @@ export default function CodeCelesteLanding() {
                 lineHeight: 1.65,
               }}
             >
-              On crée <strong style={{ color: TEXT }}>votre</strong> page —
-              votre entreprise, votre métier, vos couleurs —{" "}
-              <strong style={{ color: TEXT }}>offerte, sans engagement</strong>.
-              Si le résultat ne vous plaît pas, vous ne payez rien. Zéro frais
-              cachés, zéro surprise.
+              Je prends le risque à votre place. Zéro frais cachés, zéro
+              surprise.
             </p>
             <div
               style={{
                 display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                gap: 24,
+                flexDirection: "column",
+                gap: 12,
+                textAlign: "left",
               }}
             >
-              {[
-                { icon: "💰", text: "Première page 100% gratuite" },
-                { icon: "🤝", text: "Zéro engagement" },
-                { icon: "↩️", text: "Pas satisfait = vous ne devez rien" },
-              ].map((g, i) => (
+              {guarantees.map((g, i) => (
                 <div
-                  key={i}
+                  key={g.title}
                   style={{
                     display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                    background: "rgba(52,211,153,0.08)",
-                    padding: "10px 18px",
-                    borderRadius: 12,
+                    gap: 14,
+                    background: "rgba(52,211,153,0.06)",
+                    padding: "16px 18px",
+                    borderRadius: 14,
                     border: "1px solid rgba(52,211,153,0.15)",
                   }}
                 >
-                  <span style={{ fontSize: 20 }}>{g.icon}</span>
-                  <span style={{ fontSize: 14, fontWeight: 600 }}>
-                    {g.text}
+                  <span
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 700,
+                      color: GRN,
+                      minWidth: 18,
+                    }}
+                  >
+                    {i + 1}
                   </span>
+                  <div>
+                    <div style={{ fontSize: 15, fontWeight: 600 }}>
+                      {g.title}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 14,
+                        color: MUT,
+                        marginTop: 4,
+                        lineHeight: 1.55,
+                      }}
+                    >
+                      {g.text}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
+            <p style={{ fontSize: 13, color: MUT, marginTop: 18 }}>
+              {NOT_GUARANTEED}
+            </p>
           </div>
         </div>
       </RevealSection>
+
+      {/* ══ FORMULES ET SUIVI (contenu partagé avec la home) ══ */}
+      <section style={{ padding: "70px 24px", maxWidth: 920, margin: "0 auto" }}>
+        <div className="space-y-10">
+          <Formulas onChoose={openModal} />
+          <Suivi />
+        </div>
+      </section>
 
       {/* ══ TÉMOIGNAGE STAR — À remplacer par un vrai avis dès le 1er client ══ */}
       <RevealSection
@@ -1839,7 +1882,7 @@ export default function CodeCelesteLanding() {
             marginBottom: 12,
           }}
         >
-          Nos <span style={{ color: PL }}>réalisations</span>
+          Mes <span style={{ color: PL }}>réalisations</span>
         </h2>
         <p
           style={{
@@ -1871,8 +1914,7 @@ export default function CodeCelesteLanding() {
               title: "Smart Power System",
               job: "Coaching en force athlétique",
               city: "La Réunion",
-              quote:
-                '"Son investissement dans le projet et le rapport qualité/prix ont été particulièrement appréciés."',
+              quote: "15 demandes depuis la mise en ligne, dont 4 à 5 signées",
               img: "screen-SPS.png",
             },
             {
@@ -1887,7 +1929,7 @@ export default function CodeCelesteLanding() {
               title: "SCMOI",
               job: "Site vitrine",
               city: "La Réunion",
-              quote: '"Site professionnel livré et en ligne — scmoi.re"',
+              quote: "+20 nouveaux clients en 3 mois",
               img: "scmoi-hero.png",
             },
           ] as Project[]).map((p, i) => (
@@ -1949,6 +1991,11 @@ export default function CodeCelesteLanding() {
           ))}
         </div>
       </RevealSection>
+
+      {/* ══ AVIS CLIENTS (contenu partagé avec la home) ══ */}
+      <section style={{ padding: "70px 24px", maxWidth: 920, margin: "0 auto" }}>
+        <Reviews exclude={["Alexandre Eydieux"]} />
+      </section>
 
       {/* ══ FAQ ══ */}
       <RevealSection
@@ -2071,7 +2118,8 @@ export default function CodeCelesteLanding() {
               marginRight: "auto",
             }}
           >
-            On crée votre page. Vous la regardez. Vous décidez. C'est tout.
+            Je crée votre maquette. Vous la regardez. Vous décidez. C&apos;est
+            tout.
           </p>
           <button
             onClick={openModal}
