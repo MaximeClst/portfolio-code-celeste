@@ -58,7 +58,7 @@
 
 ## Actualisation du 26 novembre
 1. **À corriger par Maxime** : avis « Severin Emmanuel » affiche « [Activité de Severin Emmanuel] » en production (accueil, page artisan, /ads). Activité à fournir ou ligne à masquer — non modifié (texte client).
-2. Weekly du 26 incomplet : Search Console, 25 prompts IA et diff concurrents non faits (Chrome injoignable). À reprendre au prochain run, avec inspection de /politique-de-confidentialite et de /llms.txt n'est pas nécessaire (fichier texte).
+2. Weekly du 26 incomplet : Search Console, 25 prompts IA et diff concurrents non faits (Chrome injoignable). À reprendre au prochain run, avec inspection de /politique-de-confidentialite (/llms.txt est un fichier texte, pas d’inspection nécessaire).
 3. Données structurées : envisager `offers` (1 000 € / 169 €/mois) dans le Service JSON-LD de la page artisan, prix désormais publics et sourcés dans `offer.ts`.
 4. page_checks : premières images en lazy-load sur 8 pages (probablement logo d'en-tête), méta description trop longue sur /works, contenu mince sur les trois fiches /works/* (déjà connu, item « Pages de preuves »).
 5. /noel : page temporaire (concours jusqu'au 6/12, gagnant le 15/12) — la laisser hors sitemap ; après le concours, décider avec Maxime noindex ou conservation.
