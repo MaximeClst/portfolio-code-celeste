@@ -7,11 +7,26 @@ import { PageTopBar } from "../_landing/home/ContactCTA";
 import { sites } from "../_landing/home/data";
 import { SiteCard } from "../_landing/home/Realisations";
 import { Formulas, Guarantees, Suivi } from "../_landing/home/Offers";
-import { NOT_INCLUDED, PRICING_SUMMARY, RESPONSE_DELAY, VAT_NOTICE } from "../_landing/home/offer";
+import { formulas, NOT_INCLUDED, PRICING_SUMMARY, RESPONSE_DELAY, VAT_NOTICE } from "../_landing/home/offer";
 import { Eyebrow, HomeFooter, Reviews } from "../_landing/home/Sections";
 import { QuoteButton } from "./QuoteButton";
 
 const path = "/creation-site-web-artisan-reunion";
+
+// Offres du JSON-LD dérivées de offer.ts : les prix ne peuvent pas diverger de la page.
+const euros = (amount: string) => Number(amount.replace(/[^\d]/g, ""));
+const serviceOffers = formulas.map((f) => ({
+  "@type": "Offer",
+  name: f.name,
+  description: `${f.tagline} ${f.total.note}.`,
+  priceCurrency: "EUR",
+  price: euros(f.total.amount),
+  ...(f.total.unit === "/mois"
+    ? { priceSpecification: { "@type": "UnitPriceSpecification", price: euros(f.total.amount), priceCurrency: "EUR", unitCode: "MON", billingDuration: 12 } }
+    : {}),
+  availability: "https://schema.org/InStock",
+  url: `${SiteConfig.prodUrl}${path}#offres`,
+}));
 const title = "Création de site web artisan à La Réunion | Code Céleste";
 const description = "Site vitrine pour artisan à La Réunion : 1 000 € prix fixe ou 169 €/mois sans avance, maquette offerte, en ligne en 7 jours. Découvrez le projet SCMOI.";
 
@@ -60,6 +75,7 @@ export default function ArtisanPage() {
         description,
         provider: { "@type": "Organization", "@id": `${SiteConfig.prodUrl}/#organization`, name: "Code Céleste", url: SiteConfig.prodUrl },
         areaServed: { "@type": "AdministrativeArea", name: "La Réunion" },
+        offers: serviceOffers,
       }).replace(/</g, "\\u003c") }} />
 
       <div className="relative mx-auto max-w-5xl space-y-20 px-4 py-12 sm:px-6 lg:py-16">
