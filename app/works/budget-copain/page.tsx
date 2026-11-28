@@ -38,14 +38,15 @@ export default function BudgetCopainPage() {
               <div className="flex justify-center items-center mb-6">
                 <Image
                   src="/adaptive-icon.png"
-                  alt="Budget Copain"
+                  alt="Logo Budget Copain"
                   width={120}
                   height={120}
+                  priority
                   className="object-contain rounded-2xl"
                 />
               </div>
               <div className="flex justify-center gap-2 mb-4">
-                <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm flex items-center gap-1.5">
+                <span className="px-3 py-1 bg-primary/10 text-violet-300 rounded-full text-sm flex items-center gap-1.5">
                   <Smartphone className="size-3.5" />
                   Application Mobile
                 </span>
@@ -130,7 +131,7 @@ export default function BudgetCopainPage() {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      className="px-3 py-1 bg-primary/10 text-violet-300 rounded-full text-sm"
                     >
                       {tech}
                     </span>

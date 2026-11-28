@@ -162,6 +162,7 @@ export function PageTopBar() {
             alt=""
             width={64}
             height={64}
+            priority
             className="size-8 rounded-lg object-cover ring-1 ring-brand/40"
           />
           <span className="font-medium text-foreground">Maxime Céleste</span>

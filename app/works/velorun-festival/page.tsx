@@ -33,9 +33,10 @@ export default function VeloRunFestivalPage() {
               <div className="flex justify-center items-center mb-6">
                 <Image
                   src="/VeloRunFest.png"
-                  alt="VELORUN Festival"
+                  alt="Logo VELORUN Festival"
                   width={120}
                   height={120}
+                  priority
                   className="object-contain"
                 />
               </div>
@@ -111,7 +112,7 @@ export default function VeloRunFestivalPage() {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      className="px-3 py-1 bg-primary/10 text-violet-300 rounded-full text-sm"
                     >
                       {tech}
                     </span>

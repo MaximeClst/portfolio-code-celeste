@@ -4,7 +4,7 @@ import { apps, sites } from "../_landing/home/data";
 import { AppCard, SiteCard } from "../_landing/home/Realisations";
 import { Eyebrow, HomeFooter, SideProjects } from "../_landing/home/Sections";
 
-export const metadata = pageMetadata("Réalisations web et mobiles | Code Céleste, La Réunion", "Découvrez les sites web et applications mobiles réalisés par Code Céleste : SCMOI, L2KJ Services, O'Milles Déco, Smart Power System, Z'Happyro et autres projets.", "/works");
+export const metadata = pageMetadata("Réalisations web et mobiles | Code Céleste, La Réunion", "Sites web et applications mobiles réalisés à La Réunion par Code Céleste : SCMOI, L2KJ Services, O'Milles Déco, Smart Power System, Z'Happyro…", "/works");
 
 export default function WorksPage() {
   return (
