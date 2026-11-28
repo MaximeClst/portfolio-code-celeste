@@ -68,3 +68,9 @@
 2. Suivre l'indexation de /politique-de-confidentialite (demandée le 27) — ne pas redemander avant une semaine.
 3. Prochain gain concret : premières images en lazy-load (8 pages) puis méta description /works (> 160 car.).
 4. Placeholder « [Activité de Severin Emmanuel] » toujours en production (`offer.ts` l. 168) — attend Maxime.
+
+## Actualisation du 28 novembre
+1. ~~Premières images en lazy-load + méta /works~~ — **fait le 28/11** (`8c7413c`).
+2. /works : page_checks signale un saut de niveau de titre (heading-level-skip) — vérifier la hiérarchie H1 → H2 → H3 des cartes.
+3. Fiches /works/* minces (< 200 mots) — reste l'item « Pages de preuves », attend captures/faits confirmés par Maxime.
+4. Placeholder « [Activité de Severin Emmanuel] » toujours en production — attend Maxime. Monthly le 29.
